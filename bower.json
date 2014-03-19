@@ -1,0 +1,17 @@
+{
+  "name": "makerparty",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "4.0.3",
+    "makerstrap": "0.1.1",
+    "jquery": "2.1.0",
+    "animate.css": "3.1.0"
+  }
+}

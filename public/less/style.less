@@ -1,0 +1,146 @@
+@import '../bower_components/makerstrap/less/makerstrap';
+
+// Font Awesome ---------------------------------------------------------------
+// Use http://fortawesome.github.io/Font-Awesome/cheatsheet/ as a guide
+@import "../bower_components/font-awesome/less/font-awesome";
+@fa-font-path: "/bower_components/font-awesome/fonts";
+
+// Animations
+@import (less) "../bower_components/animate.css/animate.css";
+
+@import "mixins";
+
+.fa(@icon) {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: @icon;
+}
+
+@border-radius-base: 0;
+
+//  Resets --------------------------------------------------------------------
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+*:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+h1 {
+  font-weight: 100;
+}
+
+p {
+  line-height: 1.7;
+}
+
+//  Bootstrap Overrides -------------------------------------------------------
+
+h1, h2, h3, h4 {
+  font-weight: 200;
+}
+
+.page-header {
+  border: 0;
+  margin-bottom: 20px;
+}
+
+.row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-mobile-block {
+  display: block;
+
+  @media (min-width: @grid-float-breakpoint) {
+    display: inline-block;
+  }
+}
+
+.btn-group {
+  .btn:active, .btn:hover, .btn.active {
+    background-color: @brand-primary;
+    color: @white;
+  }
+}
+
+//  Utility -------------------------------------------------------------------
+
+.add-bottom-margin {
+  margin-bottom: 20px;
+}
+
+.add-double-bottom-margin {
+  margin-bottom: 40px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.visible-mobile-inline {
+  display: inline;
+  @media (min-width: @grid-float-breakpoint) {
+    display: none;
+  }
+}
+//  Navbar Header
+
+.navbar.navbar-no-header-xs {
+  @media (max-width: @grid-float-breakpoint) {
+    border: none;
+    min-height: 0;
+    .navbar-header {
+      display: none;
+    }
+  }
+}
+
+.navbar-webmaker {
+  margin-bottom: 0;
+
+  .webmaker-logo {
+    display: inline-block;
+    padding: 2px 10px;
+  }
+
+  @media (min-width: @screen-lg-min) {
+    padding: 12px 0;
+    height: 90px;
+
+    .webmaker-logo {
+      padding: 0;
+    }
+
+    .navbar-nav {
+      margin-top: 6px;
+    }
+
+  }
+}
+
+.text-title-case {
+  text-transform: capitalize;
+}
+
+//  Angular Helpers -----------------------------------------------------------
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.view-animate.ng-enter {
+  .animated;
+  .fadeIn;
+}
