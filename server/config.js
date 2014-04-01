@@ -54,7 +54,7 @@ module.exports = function (env) {
     res.send('window.eventsConfig = ' + JSON.stringify(config));
   });
 
-  app.get('/hello', function(req, res){
+  app.get('/', function(req, res){
     res.render("views/home.html");
   });
 
