@@ -1,6 +1,6 @@
 {
   "name": "makerparty",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Mozilla Maker Party Site",
   "main": "app/js/app.js",
   "scripts": {
@@ -11,6 +11,7 @@
   "dependencies": {
     "express": "3.4.8",
     "bower": "1.2.8",
+    "gobbledygook": "0.0.3",
     "habitat": "1.1.0",
     "grunt": "0.4.2",
     "grunt-contrib-jshint": "0.7.2",
@@ -19,7 +20,9 @@
     "grunt-contrib-less": "0.10.0",
     "grunt-contrib-watch": "0.5.3",
     "grunt-shell-spawn": "0.3.0",
-    "grunt-cli": "0.1.13"
+    "grunt-cli": "0.1.13",
+    "nunjucks": "0.1.10",
+    "plist": "0.4.3"
   },
   "engines": {
     "node": ">=0.10"
