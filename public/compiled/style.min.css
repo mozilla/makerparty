@@ -9984,9 +9984,6 @@ ng\:form {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
-#tabzilla {
-  top: -12px;
-}
 .navbar {
   border: none;
 }
@@ -9994,9 +9991,16 @@ ng\:form {
   background: #00b0b7;
 }
 .navbar-webmaker .webmaker-logo img {
-  width: 135px;
-  height: auto;
+  width: auto;
+  height: 46px;
+  margin-top: 6px;
 }
 .navbar-collapse {
   padding-left: 0;
+}
+footer {
+  background: #013e5f;
+  color: #fff;
+  padding: 30px 0;
+  margin-top: 40px;
 }

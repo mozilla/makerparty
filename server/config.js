@@ -2,7 +2,7 @@ module.exports = function (env) {
   var express = require('express');
   var nunjucks = require( "nunjucks" );
   var path = require('path');
-  var i18n = require( "../lib/i18n.js" );
+  var i18n = require( "webmaker-i18n" );
   console.log(i18n);
   var app = express();
   var nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader( "./public"));
@@ -15,6 +15,10 @@ module.exports = function (env) {
   app.use(express.urlencoded());
 
   nunjucksEnv.express( app );
+  nunjucksEnv.addFilter( "instantiate", function( input ) {
+    var tmpl = new nunjucks.Template( input );
+    return tmpl.render( this.getVariables() );
+  });
 
   var config = {
     version: appVersion
@@ -26,14 +30,15 @@ module.exports = function (env) {
   };
 
   // Setup locales with i18n
-  // app.use( i18n.abide({
-  //   supported_languages: [
-  //     "en_US"
-  //   ],
-  //   default_lang: "en_US",
-  //   translation_directory: "locale",
-  //   localeOnUrl: true
-  // }));
+  app.use( i18n.middleware({
+    supported_languages: [ "*" ], // TO FIX: config.SUPPORTED_LANGS ???
+    default_lang: "en-US",
+    mappings: require("webmaker-locale-mapping"),
+    translation_directory: path.resolve( __dirname, "../locale" )
+  }));
+
+  // Localized Strings
+  app.get("/strings/:lang?", i18n.stringsRoute("en_US"));
 
   // Static files
   app.use(express.static('./public'));
@@ -50,7 +55,7 @@ module.exports = function (env) {
   });
 
   app.get('/hello', function(req, res){
-    res.render( "index.html", { helloworld: "Hello World"});
+    res.render("views/home.html");
   });
 
 

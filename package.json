@@ -22,7 +22,9 @@
     "grunt-shell-spawn": "0.3.0",
     "grunt-cli": "0.1.13",
     "nunjucks": "0.1.10",
-    "plist": "0.4.3"
+    "plist": "0.4.3",
+    "webmaker-i18n": "0.3.15",
+    "webmaker-locale-mapping": "latest"
   },
   "engines": {
     "node": ">=0.10"
