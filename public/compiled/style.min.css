@@ -9815,6 +9815,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: rollOut;
   animation-name: rollOut;
 }
+html,
+body {
+  display: block;
+}
 a {
   cursor: pointer;
 }
@@ -9843,7 +9847,7 @@ h4 {
 }
 .page-header {
   border: 0;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .row {
   margin-top: 10px;
@@ -9857,17 +9861,33 @@ h4 {
     display: inline-block;
   }
 }
+.btn-block {
+  display: block;
+}
 .btn-group .btn:active,
 .btn-group .btn:hover,
 .btn-group .btn.active {
   background-color: #3fb58e;
   color: #ffffff;
 }
+.lead {
+  margin-bottom: 0;
+}
 .add-bottom-margin {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .add-bottom-margin {
+    margin-bottom: 20px;
+  }
 }
 .add-double-bottom-margin {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .add-double-bottom-margin {
+    margin-bottom: 40px;
+  }
 }
 .no-padding {
   padding: 0;
@@ -9880,6 +9900,21 @@ h4 {
     display: none;
   }
 }
+.brand-primary {
+  color: #3fb58e;
+}
+.with-icon {
+  line-height: 2em;
+}
+.with-icon span {
+  position: relative;
+  top: 0.133em;
+}
+.with-icon img {
+  width: 1.5em;
+  vertical-align: middle;
+  margin-right: 0.2em;
+}
 @media (max-width: 768px) {
   .navbar.navbar-no-header-xs {
     border: none;
@@ -9889,20 +9924,12 @@ h4 {
     display: none;
   }
 }
-.navbar-default {
-  border: none;
-}
 .navbar-webmaker {
   margin-bottom: 0;
-  background: #00b0b7;
 }
 .navbar-webmaker .webmaker-logo {
   display: inline-block;
   padding: 2px 10px;
-}
-.navbar-webmaker .webmaker-logo img {
-  width: 135px;
-  height: auto;
 }
 @media (min-width: 1200px) {
   .navbar-webmaker {
@@ -9919,16 +9946,35 @@ h4 {
 .text-title-case {
   text-transform: capitalize;
 }
-#tabzilla {
-  top: -12px;
+html[dir="rtl"] .fa.fa-reply {
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .fa.fa-angle-right {
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+html[dir="rtl"] ul.angle-list li h3:before {
+  font-family: FontAwesome;
+  content: "\f104";
 }
 [ng\:cloak],
 [ng-cloak],
 [data-ng-cloak],
 [x-ng-cloak],
 .ng-cloak,
-.x-ng-cloak {
+.x-ng-cloak,
+.ng-hide {
   display: none !important;
+}
+ng\:form {
+  display: block;
+}
+.ng-animate-block-transitions {
+  transition: 0s all!important;
+  -webkit-transition: 0s all!important;
 }
 .view-animate.ng-enter {
   -webkit-animation-duration: 1s;
@@ -9937,4 +9983,20 @@ h4 {
   animation-fill-mode: both;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+}
+#tabzilla {
+  top: -12px;
+}
+.navbar {
+  border: none;
+}
+.navbar-webmaker {
+  background: #00b0b7;
+}
+.navbar-webmaker .webmaker-logo img {
+  width: 135px;
+  height: auto;
+}
+.navbar-collapse {
+  padding-left: 0;
 }
