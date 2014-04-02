@@ -23,11 +23,32 @@
 .navbar-webmaker {
   background: @mp-green;
 
-  .webmaker-logo img {
-    width: auto;
-    height: 46px;
+  .webmaker-logo {
     margin-top: 6px;
+    img {
+      width: auto;
+      /*height: 46px;*/
+    }
   }
+
+  @media (min-width: @screen-lg-min) {
+    padding: 0;
+
+    .navbar-header {
+      padding-top: 12px;
+    }
+
+    .webmaker-logo {
+      padding: 0;
+      margin-top: 2px;
+    }
+
+    .navbar-nav {
+      margin-top: 6px;
+    }
+  }
+
+
 
 }
 

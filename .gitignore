@@ -1,4 +1,4 @@
-.log
+*.log
 logs/*
 !.gitkeep
 node_modules/
@@ -7,5 +7,5 @@ tmp
 .DS_Store
 .idea
 .env
-app/compiled/
+public/compiled/
 TODO.txt
