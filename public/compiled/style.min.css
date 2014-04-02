@@ -10004,3 +10004,14 @@ footer {
   padding: 30px 0;
   margin-top: 40px;
 }
+.banner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.call-out {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+  background: #e3eaee;
+  color: #013e5f;
+}

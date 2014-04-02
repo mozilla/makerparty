@@ -14,19 +14,7 @@
       <div class="container">
         <a href="https://www.mozilla.org/" id="tabzilla">mozilla</a>
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
-            <span class="sr-only">{{ '_toggle_navigation_' }}</span>
-            <span class="fa fa-bars fa-lg"></span>
-          </button>
-          <a href="" class="logo webmaker-logo"><img src="img/makerparty_headerwordmark.png"></a>
-        </div>
-
-        <div class="navbar-collapse" collapse="isCollapsed">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <button ng-cloak ng-show="!_user.email" class="btn btn-primary btn-sm navbar-btn" ng-click="login()">{{ '_log_in_' }}</button>
-            </li>
-          </ul>
+          <a href="/" class="logo webmaker-logo"><img src="img/makerparty_headerwordmark.png"></a>
         </div>
       </div>
     </nav>
@@ -36,13 +24,15 @@
         <div class="navbar-header">
         </div>
         <div class="navbar-collapse" collapse="isCollapsed">
+          {% block navItems %}
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Maker Party</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Partners</a></li>
-            <li><a href="#">Resources</a></li>
-            <li><a href="#">History</a></li>
+            <li><a href="https://events.webmaker.org">Events</a></li>
+            <li><a href="/partners">Partners</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/history">History</a></li>
           </ul>
+          {% endblock %}
         </div>
 
       </div>

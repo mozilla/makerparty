@@ -1,9 +1,65 @@
 {% extends "views/layout.html" %}
 {% block title %} Maker Party - Home {% endblock %}
 
+{% block navItems %}
+<ul class="nav navbar-nav">
+  <li class="active"><a href="#">Maker Party</a></li>
+  <li><a href="https://events.webmaker.org">Events</a></li>
+  <li><a href="/partners">Partners</a></li>
+  <li><a href="/resources">Resources</a></li>
+  <li><a href="/history">History</a></li>
+</ul>
+{% endblock %}
+
+
 {% block mainContent %}
+  <div class="container banner">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="banner-video">
+          <iframe src="https://vialogues.com/videos/embedded/11183/" width="450" height="300" frameBorder="0" scrolling="No"></iframe>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h1>{{ gettext("Teach, Learn & Make") }}</h1>
+        <p>{{ gettext("Home Banner Desc") }}</p>
+        <p>{{ gettext("We want people to throw or attend an event.") }}</p>
+        <p>
+          <a class="btn btn-default">{{ gettext("Become a Partner") }}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="call-out">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>{{ gettext("Maker Party 2014 runs from July 15 to September 15.") }}</h2>
+        <p>{{ gettext("Anyone can join Maker Party by hosting or attending an event.") }}</p>
+      </div>
+    </div>
+  </div>
   <div class="container">
-    {{ gettext("testing") }}
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>{{ gettext("How does Maker Party work?") }}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <h3>{{ gettext("Host an Event") }}</h3>
+        <p>{{ gettext("Host an Event Desc") }}</p>
+      </div>
+      <div class="col-md-4">
+        <h3>{{ gettext("Attend an Event") }}</h3>
+        <p>{{ gettext("Attend an Event Desc") | safe }}</p>
+      </div>
+      <div class="col-md-4">
+        <h3>{{ gettext("Get Support") }}</h3>
+        <p>{{ gettext("Get Support Desc") }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
   </div>
 {% endblock %}
 

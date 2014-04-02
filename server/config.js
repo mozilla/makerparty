@@ -58,6 +58,17 @@ module.exports = function (env) {
     res.render("views/home.html");
   });
 
+  app.get('/partners', function(req, res){
+    res.render("views/partners.html");
+  });
+
+  app.get('/resources', function(req, res){
+    res.render("views/resources.html");
+  });
+
+  app.get('/history', function(req, res){
+    res.render("views/history.html");
+  });
 
   return app;
 };
