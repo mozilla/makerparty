@@ -3,14 +3,13 @@
 
 {% block navItems %}
 <ul class="nav navbar-nav">
-  <li><a href="/">Maker Party</a></li>
-  <li><a href="https://events.webmaker.org">Events</a></li>
-  <li class="active"><a href="/partners">Partners</a></li>
-  <li><a href="/resources">Resources</a></li>
-  <li><a href="/history">History</a></li>
+  <li><a href="/">{{ gettext("Maker Party") }}</a></li>
+  <li><a href="https://events.webmaker.org">{{ gettext("Events") }}</a></li>
+  <li class="active"><a href="/partners">{{ gettext("Partners") }}</a></li>
+  <li><a href="/resources">{{ gettext("Resources") }}</a></li>
+  <li><a href="/history">{{ gettext("History") }}</a></li>
 </ul>
 {% endblock %}
-
 
 {% block mainContent %}
   <div class="container">

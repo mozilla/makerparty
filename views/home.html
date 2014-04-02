@@ -3,14 +3,13 @@
 
 {% block navItems %}
 <ul class="nav navbar-nav">
-  <li class="active"><a href="#">Maker Party</a></li>
-  <li><a href="https://events.webmaker.org">Events</a></li>
-  <li><a href="/partners">Partners</a></li>
-  <li><a href="/resources">Resources</a></li>
-  <li><a href="/history">History</a></li>
+  <li class="active"><a href="/">{{ gettext("Maker Party") }}</a></li>
+  <li><a href="https://events.webmaker.org">{{ gettext("Events") }}</a></li>
+  <li><a href="/partners">{{ gettext("Partners") }}</a></li>
+  <li><a href="/resources">{{ gettext("Resources") }}</a></li>
+  <li><a href="/history">{{ gettext("History") }}</a></li>
 </ul>
 {% endblock %}
-
 
 {% block mainContent %}
   <div class="container banner">
@@ -30,6 +29,7 @@
       </div>
     </div>
   </div>
+
   <div class="call-out">
     <div class="container">
       <div class="row">
@@ -40,6 +40,7 @@
       </div>
     </div>
   </div>
+
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
@@ -48,20 +49,93 @@
     </div>
     <div class="row">
       <div class="col-md-4">
+        <div class="placeholder-image" style="height: 100px">image placeholder</div>
         <h3>{{ gettext("Host an Event") }}</h3>
         <p>{{ gettext("Host an Event Desc") }}</p>
       </div>
       <div class="col-md-4">
+        <div class="placeholder-image" style="height: 100px">image placeholder</div>
         <h3>{{ gettext("Attend an Event") }}</h3>
         <p>{{ gettext("Attend an Event Desc") | safe }}</p>
       </div>
       <div class="col-md-4">
+        <div class="placeholder-image" style="height: 100px">image placeholder</div>
         <h3>{{ gettext("Get Support") }}</h3>
         <p>{{ gettext("Get Support Desc") }}</p>
       </div>
     </div>
   </div>
+
   <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>{{ gettext("Have fun with our tools") }}</h3>
+        <p>{{ gettext("Have fun with our tools Desc") | safe }}</p>
+      </div>
+      <div class="col-md-6">
+        <h3>{{ gettext("Learn by teaching") }}</h3>
+        <p>{{ gettext("Learn by teaching Desc") | safe }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>{{ gettext("Maker Party History") }}</h3>
+        <p>{{ gettext("Maker Party History Desc") | safe }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="placeholder-image" style="height: 300px">image placeholder</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="placeholder-image" style="height: 300px">image placeholder</div>
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>{{ gettext("Why Mozilla throws an annual Maker Party") }}</h3>
+            <p>{{ gettext("Why Mozilla throws an annual Maker Party Desc") }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h3>{{ gettext("Learn more about us") }}</h3>
+            <p>{{ gettext("Learn more about us Desc") | safe }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h3>{{ gettext("See what people are saying about Maker Party") }}</h3>
+          <p><i>{{ gettext("See what people are saying about Maker Party Desc") }}</i></p>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="avatar-pic"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p>YWCA Toronto Girls’ Council (FIXME: add a link?)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 {% endblock %}
 

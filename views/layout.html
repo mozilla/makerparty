@@ -26,11 +26,11 @@
         <div class="navbar-collapse" collapse="isCollapsed">
           {% block navItems %}
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Maker Party</a></li>
-            <li><a href="https://events.webmaker.org">Events</a></li>
-            <li><a href="/partners">Partners</a></li>
-            <li><a href="/resources">Resources</a></li>
-            <li><a href="/history">History</a></li>
+            <li class="active"><a href="/">{{ gettext("Maker Party") }}</a></li>
+            <li><a href="https://events.webmaker.org">{{ gettext("Events") }}</a></li>
+            <li><a href="/partners">{{ gettext("Partners") }}</a></li>
+            <li><a href="/resources">{{ gettext("Resources") }}</a></li>
+            <li><a href="/history">{{ gettext("History") }}</a></li>
           </ul>
           {% endblock %}
         </div>
@@ -39,14 +39,72 @@
     </nav>
   </div>
 
-  <div class="view-animate" role="main" ng-view>
+  <div class="view-animate" role="main">
   {% block mainContent %}
   {% endblock %}
   </div>
 
+  <div class="container sponsorship-partners">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>{{ gettext("Our Sponsorship Partners") }}</h3>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="placeholder-image" style="height: 100px">MacArthur logo & link placeholder</div>
+          </div>
+          <div class="col-md-4">
+            <div class="placeholder-image" style="height: 100px">Mozilla logo & link placeholder</div>
+          </div>
+          <div class="col-md-4">
+            <div class="placeholder-image" style="height: 100px">NWP logo & link placeholder</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="get-mp-updates">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h3>{{ gettext("Get Maker Party Updates") }}</h3>
+          <p>{{ gettext("Get Maker Party Updates Desc") }}</p>
+        </div>
+        <div class="col-md-4">
+          <input type="e-mail" />
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div class="container">
-      I'm the footer
+      <div class="row">
+        <div class="col-md-2">
+          <img src="img/makerparty_footerwordmark.png" />
+        </div>
+        <div class="col-md-3">
+          <img src="img/webmaker_footerwordmark.png" />
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-2 footer-links">
+          <ul>
+            <li><i class="fa fa-globe"></i>{{ gettext("English") }}</li>
+            <li><i class="fa fa-twitter"></i><a href="https://twitter.com/search?q=%23MakerParty&src=typd ">{{ gettext("Twitter") }}</a></li>
+            <li><i class="fa fa-flickr"></i><a href="http://www.flickr.com/search/?w=faves-47833020@N03&q=makerparty">{{ gettext("Flickr") }}</a></li>
+            <li><i class="fa fa-google-plus"></i><a href="https://plus.google.com/communities/106022863174952221205">{{ gettext("Google+") }}</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 footer-links">
+          <ul>
+            <li>&nbsp;</li>
+            <li>{{ gettext("About Webmaker") }}</li>
+            <li><a href="mailto:makerparty@mozilla.org">{{ gettext("Contact") }}</li>
+            <li>{{ gettext("Donate") }}</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
 
