@@ -1,5 +1,5 @@
 {% extends "views/layout.html" %}
-{% block title %} Maker Party - Home {% endblock %}
+{% block title %} Maker Party - Party {% endblock %}
 
 {% block navItems %}
 <ul class="nav navbar-nav">
@@ -12,13 +12,119 @@
 {% endblock %}
 
 {% block banner %}
-  <div class="container banner">
+  <div class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>{{ gettext("Help us teach the web") }}</h1>
+          <p class="lead">{{ gettext("Help us teach the web Desc") }}</p>
+          <div class="cta-button-container">
+            <p><i>{{ gettext("Partner with Mozilla to teach the web.") }}</i></p>
+            <p><a class="btn btn-cta" href="/partners">{{ gettext("Register Now!") }}</a></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+        </div>
+      </div>
+    </div>
   </div>
 {% endblock %}
 
 {% block mainContent %}
-  <div class="container">
-    Partners Page
+  <div class="big-section what-is-mp-partner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center">
+          <h2>{{ gettext("What is a Maker Party Partner?") }}</h2>
+          <p>{{ gettext("What is a Maker Party Partner? Desc") }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h3>{{ gettext("Promotional Partners") }}</h3>
+          <p>{{ gettext("Promotional Partners Desc") }}</p>
+        </div>
+        <div class="col-md-4">
+          <h3>{{ gettext("Event Partners") }}</h3>
+          <p>{{ gettext("Event Partners Desc") | safe }}</p>
+        </div>
+        <div class="col-md-4">
+          <h3>{{ gettext("Sponsorship Partners") }}</h3>
+          <p>{{ gettext("Sponsorship Partners Desc") }}</p>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="big-section who-why-partner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="img/makerparty_partnerspage_photo.jpg" />
+        </div>
+        <div class="col-md-6">
+          <div class="row nested-row">
+            <div class="col-md-12">
+              <h2>{{ gettext("Who can be a partner?") }}</h2>
+              <p>{{ gettext("Who can be a partner? Desc") }}</p>
+            </div>
+            <div id="why-partner" class="col-md-12">
+              <h2>{{ gettext("Why partner?") }}</h2>
+              <p>{{ gettext("Why partner? Desc") }}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="big-section partner-yellow-cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row nested-row">
+            <div class="col-md-12">
+              <h2>{{ gettext("Interested in becoming a Maker Party partner?") }}</h2>
+            </div>
+          </div>
+          <div class="row nested-row">
+            <div class="col-md-9">
+              <p>{{ gettext("Interested in becoming a Maker Party partner? Desc") | safe }}</p>
+            </div>
+            <div class="col-md-3">
+              <a class="btn btn-form-submit">{{ gettext("Register Now!") }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="big-section previous-partners">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="img/makerparty_network_illustration.png" />
+        </div>
+        <div class="col-md-8">
+          <h2>{{ gettext("Previous Partners") }}</h2>
+          <h4>{{ gettext("Previous Partners Desc") }}</h4>
+          ===== FIXME =====
+          <ul>
+            <li>{{ gettext("Black Girls Code Desc") | safe }}</li>
+            <li>{{ gettext("MIT Media Lab Desc") | safe }}</li>
+            <li>{{ gettext("DIY.org Desc") | safe }}</li>
+            <li>{{ gettext("Maker Education Initiative Desc") | safe }}</li>
+            <li>{{ gettext("Girl Scout Troops Desc") | safe}}</li>
+          </ul>
+          <p class="read-more-links">
+            <a href="/history">{{ gettext("Read more about the history of Maker Party.") }}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 {% endblock %}
 

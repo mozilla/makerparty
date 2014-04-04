@@ -12,60 +12,66 @@
 {% endblock %}
 
 {% block banner %}
-  <div class="container banner">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="banner-video">
-          <iframe src="https://vialogues.com/videos/embedded/11183/" width="450" height="300" frameBorder="0" scrolling="No"></iframe>
+  <div class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="banner-video">
+            <iframe src="https://vialogues.com/videos/embedded/11183/" width="450" height="300" frameBorder="0" scrolling="No"></iframe>
+          </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <h1>{{ gettext("Teach, Learn & Make") }}</h1>
-        <p>{{ gettext("Home Banner Desc") }}</p>
-        <p>{{ gettext("We want people to throw or attend an event.") }}</p>
-        <p>
-          <a class="btn btn-cta" href="/partners">{{ gettext("Become a Partner") }}</a>
-        </p>
+        <div class="col-md-6">
+          <h1>{{ gettext("Teach, Learn & Make") }}</h1>
+          <p class="lead">{{ gettext("Home Banner Desc") }}</p>
+          <div class="cta-button-container">
+            <p><i>{{ gettext("We want people to throw or attend an event.") }}</i></p>
+            <p><a class="btn btn-cta" href="/partners">{{ gettext("Become a Partner") }}</a></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 {% endblock %}
 
 {% block mainContent %}
-  <div class="container big-section how-mp-work">
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <h2>{{ gettext("How does Maker Party work?") }}</h2>
+  <div class="big-section how-mp-work">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2>{{ gettext("How does Maker Party work?") }}</h2>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <img src="img/makerparty_hostanevent_illustration.png" />
-        <h3>{{ gettext("Host an Event") }}</h3>
-        <p>{{ gettext("Host an Event Desc") }}</p>
-      </div>
-      <div class="col-md-4">
-        <img src="img/makerparty_attendanevent_illustration.png" />
-        <h3>{{ gettext("Attend an Event") }}</h3>
-        <p>{{ gettext("Attend an Event Desc") | safe }}</p>
-      </div>
-      <div class="col-md-4">
-        <img src="img/makerparty_getsupport_illustration.png" />
-        <h3>{{ gettext("Get Support") }}</h3>
-        <p>{{ gettext("Get Support Desc") }}</p>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="img/makerparty_hostanevent_illustration.png" />
+          <h3>{{ gettext("Host an Event") }}</h3>
+          <p>{{ gettext("Host an Event Desc") }}</p>
+        </div>
+        <div class="col-md-4">
+          <img src="img/makerparty_attendanevent_illustration.png" />
+          <h3>{{ gettext("Attend an Event") }}</h3>
+          <p>{{ gettext("Attend an Event Desc") | safe }}</p>
+        </div>
+        <div class="col-md-4">
+          <img src="img/makerparty_getsupport_illustration.png" />
+          <h3>{{ gettext("Get Support") }}</h3>
+          <p>{{ gettext("Get Support Desc") }}</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="container big-section">
-    <div class="row">
-      <div class="col-md-6">
-        <h2>{{ gettext("Have fun with our tools") }}</h2>
-        <p>{{ gettext("Have fun with our tools Desc") | safe }}</p>
-      </div>
-      <div class="col-md-6">
-        <h2>{{ gettext("Learn by teaching") }}</h2>
-        <p>{{ gettext("Learn by teaching Desc") | safe }}</p>
+  <div class="big-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>{{ gettext("Have fun with our tools") }}</h2>
+          <p>{{ gettext("Have fun with our tools Desc") | safe }}</p>
+        </div>
+        <div class="col-md-6">
+          <h2>{{ gettext("Learn by teaching") }}</h2>
+          <p>{{ gettext("Learn by teaching Desc") | safe }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -85,24 +91,26 @@
     </div>
   </div>
 
-  <div class="container big-section why-throw">
-    <div class="row">
-      <div class="col-md-4">
-        <img class="side-illust" src="img/makerparty_world_illustration.png" />
-      </div>
-      <div class="col-md-8">
-        <div class="row">
-          <div class="col-md-12">
-            <h2>{{ gettext("Why Mozilla throws an annual Maker Party") }}</h2>
-            <p>{{ gettext("Why Mozilla throws an annual Maker Party Desc") }}</p>
-          </div>
+  <div class="big-section">
+    <div class="container why-throw">
+      <div class="row">
+        <div class="col-md-4">
+          <img class="side-illust" src="img/makerparty_world_illustration.png" />
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <h3>{{ gettext("Learn more about us") }}</h3>
-            <div class="wordmarks">
-              <a href="https://webmaker.org/"><img src="img/webmaker_wordmark.png" /></a>
-              <a href="http://mozilla.org/"><img src="img/mozilla_wordmark.png" /></a>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>{{ gettext("Why Mozilla throws an annual Maker Party") }}</h2>
+              <p>{{ gettext("Why Mozilla throws an annual Maker Party Desc") }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h3>{{ gettext("Learn more about us") }}</h3>
+              <div class="wordmarks">
+                <a href="https://webmaker.org/"><img src="img/webmaker_wordmark.png" /></a>
+                <a href="http://mozilla.org/"><img src="img/mozilla_wordmark.png" /></a>
+              </div>
             </div>
           </div>
         </div>
@@ -110,8 +118,8 @@
     </div>
   </div>
 
-  <div class="testimonials">
-    <div class="container big-section">
+  <div class="testimonials big-section">
+    <div class="container">
       <div class="row">
         <div class="col-md-12">
           <h2>{{ gettext("See what people are saying about Maker Party") }}</h2>
