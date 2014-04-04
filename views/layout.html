@@ -6,8 +6,8 @@
   <title>{% block title %}{% endblock %}</title>
   <link rel="icon" type="image/png" href="img/makerparty_favicon.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
-  <link rel="stylesheet" href="compiled/style.min.css">
   <link href="//mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="compiled/style.min.css">
 </head>
 <body>
   <div>
@@ -15,6 +15,9 @@
       <div class="container">
         <a href="https://www.mozilla.org/" id="tabzilla">mozilla</a>
         <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mp-navbar-row">
+            <span class="fa fa-bars fa-lg"></span>
+          </button>
           <a href="/" class="logo webmaker-logo"><img src="img/makerparty_headerwordmark.png"></a>
         </div>
       </div>
@@ -24,7 +27,7 @@
       <div class="container">
         <div class="navbar-header">
         </div>
-        <div class="navbar-collapse" collapse="isCollapsed">
+        <div class="navbar-collapse" id="mp-navbar-row">
           {% block navItems %}
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">{{ gettext("Maker Party") }}</a></li>
@@ -34,8 +37,10 @@
             <li><a href="/history">{{ gettext("History") }}</a></li>
           </ul>
           {% endblock %}
+          <ul class="nav-webmaker-logo">
+            <li><a href="https://webmaker.org"><img src="img/webmaker_headerwordmark.png"></a></li>
+          </ul>
         </div>
-
       </div>
     </nav>
   </div>
@@ -63,14 +68,14 @@
     <div class="row">
       <div class="col-md-12">
         <h3>{{ gettext("Our Sponsorship Partners") }}</h3>
-        <div class="row">
-          <div class="col-md-4">
+        <div class="row text-center">
+          <div class="col-md-4 col-sm-4">
             <a href="http://www.macfound.org/"><img src="img/macarthur.png" /></a>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-4">
             <a href="http://www.mozilla.org/"><img src="img/mozilla.png" /></a>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-4">
             <a href="http://www.nwp.org/"><img src="img/nwp.png" /></a>
           </div>
         </div>
@@ -81,12 +86,12 @@
   <div class="get-mp-updates">
     <div class="container">
       <div class="row">
-        <div class="col-md-2">
-          <img src="img/makerparty_update_illustration.png" />
+        <div class="col-md-2 col-sm-2">
+          <img src="img/makerparty_updatenarrow_illustration.png" />
         </div>
-        <div class="col-md-10">
+        <div class="col-md-10 col-sm-10">
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12">
               <h3>{{ gettext("Get Maker Party Updates") }}</h3>
             </div>
           </div>
@@ -109,15 +114,15 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-2 col-sm-2 col-xs-12">
           <img src="img/makerparty_footerwordmark.png" />
         </div>
-        <div class="col-md-3">
-          <img src="img/webmaker_footerwordmark.png" />
+        <div class="col-md-3 col-sm-2 col-xs-12">
+          <img src="img/webmaker_headerwordmark.png" />
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-3 col-xs-12">
         </div>
-        <div class="col-md-2 footer-links">
+        <div class="col-md-2 col-sm-3 col-xs-12 footer-links">
           <ul>
             <li><i class="fa fa-globe"></i>{{ gettext("English") }}</li>
             <li><i class="fa fa-twitter"></i><a href="https://twitter.com/search?q=%23MakerParty&src=typd ">{{ gettext("Twitter") }}</a></li>
@@ -125,7 +130,7 @@
             <li><i class="fa fa-google-plus"></i><a href="https://plus.google.com/communities/106022863174952221205">{{ gettext("Google+") }}</a></li>
           </ul>
         </div>
-        <div class="col-md-2 footer-links">
+        <div class="col-md-2 col-sm-2 footer-links">
           <ul>
             <li>&nbsp;</li>
             <li>{{ gettext("About Webmaker") }}</li>
