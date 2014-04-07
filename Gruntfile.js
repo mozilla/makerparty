@@ -42,6 +42,13 @@ module.exports = function (grunt) {
           config: '.jsbeautifyrc'
         }
       }
+    },
+    gettext_finder: {
+      files: ["views/*.html", "views/**/*.html"],
+      options: {
+        pathToJSON: ["locale/en_US/*.json"],
+        ignoreKeys: grunt.file.readJSON("gtf-ignored-keys.json")
+      },
     }
   });
 
