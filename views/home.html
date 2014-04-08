@@ -1,6 +1,7 @@
 {% extends "views/layout.html" %}
 {% block title %} Maker Party - Home {% endblock %}
 
+{% block bodyOpen %}<body class="home">{% endblock %}
 {% block navItems %}
 <ul class="nav navbar-nav">
   <li class="active"><a href="/">{{ gettext("Maker Party") }}</a></li>
@@ -16,7 +17,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <div class="banner-video">
+          <div class="home-banner-video">
             <iframe src="https://vialogues.com/videos/embedded/11183/" width="450" height="300" frameBorder="0" scrolling="No"></iframe>
           </div>
         </div>
@@ -89,10 +90,10 @@
           <div class="collage">
             <div class="collage-row">
               <img src="img/collage/1.jpg" />
+              <img src="img/collage/5.jpg" />
               <img src="img/collage/2.jpg" />
               <img src="img/collage/3.jpg" />
               <img src="img/collage/4.jpg" />
-              <img src="img/collage/5.jpg" />
             </div>
             <div class="collage-row">
               <img src="img/collage/6.jpg" />

@@ -209,6 +209,18 @@ footer {
   HOME page
 */
 
+.home-banner-video {
+  padding-bottom: 66.66%;
+  height: 0;
+  position: relative;
+  margin-bottom: 20px;
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .how-mp-work {
   img {
     width: 100%;
@@ -385,5 +397,47 @@ footer {
   }
   ul {
     padding-left: 1em;
+  }
+}
+
+
+/* ====================
+  History page
+*/
+
+.history {
+  img {
+    width: 100%;
+  }
+}
+
+#snapshot-2013 {
+  .blog-read-more {
+    float: right;
+    margin-top: 2em;
+  }
+}
+
+.blog-read-more {
+  a::after {
+    content: " >>";
+  }
+}
+
+.blog-posts {
+  position: relative;
+  img {
+    width: 100%;
+  }
+  h3 {
+    margin-top: 0;
+  }
+  .blog-date {
+    font-style: italic;
+    color: @midgrey;
+  }
+  .blog-read-more {
+    position: absolute;
+    margin-top: 0;
   }
 }
