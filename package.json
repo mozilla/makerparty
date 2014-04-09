@@ -2,7 +2,7 @@
   "name": "makerparty",
   "version": "0.0.3",
   "description": "Mozilla Maker Party Site",
-  "main": "app/js/app.js",
+  "main": "server/js/server.js",
   "scripts": {
     "postinstall": "bower install; grunt heroku"
   },

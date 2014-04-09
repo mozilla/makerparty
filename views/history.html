@@ -13,14 +13,14 @@
 {% endblock %}
 
 {% block banner %}
-  <div class="banner">
+  <div class="banner jumbotron">
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-8">
           <h1>{{ gettext("History") }}</h1>
           <p class="lead">{{ gettext("History Desc") }}</p>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-4">
         </div>
       </div>
     </div>
@@ -132,8 +132,8 @@
     <div class="container top-spacing">
       <div class="row">
         <div class="col-md-12">
-          <div class="left-corner"></div>
-          <div class="right-corner"></div>
+          <div class="top-left-corner circle-corner"></div>
+          <div class="top-right-corner circle-corner"></div>
         </div>
       </div>
     </div>
@@ -232,9 +232,11 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container bottom-spacing">
       <div class="row">
         <div class="col-md-12">
+          <div class="bottom-left-corner circle-corner"></div>
+          <div class="bottom-right-corner circle-corner"></div>
         </div>
       </div>
     </div>

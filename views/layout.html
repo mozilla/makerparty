@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" href="img/makerparty_favicon.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
   <link href="//mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="bower_components/jquery-colorbox/example4/colorbox.css" />
   <link rel="stylesheet" href="compiled/style.min.css">
 </head>
 {% block bodyOpen %}
@@ -53,6 +54,8 @@
     {% block callout %}
       <div class="call-out">
         <div class="container">
+          <div class="left-triangle"></div>
+          <div class="right-triangle"></div>
           <div class="row">
             <div class="col-md-12 text-center">
               <h2>{{ gettext("Maker Party 2014 runs from July 15 to September 15.") }}</h2>
@@ -104,7 +107,7 @@
             <div class="col-md-5">
               <form id="form-get-updates">
                 <input type="email" placeholder="Sign up for email updates" required />
-                <button type="submit" class="btn btn-form-submit"><i class="fa fa-caret-right"></i></button>
+                <button type="submit" class="btn btn-mp-green"><i class="fa fa-caret-right"></i></button>
               </form>
             </div>
           </div>
@@ -144,6 +147,7 @@
 
   <script src="config.js"></script>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/jquery-colorbox/jquery.colorbox-min.js"></script>
   <script src="http://mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
 
   <script src="js/ui.js"></script>

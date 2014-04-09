@@ -37,7 +37,7 @@
   margin-top: 25px;
 }
 
-.btn-form-submit {
+.btn-mp-green {
   background: @mp-green;
   color: @mp-yellow;
   text-transform: uppercase;
@@ -106,7 +106,6 @@ ul.nav-webmaker-logo {
 }
 
 .navbar-toggle {
-
   @media (min-width: @screen-sm-min) {
   }
 }
@@ -115,20 +114,52 @@ ul.nav-webmaker-logo {
   padding-left: 0;
 }
 
-.banner {
+.navbar.navbar-inverse.navbar-no-header-xs {
+  margin-bottom: 0;
+}
+
+.banner.jumbotron {
   .big-section;
+  color: inherit;
+  background: none;
+  margin-bottom: 0;
   h1 {
-    margin-top: 0;
     line-height: 100%;
+  }
+  .container {
+    margin-bottom: 50px;
   }
 }
 
 .call-out {
-  padding-top: 10px;
   padding-bottom: 10px;
-  margin-bottom: 50px;
-  background: @lightgrey;
-  color: @brand-secondary;
+  position: relative;
+  top: -40px;
+  h2 {
+    margin-top: 10px;
+    color: @mp-green;
+  }
+  .container {
+    background: @mp-yellow;
+    color: #000;
+    position: relative;
+  }
+  .left-triangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-bottom: 40px solid #cdbd2c;
+    position: absolute;
+    left: -25px;
+  }
+  .right-triangle {
+    width: 0;
+    height: 0;
+    border-right: 25px solid transparent;
+    border-bottom: 40px solid #cdbd2c;
+    position: absolute;
+    right: -25px;
+  }
 }
 
 footer {
@@ -239,6 +270,10 @@ footer {
   }
 }
 
+#cboxOverlay {
+  background: @mp-green;
+}
+
 .collage {
   @media (max-width: @screen-xs-max) {
     .collage-row {
@@ -253,7 +288,7 @@ footer {
         max-height: 100%;
       }
     }
-    img:not(:first-child) {
+    .collage-row a:not(:first-child) img {
       margin-left: 5px;
     }
     .collage-row:first-child {
@@ -375,6 +410,15 @@ footer {
   Partners page
 */
 
+.partners {
+  .banner {
+    background-image: url('../img/makerparty_partners_header_yellow.jpg');
+    background-size: cover;
+    background-position: center center;
+    min-height: 300px;
+  }
+}
+
 .who-why-partner {
   .nested-row {
     margin-top: 0;
@@ -424,7 +468,7 @@ footer {
 
 .blog-read-more {
   a::after {
-    content: " >>";
+    content: " »";
   }
 }
 
@@ -451,27 +495,38 @@ footer {
     background: @lightgrey;
     padding-bottom: 20px;
   }
+
+  .circle-corner {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+  }
+
   .top-spacing {
     padding-top: 20px;
-    .left-corner {
-      width: 50px;
-      height: 50px;
-      background: #fff;
-      border-radius: 50%;
-      position: absolute;
+    .top-left-corner {
       top: -55px;
       left: -25px;
     }
-    .right-corner {
-      width: 50px;
-      height: 50px;
-      background: #fff;
-      border-radius: 50%;
-      position: absolute;
+    .top-right-corner {
       top: -55px;
       right: -25px;
     }
   }
+
+  .bottom-spacing {
+    .bottom-left-corner {
+      top: 0px;
+      left: -25px;
+    }
+    .bottom-right-corner {
+      top: 0;
+      right: -25px;
+    }
+  }
+
   .outer-wrapper.header {
     background: @mp-green;
     margin: 0 auto;
@@ -526,5 +581,31 @@ footer {
     h4 {
       color: #fff;
     }
+  }
+
+  .the-list {
+    ul {
+      margin-top: 30px;
+      list-style-type: none;
+    }
+    li:before {
+      content:'\2022';
+      color: @mp-green;
+      margin-right: 5px;
+    }
+  }
+}
+
+
+/* ====================
+  Resources page
+*/
+
+.resources {
+  .banner {
+    background-image: url('../img/makerparty_partners_header_badgeyellow2.jpg');
+    background-size: cover;
+    background-position: center center;
+    min-height: 300px;
   }
 }
