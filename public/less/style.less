@@ -136,10 +136,22 @@ footer {
   background: @brand-secondary;
   color: #fff;
 
-  img {
-    width: 100%;
-    height: 100%;
-    opacity: .6;
+  .footer-wordmark {
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: .6;
+    }
+    @media (max-width: @screen-sm-min) {
+      width: 60%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer-wordmark + .footer-links {
+    @media (max-width: @screen-sm-min) {
+      margin-top: 10px;
+    }
   }
 
   .footer-links {
@@ -158,8 +170,8 @@ footer {
 .sponsorship-partners {
   .big-section;
   img {
-    width: 50%;
-    height: 50%;
+    max-width: 200px;
+    width: 80%;
   }
 }
 
@@ -277,6 +289,7 @@ footer {
   .wordmarks {
     img {
       max-width: 250px;
+      width: 30%;
     }
     img:first-child {
       margin-right: 20px;
@@ -345,21 +358,12 @@ footer {
 
   .avatar-container {
     text-align: left;
-    padding-left: 50px;
+    padding-top: 20px;
+    @media (max-width: @screen-md-min) {
+      padding-left: 50px;
+    }
     @media (min-width: @screen-md-min) {
       .text-center;
-    }
-  }
-
-  .avatar-pic{
-    background: #EDEDED;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 8px solid #fff;
-    margin: 0;
-    @media (min-width: @screen-md-min) {
-      margin: 0 auto;
     }
   }
 
@@ -439,5 +443,88 @@ footer {
   .blog-read-more {
     position: absolute;
     margin-top: 0;
+  }
+}
+
+.past-partners-list {
+  .container {
+    background: @lightgrey;
+    padding-bottom: 20px;
+  }
+  .top-spacing {
+    padding-top: 20px;
+    .left-corner {
+      width: 50px;
+      height: 50px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: -55px;
+      left: -25px;
+    }
+    .right-corner {
+      width: 50px;
+      height: 50px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: -55px;
+      right: -25px;
+    }
+  }
+  .outer-wrapper.header {
+    background: @mp-green;
+    margin: 0 auto;
+    @media (min-width: @screen-sm-min) {
+      width: calc( @screen-sm-min + 20px );
+      .fold-in-left {
+        float: left;
+        width: 0;
+        height: 0;
+        border-top: 0 solid transparent;
+        border-bottom: 20px solid transparent;
+        border-right: 20px solid #007f89;
+      }
+      .fold-in-right {
+        float: right;
+        width: 0;
+        height: 0;
+        border-top: 0 solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid #007f89;
+      }
+    }
+    @media (min-width: @screen-md-min) {
+      width: calc( @screen-md-min + 30px );
+      .fold-in-left {
+        border-bottom: 30px solid transparent;
+        border-right: 30px solid #007f89;
+      }
+      .fold-in-right {
+        border-bottom: 30px solid transparent;
+        border-left: 30px solid #007f89;
+      }
+    }
+    @media (min-width: @screen-lg-min) {
+      width: calc( @screen-lg-min + 30px );
+    }
+    .row {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .container,
+    .content {
+      background: @mp-green;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 10px;
+    }
+    h2 {
+      font-weight: bold;
+      color: @mp-yellow;
+    }
+    h4 {
+      color: #fff;
+    }
   }
 }
