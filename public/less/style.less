@@ -97,22 +97,25 @@
 }
 
 ul.nav-webmaker-logo {
-  float: right;
+  float: left;
+  margin-left: -50px;
   margin-bottom: 0;
   list-style-type: none;
   img {
     max-height: 60px;
   }
-}
-
-.navbar-collapse {
   @media (min-width: @screen-sm-min) {
-    padding-left: 0;
+    float: right;
   }
 }
 
 .navbar.navbar-inverse.navbar-no-header-xs {
   margin-bottom: 0;
+  .navbar-collapse {
+    @media (min-width: @screen-sm-min) {
+      padding-left: 0;
+    }
+  }
 }
 
 .banner.jumbotron {
