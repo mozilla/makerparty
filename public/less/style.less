@@ -445,10 +445,14 @@ footer {
 }
 
 .partner-yellow-cta .container {
-  background: @mp-yellow;
+  background-color: @mp-yellow;
+  background-image: url("../img/makerparty_pattern_light.png");
+  background-size: 314px 200px;
+  background-repeat: repeat repeat;
 
   h2 {
     color: @mp-green;
+    margin-bottom: 0;
   }
 }
 
@@ -631,10 +635,34 @@ footer {
     background-position: center center;
     min-height: 300px;
   }
+  .docs-section {
+  }
+  .graphics-section {
+
+  }
   .asset {
+    .doc-preview {
+      .text-center;
+      i {
+        color: @mp-green;
+        font-size: 150px;
+      }
+    }
     .preview {
       background: @lightgrey;
-      min-height: 200px;
+      img {
+        width: 100%;
+      }
+    }
+    .download-links {
+      .text-center;
+      margin-top: 10px;
+      a:not(:first-child) {
+        margin-left: 15px;
+      };
+      i {
+        margin-right: 5px;
+      }
     }
   }
 }

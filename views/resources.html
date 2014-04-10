@@ -28,7 +28,7 @@
 {% endblock %}
 
 {% block mainContent %}
-  <div class="big-section">
+  <div class="big-section docs-section">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -38,26 +38,35 @@
       </div>
       <div class="row">
         <div class="col-md-3 asset">
-          <div class="preview"></div>
-          <p>{{ gettext("") }}</p>
+          <div class="doc-preview">
+            <i class="fa fa-file-text-o"></i>
+          </div>
+          <div class="download-links">
+            <a href=""><i class="fa fa-download"></i>{{ gettext("Resource PDF") }}</a>
+          </div>
         </div>
         <div class="col-md-3 asset">
-          <div class="preview"></div>
-          <p>{{ gettext("") }}</p>
+          <div class="doc-preview">
+            <i class="fa fa-file-text-o"></i>
+          </div>
+          <div class="download-links">
+            <a href=""><i class="fa fa-download"></i>{{ gettext("Agreenment PDF") }}</a>
+          </div>
         </div>
         <div class="col-md-3 asset">
-          <div class="preview"></div>
-          <p>{{ gettext("") }}</p>
-        </div>
-        <div class="col-md-3 asset">
-          <div class="preview"></div>
-          <p>{{ gettext("") }}</p>
+          <div class="doc-preview">
+            <!-- <i class="fa fa-file-text-o"></i> -->
+          </div>
+        </div><div class="col-md-3 asset">
+          <div class="doc-preview">
+            <!-- <i class="fa fa-file-text-o"></i> -->
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="big-section">
+  <div class="big-section graphics-section">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -67,20 +76,36 @@
       </div>
       <div class="row">
         <div class="col-md-3 asset">
-          <div class="preview"></div>
-          <p>{{ gettext("") }}</p>
+          <h3>{{ gettext("Logo") }}</h3>
+          <div class="preview">
+            <img src="resources/MakerPartyLogo-thumb.png" />
+          </div>
+          <div class="download-links">
+            <a href="resources/MakerPartyLogo.eps" target="_blank"><i class="fa fa-download"></i>{{ gettext("EPS") }}</a>
+            <a href="resources/MakerPartyLogo.png" target="_blank" target="_blank"><i class="fa fa-download"></i>{{ gettext("PNG") }}</a>
+          </div>
         </div>
         <div class="col-md-3 asset">
-          <div class="preview"></div>
-          <p>{{ gettext("") }}</p>
+          <h3>{{ gettext("Wordmark") }}</h3>
+          <div class="preview">
+            <img src="resources/MakerPartyWordmark-thumb.png" />
+          </div>
+          <div class="download-links">
+            <a href="resources/MakerPartyWordmark.eps" target="_blank"><i class="fa fa-download"></i>{{ gettext("EPS") }}</a>
+            <a href="resources/MakerPartyWordmark.png" target="_blank" target="_blank"><i class="fa fa-download"></i>{{ gettext("PNG") }}</a>
+          </div>
         </div>
         <div class="col-md-3 asset">
-          <div class="preview"></div>
-          <p>{{ gettext("") }}</p>
+          <h3>{{ gettext("Brand Palette") }}</h3>
+          <div class="preview">
+            <img src="resources/MakerPartyBrandPalette-thumb.jpg" />
+          </div>
+          <div class="download-links">
+            <a href="resources/MakerPartyBrandPalette.eps"><i class="fa fa-download"></i>{{ gettext("EPS") }}</a>
+            <a href="resources/MakerPartyBrandPalette.png" target="_blank"><i class="fa fa-download"></i>{{ gettext("PNG") }}</a>
+          </div>
         </div>
         <div class="col-md-3 asset">
-          <div class="preview"></div>
-          <p>{{ gettext("") }}</p>
         </div>
       </div>
     </div>
