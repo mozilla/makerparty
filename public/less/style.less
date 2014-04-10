@@ -105,13 +105,10 @@ ul.nav-webmaker-logo {
   }
 }
 
-.navbar-toggle {
-  @media (min-width: @screen-sm-min) {
-  }
-}
-
 .navbar-collapse {
-  padding-left: 0;
+  @media (min-width: @screen-sm-min) {
+    padding-left: 0;
+  }
 }
 
 .navbar.navbar-inverse.navbar-no-header-xs {
@@ -137,28 +134,32 @@ ul.nav-webmaker-logo {
   top: -40px;
   h2 {
     margin-top: 10px;
-    color: @mp-green;
+    color: #fff;
   }
   .container {
-    background: @mp-yellow;
-    color: #000;
+    background: #99d2d4;
+    color: @mp-green;
     position: relative;
   }
   .left-triangle {
-    width: 0;
-    height: 0;
-    border-left: 25px solid transparent;
-    border-bottom: 40px solid #cdbd2c;
-    position: absolute;
-    left: -25px;
+    @media (min-width: 830px ) {
+      width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-bottom: 40px solid @mp-green;
+      position: absolute;
+      left: -25px;
+    }
   }
   .right-triangle {
-    width: 0;
-    height: 0;
-    border-right: 25px solid transparent;
-    border-bottom: 40px solid #cdbd2c;
-    position: absolute;
-    right: -25px;
+    @media (min-width: 830px ) {
+      width: 0;
+      height: 0;
+      border-right: 25px solid transparent;
+      border-bottom: 40px solid @mp-green;
+      position: absolute;
+      right: -25px;
+    }
   }
 }
 
@@ -251,6 +252,15 @@ footer {
 /* ====================
   HOME page
 */
+
+.home {
+  .banner {
+    background-image: url('../img/makerparty_landing_image2.jpg');
+    background-size: cover;
+    background-position: center center;
+    min-height: 300px;
+  }
+}
 
 .home-banner-video {
   padding-bottom: 66.66%;
@@ -454,6 +464,16 @@ footer {
 */
 
 .history {
+  .banner {
+    background-image: url('../img/makerparty_history_headeryellow2.jpg');
+    background-size: cover;
+    background-position: center center;
+    min-height: 300px;
+  }
+}
+
+
+.history {
   img {
     width: 100%;
   }
@@ -607,5 +627,11 @@ footer {
     background-size: cover;
     background-position: center center;
     min-height: 300px;
+  }
+  .asset {
+    .preview {
+      background: @lightgrey;
+      min-height: 200px;
+    }
   }
 }
