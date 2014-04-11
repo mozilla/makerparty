@@ -53,15 +53,15 @@
           <h1>{{ gettext("Maker Party 2013 Blog Posts") }}</h1>
         </div>
       </div>
-      <div class="row">
-        <div class="blog-post">
+      <div class="row blog-row" id="first-blog-row">
+        <div class="blog-post" id="blog-1">
           <div class="col-md-3 col-sm-2">
             <img src="img/blog/blog1.png" />
           </div>
           <div class="col-md-3 col-sm-4">
             <h3>{{ gettext("Blog 1") }}</h3>
             <p class="blog-date">{{ gettext("Blog 1 Date") }}</p>
-            <p>{{ gettext("Blog 1 Desc") }}</p>
+            <p class="blog-excerpt">{{ gettext("Blog 1 Desc") }}</p>
             <div class="blog-read-more"><a href="https://blog.webmaker.org/reports-from-maker-party-2013">{{ gettext("Read more") }}</a></div>
           </div>
         </div>
@@ -72,12 +72,12 @@
           <div class="col-md-3 col-sm-4">
             <h3>{{ gettext("Blog 2") }}</h3>
             <p class="blog-date">{{ gettext("Blog 1 Date") }}</p>
-            <p>{{ gettext("Blog 2 Desc") }}</p>
+            <p class="blog-excerpt">{{ gettext("Blog 2 Desc") }}</p>
             <div class="blog-read-more"><a href="https://blog.webmaker.org/maker-parties-in-asia">{{ gettext("Read more") }}</a></div>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row blog-row">
         <div class="blog-post">
           <div class="col-md-3 col-sm-2">
             <img src="img/blog/blog3.png" />
@@ -85,7 +85,7 @@
           <div class="col-md-3 col-sm-4">
             <h3>{{ gettext("Blog 3") }}</h3>
             <p class="blog-date">{{ gettext("Blog 1 Date") }}</p>
-            <p>{{ gettext("Blog 3 Desc") }}</p>
+            <p class="blog-excerpt">{{ gettext("Blog 3 Desc") }}</p>
             <div class="blog-read-more"><a href="https://blog.webmaker.org/jamboree-maker-party">{{ gettext("Read more") }}</a></div>
           </div>
         </div>
@@ -96,12 +96,12 @@
           <div class="col-md-3 col-sm-4">
             <h3>{{ gettext("Blog 4") }}</h3>
             <p class="blog-date">{{ gettext("Blog 1 Date") }}</p>
-            <p>{{ gettext("Blog 4 Desc") }}</p>
+            <p class="blog-excerpt">{{ gettext("Blog 4 Desc") }}</p>
             <div class="blog-read-more"><a href="https://blog.webmaker.org/babymaker">{{ gettext("Read more") }}</a></div>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row blog-row">
         <div class="blog-post">
           <div class="col-md-3 col-sm-2">
             <img src="img/blog/blog5.png" />
@@ -109,7 +109,7 @@
           <div class="col-md-3 col-sm-4">
             <h3>{{ gettext("Blog 5") }}</h3>
             <p class="blog-date">{{ gettext("Blog 5 Date") }}</p>
-            <p>{{ gettext("Blog 5 Desc") }}</p>
+            <p class="blog-excerpt">{{ gettext("Blog 5 Desc") }}</p>
             <div class="blog-read-more"><a href="https://blog.webmaker.org/nyc-makery">{{ gettext("Read more") }}</a></div>
           </div>
         </div>
@@ -120,7 +120,7 @@
           <div class="col-md-3 col-sm-4">
             <h3>{{ gettext("Blog 6") }}</h3>
             <p class="blog-date">{{ gettext("Blog 6 Date") }}</p>
-            <p>{{ gettext("Blog 6 Desc") }}</p>
+            <p class="blog-excerpt">{{ gettext("Blog 6 Desc") }}</p>
             <div class="blog-read-more"><a href="https://blog.webmaker.org/hack-n-chat">{{ gettext("Read more") }}</a></div>
           </div>
         </div>
@@ -181,7 +181,7 @@
           </ul>
         </div>
         <div class="col-md-4">
-          <ul class="sublist-1">
+          <ul class="sublist-2">
             <li><a href="http://girlslearningcode.com/events">{{ gettext("Girls Learning Code and Kids Learning Code") }}</a></li>
             <li><a href="http://www.girlscoutsgcnwi.org/">{{ gettext("Girl Scouts of Greater Chicago and Northwest Indiana") }}</a></li>
             <li><a href="http://good.is/neighboring">{{ gettext("Good") }}</a></li>
@@ -207,7 +207,7 @@
           </ul>
         </div>
         <div class="col-md-4">
-          <ul class="sublist-1">
+          <ul class="sublist-3">
             <li><a href="https://www.fundforpublicschools.org/nyc-summer-quest-highlights">{{ gettext("NYC Summer Quest: Fund for Public Schools") }}</a></li>
             <li><a href="http://www.o2thinkbig.co.uk/">{{ gettext("O2 Think Big") }}</a></li>
             <li><a href="https://2013.pycon.ca/en/">{{ gettext("PyCon Canada") }}</a></li>
