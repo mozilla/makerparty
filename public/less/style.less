@@ -13,8 +13,31 @@
 
 @import "mixins";
 
+// From Maker Brand Guide
 @mp-yellow: #FFE600;
 @mp-green: #00B0B7;
+@mp-darkgreen: #2A4D50;
+
+// Newly introduced
+@mp-lightblue: #99d2d4;
+@mp-lightyellow: #fbf6b6;
+@mp-grey: #83a4b3;
+
+
+/* ====================
+  Copied from Webmaker Events
+*/
+.btn-banner {
+  font-weight: 200;
+  padding: 15px 18px;
+  margin-bottom: 5px;
+  a {
+    vertical-align: baseline;
+  }
+  .fa {
+    margin-right: 0.3em;
+  }
+}
 
 /* ====================
   Layout / Shared elements
@@ -45,6 +68,11 @@
   text-transform: uppercase;
 }
 
+.btn-mp-green:hover {
+  background: @mp-darkgreen;
+  color: @mp-yellow;
+}
+
 .placeholder-image {
   background: #EDEDED;
   text-align: center;
@@ -61,6 +89,11 @@
   h2 {
     margin-top: 0;
   }
+}
+
+.section-divider {
+  width: 100%;
+  border-top: 1px solid @lightgrey;
 }
 
 .navbar {
@@ -101,6 +134,12 @@ ul.nav-webmaker-logo {
   margin-left: -50px;
   margin-bottom: 0;
   list-style-type: none;
+  a {
+    display: block;
+  }
+  a:hover {
+    background: #01527D;
+  };
   img {
     max-height: 60px;
   }
@@ -118,16 +157,30 @@ ul.nav-webmaker-logo {
   }
 }
 
+.navbar-makerparty .navbar-toggle {
+  background: @mp-lightblue;
+  color: @mp-darkgreen;
+}
+
+.navbar-makerparty .navbar-toggle:hover {
+  background: @mp-lightyellow;
+}
+
 .banner.jumbotron {
   .big-section;
   color: inherit;
   background: none;
   margin-bottom: 0;
   h1 {
+    color: @brand-secondary;
     line-height: 100%;
   }
   .container {
     margin-bottom: 50px;
+  }
+  .cta-button-container p.ctn-desc {
+    font-size: 21px;
+    line-height: 1;
   }
 }
 
@@ -140,7 +193,7 @@ ul.nav-webmaker-logo {
     color: #fff;
   }
   .container {
-    background: #99d2d4;
+    background: @mp-lightblue;
     color: @mp-green;
     position: relative;
   }
@@ -204,9 +257,18 @@ footer {
 
 .sponsorship-partners {
   .big-section;
-  img {
-    max-width: 200px;
-    width: 80%;
+  .logos {
+    margin-top: 20px;
+    .text-center;
+    img {
+      max-width: 200px;
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+      @media (max-width: @screen-md-min) {
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 
@@ -249,6 +311,11 @@ footer {
       margin-left: -3px;
     }
   }
+  @media (max-width: @screen-md-min) {
+    #bullhorn {
+      display: none;
+    }
+  }
 }
 
 
@@ -258,6 +325,7 @@ footer {
 
 .home {
   .banner {
+    background: @mp-lightyellow;
     background-image: url('../img/makerparty_landing_image2.jpg');
     background-size: cover;
     background-position: center center;
@@ -269,6 +337,7 @@ footer {
   padding-bottom: 66.66%;
   height: 0;
   position: relative;
+  margin-top: 20px; /* so that it aligns with the h1 in banner */
   margin-bottom: 20px;
   iframe {
     position: absolute;
@@ -280,6 +349,18 @@ footer {
 .how-mp-work {
   img {
     width: 100%;
+  }
+  .modules:not(:last-child) {
+    @media (max-width: @screen-sm-min) {
+      h3 {
+        margin-top: 13px;
+      }
+    }
+  }
+  .modules:not(:last-child) {
+    @media (max-width: @screen-sm-min) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -335,12 +416,8 @@ footer {
     width: 100%;
   }
   .wordmarks {
-    img {
-      max-width: 250px;
-      width: 30%;
-    }
-    img:first-child {
-      margin-right: 20px;
+    a img {
+      width: 100%;
     }
   }
 }
@@ -409,9 +486,16 @@ footer {
     padding-top: 20px;
     @media (max-width: @screen-md-min) {
       padding-left: 50px;
+      .row {
+        margin-top: 0;
+      }
     }
     @media (min-width: @screen-md-min) {
       .text-center;
+    }
+    .job-title {
+      color: @mp-grey;
+      font-style: italic;
     }
   }
 
@@ -509,7 +593,7 @@ footer {
   }
   .blog-date {
     font-style: italic;
-    color: @midgrey;
+    color: @mp-grey;
   }
   .blog-read-more {
     position: absolute;

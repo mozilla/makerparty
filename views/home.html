@@ -25,8 +25,12 @@
           <h1>{{ gettext("Teach, Learn & Make") }}</h1>
           <p class="lead">{{ gettext("Home Banner Desc") }}</p>
           <div class="cta-button-container">
-            <p><i>{{ gettext("We want people to throw or attend an event.") }}</i></p>
-            <p><a class="btn btn-mp-green" href="/partners">{{ gettext("Become a Partner") }}</a></p>
+            <p class="ctn-desc"><small><i>{{ gettext("We want people to throw or attend an event.") }}</i></small></p>
+            <p>
+              <a class="btn btn-banner btn-mp-green btn-lg" href="/partners">
+                {{ gettext("Become a Partner") }}
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -43,17 +47,17 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 col-sm-4">
+        <div class="col-md-4 col-sm-4 modules">
           <img src="img/makerparty_hostanevent_illustration.png" />
           <h3>{{ gettext("Host an Event") }}</h3>
           <p>{{ gettext("Host an Event Desc") }}</p>
         </div>
-        <div class="col-md-4 col-sm-4">
-          <img src="img/makerparty_attendanevent_illustration.png" />
+        <div class="col-md-4 col-sm-4 modules">
+          <img src="img/makerparty_attendanevent_illustration2.png" />
           <h3>{{ gettext("Attend an Event") }}</h3>
           <p>{{ gettext("Attend an Event Desc") | safe }}</p>
         </div>
-        <div class="col-md-4 col-sm-4">
+        <div class="col-md-4 col-sm-4 modules">
           <img src="img/makerparty_getsupport_illustration.png" />
           <h3>{{ gettext("Get Support") }}</h3>
           <p>{{ gettext("Get Support Desc") }}</p>
@@ -62,14 +66,19 @@
     </div>
   </div>
 
-  <div class="big-section">
+  <div class="container">
+    <div class="section-divider">
+    </div>
+  </div>
+
+  <div>
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 big-section">
           <h2>{{ gettext("Have fun with our tools") }}</h2>
           <p>{{ gettext("Have fun with our tools Desc") | safe }}</p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 big-section">
           <h2>{{ gettext("Learn by teaching") }}</h2>
           <p>{{ gettext("Learn by teaching Desc") | safe }}</p>
         </div>
@@ -127,10 +136,18 @@
           </div>
           <div class="row">
             <div class="col-md-12">
-              <h3>{{ gettext("Learn more about us") }}</h3>
-              <div class="wordmarks">
-                <a href="https://webmaker.org/"><img src="img/webmaker_wordmark.png" /></a>
-                <a href="http://mozilla.org/"><img src="img/mozilla_wordmark.png" /></a>
+              <div class="row">
+                <div class="col-md-12">
+                  <h3>{{ gettext("Learn more about us") }}</h3>
+                </div>
+              </div>
+              <div class="row wordmarks">
+                <div class="col-md-3 col-xs-6">
+                  <a href="https://webmaker.org/"><img src="img/webmaker_wordmark_update.png" /></a>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                  <a href="http://mozilla.org/"><img src="img/mozilla_wordmark_update.png" /></a>
+                </div>
               </div>
             </div>
           </div>
@@ -160,8 +177,8 @@
           <div class="row">
             <div class="col-md-12">
               <p>
-                {{ gettext("Testimonials Quote #1 Name") }} <br />
-                {{ gettext("Testimonials Quote #1 Title") }} <br />
+                <span class="lead"><strong>{{ gettext("Testimonials Quote #1 Name") }}</strong></span> <br />
+                <span class="job-title">{{ gettext("Testimonials Quote #1 Title") }}</span> <br />
                 <a href="https://www.ywcatoronto.org/page.asp?l1=54&pid=162">{{ gettext("Testimonials Quote #1 Org") }} </a>
               </p>
             </div>
