@@ -4,11 +4,11 @@
 {% block bodyOpen %}<body class="partners">{% endblock %}
 {% block navItems %}
 <ul class="nav navbar-nav">
-  <li><a href="/">{{ gettext("Maker Party") }}</a></li>
-  <li><a href="https://events.webmaker.org">{{ gettext("Events") }}</a></li>
+  <li><a href="/">{{ gettext("Home") }}</a></li>
   <li class="active"><a href="/partners">{{ gettext("Partners") }}</a></li>
   <li><a href="/resources">{{ gettext("Resources") }}</a></li>
   <li><a href="/history">{{ gettext("History") }}</a></li>
+  <li><a href="https://events.webmaker.org" target="_blank">{{ gettext("Events") }}</a></li>
 </ul>
 {% endblock %}
 
@@ -16,15 +16,13 @@
   <div class="banner jumbotron">
     <div class="container">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <h1>{{ gettext("Help us teach the web") }}</h1>
           <p class="lead">{{ gettext("Help us teach the web Desc") }}</p>
           <div class="cta-button-container">
             <p><i>{{ gettext("Partner with Mozilla to teach the web.") }}</i></p>
             <p><a class="btn btn-banner btn-mp-green" href="https://sendto.mozilla.org/page/s/maker-party-partner-signup-2014">{{ gettext("Register Now!") }}</a></p>
           </div>
-        </div>
-        <div class="col-md-4">
         </div>
       </div>
     </div>

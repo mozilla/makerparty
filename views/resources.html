@@ -4,11 +4,11 @@
 {% block bodyOpen %}<body class="resources">{% endblock %}
 {% block navItems %}
 <ul class="nav navbar-nav">
-  <li><a href="/">{{ gettext("Maker Party") }}</a></li>
-  <li><a href="https://events.webmaker.org">{{ gettext("Events") }}</a></li>
+  <li><a href="/">{{ gettext("Home") }}</a></li>
   <li><a href="/partners">{{ gettext("Partners") }}</a></li>
   <li class="active"><a href="/resources">{{ gettext("Resources") }}</a></li>
   <li><a href="/history">{{ gettext("History") }}</a></li>
+  <li><a href="https://events.webmaker.org" target="_blank">{{ gettext("Events") }}</a></li>
 </ul>
 {% endblock %}
 
@@ -16,11 +16,9 @@
   <div class="banner jumbotron">
     <div class="container">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <h1>{{ gettext("Resources") }}</h1>
           <p class="lead">{{ gettext("Resources Banner Desc") }}</p>
-        </div>
-        <div class="col-md-4">
         </div>
       </div>
     </div>
@@ -37,7 +35,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-3 asset">
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
           <div class="doc-preview">
             <i class="fa fa-file-text-o"></i>
           </div>
@@ -45,7 +43,7 @@
             <a href=""><i class="fa fa-download"></i>{{ gettext("Resource PDF") }}</a>
           </div>
         </div>
-        <div class="col-md-3 asset">
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
           <div class="doc-preview">
             <i class="fa fa-file-text-o"></i>
           </div>
@@ -53,11 +51,12 @@
             <a href=""><i class="fa fa-download"></i>{{ gettext("Agreement PDF") }}</a>
           </div>
         </div>
-        <div class="col-md-3 asset">
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
           <div class="doc-preview">
             <!-- <i class="fa fa-file-text-o"></i> -->
           </div>
-        </div><div class="col-md-3 asset">
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
           <div class="doc-preview">
             <!-- <i class="fa fa-file-text-o"></i> -->
           </div>
@@ -75,7 +74,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-3 asset">
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
           <h3>{{ gettext("Logo") }}</h3>
           <div class="preview">
             <img src="resources/MakerPartyLogo-thumb.png" />
@@ -85,7 +84,7 @@
             <a href="resources/MakerPartyLogo.png" target="_blank" target="_blank"><i class="fa fa-download"></i>{{ gettext("PNG") }}</a>
           </div>
         </div>
-        <div class="col-md-3 asset">
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
           <h3>{{ gettext("Wordmark") }}</h3>
           <div class="preview">
             <img src="resources/MakerPartyWordmark-thumb.png" />
@@ -95,7 +94,7 @@
             <a href="resources/MakerPartyWordmark.png" target="_blank" target="_blank"><i class="fa fa-download"></i>{{ gettext("PNG") }}</a>
           </div>
         </div>
-        <div class="col-md-3 asset">
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
           <h3>{{ gettext("Brand Palette") }}</h3>
           <div class="preview">
             <img src="resources/MakerPartyBrandPalette-thumb.jpg" />
@@ -105,7 +104,7 @@
             <a href="resources/MakerPartyBrandPalette.png" target="_blank"><i class="fa fa-download"></i>{{ gettext("PNG") }}</a>
           </div>
         </div>
-        <div class="col-md-3 asset">
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
         </div>
       </div>
     </div>

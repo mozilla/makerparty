@@ -178,7 +178,6 @@ ul.nav-webmaker-logo {
   background: none;
   margin-bottom: 0;
   h1 {
-    color: @brand-secondary;
     line-height: 100%;
   }
   .container {
@@ -191,36 +190,35 @@ ul.nav-webmaker-logo {
 }
 
 .call-out {
+  color: #fff;
   padding-bottom: 10px;
   position: relative;
   top: -40px;
   h2 {
     margin-top: 10px;
-    color: #fff;
   }
   .container {
     background: @mp-lightblue;
-    color: @mp-green;
     position: relative;
   }
   .left-triangle {
     @media (min-width: 830px ) {
       width: 0;
       height: 0;
-      border-left: 25px solid transparent;
+      border-left: 10px solid transparent;
       border-bottom: 40px solid @mp-green;
       position: absolute;
-      left: -25px;
+      left: -10px;
     }
   }
   .right-triangle {
     @media (min-width: 830px ) {
       width: 0;
       height: 0;
-      border-right: 25px solid transparent;
+      border-right: 10px solid transparent;
       border-bottom: 40px solid @mp-green;
       position: absolute;
-      right: -25px;
+      right: -10px;
     }
   }
 }
@@ -270,6 +268,10 @@ footer {
 
 .sponsorship-partners {
   .big-section;
+  padding-top: 0;
+  h3 {
+    margin-bottom: 40px;
+  }
   .logos {
     margin-top: 20px;
     .text-center;
@@ -289,20 +291,19 @@ footer {
   padding-top: 5px;
   padding-bottom: 10px;
   background: @lightgrey;
-  @media (min-width: @screen-lg-min) {
-    h3,
-    p {
-      margin-bottom: 0;
-    }
+  h3 {
+    margin-top: 0;
   }
   img {
     width: 100%;
     height: 100%;
+    @media (max-width: @screen-sm-max) {
+      margin-top: 10px;
+    }
   }
   #form-get-updates {
-    position: relative;
-    top: -5px;
     input[type="email"] {
+      float: left;
       width: 80%;
       width: calc( 100% - 10px );
       padding-left: 5px;
@@ -314,13 +315,17 @@ footer {
       line-height: 17px;
     }
     button[type="submit"] {
-      height: 22px;
-      width: 22px;
+      float: left;
+      height: 34px;
+      width: 34px;
       padding-top: 2px;
       padding-bottom: 0;
-      margin-top: -2px;
-      margin-left: 0px;
+      margin-left: 3px;
       border: none;
+    }
+    #pp-container {
+      display: block;
+      clear: both;
     }
     input[type="checkbox"] {
       margin-top: 15px;
@@ -501,16 +506,12 @@ footer {
   }
 
   .avatar-container {
-    text-align: left;
     padding-top: 20px;
     @media (max-width: @screen-sm-max) {
       padding-left: 50px;
       .row {
         margin-top: 0;
       }
-    }
-    @media (min-width: @screen-md-min) {
-      .text-center;
     }
     .job-title {
       color: @mp-grey;
@@ -589,6 +590,12 @@ footer {
 }
 
 #snapshot-2013 {
+  div a > img {
+    padding-right: 25px;
+  }
+  img {
+    margin-top: 20px;
+  }
   .blog-read-more {
     float: right;
     margin-top: 2em;
@@ -607,7 +614,7 @@ footer {
     width: 100%;
   }
   h3 {
-    margin-top: 0;
+    margin-top: 5px;
   }
   .blog-post {
     .blog-date {
@@ -634,7 +641,7 @@ footer {
 
   .container {
     background: @lightgrey;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
   .circle-corner {
@@ -725,14 +732,15 @@ footer {
   }
 
   .the-list {
+    .list.list-inset {
+      padding-left: 35px;
+    }
     ul {
       margin-top: 30px;
       list-style-type: none;
-    }
-    li:before {
-      content:'\2022';
-      color: @mp-green;
-      margin-right: 5px;
+      li {
+        line-height: 1.7;
+      }
     }
     @media (max-width: @screen-xs-max) {
       .sublist-1,

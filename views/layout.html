@@ -31,11 +31,11 @@
         <div class="navbar-collapse collapse" id="mp-navbar-row">
           {% block navItems %}
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">{{ gettext("Maker Party") }}</a></li>
-            <li><a href="https://events.webmaker.org">{{ gettext("Events") }}</a></li>
+            <li class="active"><a href="/">{{ gettext("Home") }}</a></li>
             <li><a href="/partners">{{ gettext("Partners") }}</a></li>
             <li><a href="/resources">{{ gettext("Resources") }}</a></li>
             <li><a href="/history">{{ gettext("History") }}</a></li>
+            <li><a href="https://events.webmaker.org" target="_blank">{{ gettext("Events") }}</a></li>
           </ul>
           {% endblock %}
           <ul class="nav-webmaker-logo">
@@ -94,20 +94,16 @@
         </div>
         <div class="col-md-10 col-sm-10">
           <div class="row">
-            <div class="col-md-12 col-sm-12">
+            <div class="col-md-4 col-sm-7">
               <h3>{{ gettext("Get Maker Party Updates") }}</h3>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-7">
-              <p>{{ gettext("Get Maker Party Updates Desc") }}</p>
-            </div>
-            <div class="col-md-5">
+            <div class="col-md-8">
               <form id="form-get-updates">
-                <input type="email" placeholder="Sign up for email updates" required />
+                <input type="email" class="form-control" placeholder="Sign up for email updates" required />
                 <button type="submit" class="btn btn-mp-green"><i class="fa fa-caret-right"></i></button>
-                <div>
-                  <input type="checkbox" name="privacy" id="privacy" /><span><small>{{ gettext("Privacy Policy Checkbox") | safe }}</small></span>
+                <div id="pp-container">
+                  <input type="checkbox" name="privacy" id="privacy" />
+                  <span><small>{{ gettext("Privacy Policy Checkbox") | safe }}</small></span>
                 </div>
               </form>
             </div>

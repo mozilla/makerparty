@@ -4,11 +4,11 @@
 {% block bodyOpen %}<body class="history">{% endblock %}
 {% block navItems %}
 <ul class="nav navbar-nav">
-  <li><a href="/">{{ gettext("Maker Party") }}</a></li>
-  <li><a href="https://events.webmaker.org">{{ gettext("Events") }}</a></li>
+  <li><a href="/">{{ gettext("Home") }}</a></li>
   <li><a href="/partners">{{ gettext("Partners") }}</a></li>
   <li><a href="/resources">{{ gettext("Resources") }}</a></li>
   <li class="active"><a href="/history">{{ gettext("History") }}</a></li>
+  <li><a href="https://events.webmaker.org" target="_blank">{{ gettext("Events") }}</a></li>
 </ul>
 {% endblock %}
 
@@ -16,11 +16,9 @@
   <div class="banner jumbotron">
     <div class="container">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <h1>{{ gettext("History") }}</h1>
           <p class="lead">{{ gettext("History Desc") }}</p>
-        </div>
-        <div class="col-md-4">
         </div>
       </div>
     </div>
@@ -32,7 +30,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <img src="img/blog/makerparty-heatmap.png" />
+          <a href="https://blog.webmaker.org/maker-party-by-the-numbers"><img src="img/blog/makerparty-heatmap.png" /></a>
         </div>
         <div class="col-md-6">
           <h1>{{ gettext("Snapshot of Maker Party 2013") }}</h1>
@@ -56,7 +54,7 @@
       <div class="row blog-row" id="first-blog-row">
         <div class="blog-post" id="blog-1">
           <div class="col-md-3 col-sm-2">
-            <img src="img/blog/blog1.png" />
+            <a href="https://blog.webmaker.org/reports-from-maker-party-2013"><img src="img/blog/blog1.png" /></a>
           </div>
           <div class="col-md-3 col-sm-4">
             <h3>{{ gettext("Blog 1") }}</h3>
@@ -67,7 +65,7 @@
         </div>
         <div class="blog-post">
           <div class="col-md-3 col-sm-2">
-            <img src="img/blog/blog2.png" />
+            <a href="https://blog.webmaker.org/maker-parties-in-asia"><img src="img/blog/blog2.png" /></a>
           </div>
           <div class="col-md-3 col-sm-4">
             <h3>{{ gettext("Blog 2") }}</h3>
@@ -80,7 +78,7 @@
       <div class="row blog-row">
         <div class="blog-post">
           <div class="col-md-3 col-sm-2">
-            <img src="img/blog/blog3.png" />
+            <a href="https://blog.webmaker.org/jamboree-maker-party"><img src="img/blog/blog3.png" /></a>
           </div>
           <div class="col-md-3 col-sm-4">
             <h3>{{ gettext("Blog 3") }}</h3>
@@ -91,7 +89,7 @@
         </div>
         <div class="blog-post">
           <div class="col-md-3 col-sm-2">
-            <img src="img/blog/blog4.png" />
+            <a href="https://blog.webmaker.org/babymaker"><img src="img/blog/blog4.png" /></a>
           </div>
           <div class="col-md-3 col-sm-4">
             <h3>{{ gettext("Blog 4") }}</h3>
@@ -104,7 +102,7 @@
       <div class="row blog-row">
         <div class="blog-post">
           <div class="col-md-3 col-sm-2">
-            <img src="img/blog/blog5.png" />
+            <a href="https://blog.webmaker.org/nyc-makery"><img src="img/blog/blog5.png" /></a>
           </div>
           <div class="col-md-3 col-sm-4">
             <h3>{{ gettext("Blog 5") }}</h3>
@@ -115,7 +113,7 @@
         </div>
         <div class="blog-post">
           <div class="col-md-3 col-sm-2">
-            <img src="img/blog/blog6.png" />
+            <a href="https://blog.webmaker.org/hack-n-chat"><img src="img/blog/blog6.png" /></a>
           </div>
           <div class="col-md-3 col-sm-4">
             <h3>{{ gettext("Blog 6") }}</h3>
@@ -152,7 +150,7 @@
     <div class="container the-list">
       <div class="row">
         <div class="col-md-4">
-          <ul class="sublist-1">
+          <ul class="list list-inset sublist-1">
             <li><a href="http://aws.amazon.com/education/">{{ gettext("Amazon") }}</a></li>
             <li><a href="http://www.appsforgood.org/">{{ gettext("Apps for Good") }}</a></li>
             <li><a href="http://bankstreet.edu/">{{ gettext("Bank Street College") }}</a></li>
@@ -181,7 +179,7 @@
           </ul>
         </div>
         <div class="col-md-4">
-          <ul class="sublist-2">
+          <ul class="list list-inset sublist-2">
             <li><a href="http://girlslearningcode.com/events">{{ gettext("Girls Learning Code and Kids Learning Code") }}</a></li>
             <li><a href="http://www.girlscoutsgcnwi.org/">{{ gettext("Girl Scouts of Greater Chicago and Northwest Indiana") }}</a></li>
             <li><a href="http://good.is/neighboring">{{ gettext("Good") }}</a></li>
@@ -207,7 +205,7 @@
           </ul>
         </div>
         <div class="col-md-4">
-          <ul class="sublist-3">
+          <ul class="list list-inset sublist-3">
             <li><a href="https://www.fundforpublicschools.org/nyc-summer-quest-highlights">{{ gettext("NYC Summer Quest: Fund for Public Schools") }}</a></li>
             <li><a href="http://www.o2thinkbig.co.uk/">{{ gettext("O2 Think Big") }}</a></li>
             <li><a href="https://2013.pycon.ca/en/">{{ gettext("PyCon Canada") }}</a></li>

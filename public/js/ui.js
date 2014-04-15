@@ -3,6 +3,18 @@ $(".collage-pics").colorbox({
                    });
 
 
+// Randomly pick a quote to start
+
+showQuote();
+
+function showQuote() {
+  var totalNum = $(".quote-text").length;
+  var indexShown = Math.floor( Math.random()*totalNum );
+  $(".quote-text").eq(indexShown).addClass("current");
+  $(".quote-source").eq(indexShown).addClass("current");
+  setInterval(autoRotatingQuotes, 13000);
+}
+
 // Auto rotates quotes
 
 function rotate(elemClass) {
@@ -15,9 +27,7 @@ function rotate(elemClass) {
   });
 }
 
-function autoRotatingQuotes(elemClass){
+function autoRotatingQuotes(){
   rotate("quote-text");
   rotate("quote-source");
 }
-
-setInterval(autoRotatingQuotes, 13000);

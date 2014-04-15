@@ -4,11 +4,11 @@
 {% block bodyOpen %}<body class="home">{% endblock %}
 {% block navItems %}
 <ul class="nav navbar-nav">
-  <li class="active"><a href="/">{{ gettext("Maker Party") }}</a></li>
-  <li><a href="https://events.webmaker.org">{{ gettext("Events") }}</a></li>
+  <li class="active"><a href="/">{{ gettext("Home") }}</a></li>
   <li><a href="/partners">{{ gettext("Partners") }}</a></li>
   <li><a href="/resources">{{ gettext("Resources") }}</a></li>
   <li><a href="/history">{{ gettext("History") }}</a></li>
+  <li><a href="https://events.webmaker.org" target="_blank">{{ gettext("Events") }}</a></li>
 </ul>
 {% endblock %}
 
@@ -131,22 +131,19 @@
           <div class="row">
             <div class="col-md-12">
               <h2>{{ gettext("Why Mozilla throws an annual Maker Party") }}</h2>
-              <p>{{ gettext("Why Mozilla throws an annual Maker Party Desc") }}</p>
+              <p>{{ gettext("Why Mozilla throws an annual Maker Party Desc") | safe }}</p>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="row">
                 <div class="col-md-12">
-                  <h3>{{ gettext("Learn more about us") }}</h3>
+                  <h3>{{ gettext("Learn more about") }}</h3>
                 </div>
               </div>
               <div class="row wordmarks">
                 <div class="col-md-3 col-xs-6">
                   <a href="https://webmaker.org/"><img src="img/webmaker_wordmark_update.png" /></a>
-                </div>
-                <div class="col-md-3 col-xs-6">
-                  <a href="http://mozilla.org/"><img src="img/mozilla_wordmark_update.png" /></a>
                 </div>
               </div>
             </div>
@@ -167,8 +164,8 @@
         <div class="col-md-8 quote-container">
           <div class="quote">
             <img src="img/makerparty_openquote.png" id="open-quote" />
-            <p class="quote-text current" id="mavis">{{ gettext("Testimonials Quote #1") }}</p>
-            <p class="quote-text" id="ou">{{ gettext("Testimonials Quote #2") }}</p>
+            <p class="quote-text">{{ gettext("Testimonials Quote #1") }}</p>
+            <p class="quote-text">{{ gettext("Testimonials Quote #2") }}</p>
             <img src="img/makerparty_closequote.png" id="close-quote" />
           </div>
           <div class="quote-arrow-right"></div>
@@ -177,13 +174,13 @@
         <div class="col-md-4 avatar-container">
           <div class="row">
             <div class="col-md-12">
-              <p class="quote-source current">
-                <span class="lead"><strong>{{ gettext("Testimonials Quote #1 Name") }}</strong></span> <br />
+              <p class="quote-source">
+                <span class="lead">{{ gettext("Testimonials Quote #1 Name") }}</span> <br />
                 <span class="job-title">{{ gettext("Testimonials Quote #1 Title") }}</span> <br />
                 <a href="https://www.ywcatoronto.org/page.asp?l1=54&pid=162">{{ gettext("Testimonials Quote #1 Org") }} </a>
               </p>
               <p class="quote-source">
-                <span class="lead"><strong>{{ gettext("Testimonials Quote #2 Name") }}</strong></span> <br />
+                <span class="lead">{{ gettext("Testimonials Quote #2 Name") }}</span> <br />
                 <span class="job-title">{{ gettext("Testimonials Quote #2 Title") }}</span> <br />
               </p>
             </div>
