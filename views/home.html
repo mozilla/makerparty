@@ -167,7 +167,8 @@
         <div class="col-md-8 quote-container">
           <div class="quote">
             <img src="img/makerparty_openquote.png" id="open-quote" />
-            <p><i>{{ gettext("Testimonials Quote #1") }}</i></p>
+            <p class="quote-text current" id="mavis">{{ gettext("Testimonials Quote #1") }}</p>
+            <p class="quote-text" id="ou">{{ gettext("Testimonials Quote #2") }}</p>
             <img src="img/makerparty_closequote.png" id="close-quote" />
           </div>
           <div class="quote-arrow-right"></div>
@@ -176,10 +177,14 @@
         <div class="col-md-4 avatar-container">
           <div class="row">
             <div class="col-md-12">
-              <p>
+              <p class="quote-source current">
                 <span class="lead"><strong>{{ gettext("Testimonials Quote #1 Name") }}</strong></span> <br />
                 <span class="job-title">{{ gettext("Testimonials Quote #1 Title") }}</span> <br />
                 <a href="https://www.ywcatoronto.org/page.asp?l1=54&pid=162">{{ gettext("Testimonials Quote #1 Org") }} </a>
+              </p>
+              <p class="quote-source">
+                <span class="lead"><strong>{{ gettext("Testimonials Quote #2 Name") }}</strong></span> <br />
+                <span class="job-title">{{ gettext("Testimonials Quote #2 Title") }}</span> <br />
               </p>
             </div>
           </div>

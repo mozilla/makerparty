@@ -305,24 +305,25 @@ footer {
     input[type="email"] {
       width: 80%;
       width: calc( 100% - 10px );
-      border: 1px solid @mp-grey;
       padding-left: 5px;
       margin: 0;
+      border: none;
     }
     i.fa {
       font-size: 17px;
       line-height: 17px;
     }
     button[type="submit"] {
-      height: 23px;
-      width: 23px;
+      height: 22px;
+      width: 22px;
       padding-top: 2px;
       padding-bottom: 0;
-      border: 1px solid @mp-grey;
-      margin-top: -4px;
+      margin-top: -2px;
       margin-left: 0px;
+      border: none;
     }
     input[type="checkbox"] {
+      margin-top: 15px;
       margin-right: 5px;
     }
   }
@@ -447,6 +448,12 @@ footer {
     background: #fff;
     padding: 20px 35px;
     width: 100%;
+    .quote-text {
+      font-style: italic;
+    }
+    .quote-text:not(.current) {
+      display: none;
+    }
     #open-quote {
       position: absolute;
       top: 10px;
@@ -508,6 +515,9 @@ footer {
     .job-title {
       color: @mp-grey;
       font-style: italic;
+    }
+    .quote-source:not(.current) {
+      display: none;
     }
   }
 
