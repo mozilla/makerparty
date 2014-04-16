@@ -25,10 +25,12 @@
           <h1>{{ gettext("Teach, Learn & Make") }}</h1>
           <p class="lead">{{ gettext("Home Banner Desc") }}</p>
           <div class="cta-button-container">
-            <p class="ctn-desc"><small><i>{{ gettext("We want people to throw or attend an event.") }}</i></small></p>
             <p>
               <a class="btn btn-banner btn-mp-green btn-lg" href="/partners">
                 {{ gettext("Become a Partner") }}
+              </a>
+              <a class="btn btn-banner btn-mp-green btn-lg" href="https://sendto.mozilla.org/page/s/maker-party-2014-save-the-date">
+                {{ gettext("Get Updates") }}
               </a>
             </p>
           </div>
@@ -48,18 +50,18 @@
       </div>
       <div class="row">
         <div class="col-md-4 col-sm-4 modules">
-          <img src="img/makerparty_hostanevent_illustration.png" />
-          <h3>{{ gettext("Host an Event") }}</h3>
+          <a href="/resources"><img src="img/makerparty_hostanevent_illustration.png" /></a>
+          <h3><a href="/resources">{{ gettext("Host an Event") }}</a></h3>
           <p>{{ gettext("Host an Event Desc") }}</p>
         </div>
         <div class="col-md-4 col-sm-4 modules">
-          <img src="img/makerparty_attendanevent_illustration2.png" />
-          <h3>{{ gettext("Attend an Event") }}</h3>
+          <a href="https://events.webmaker.org" target="_blank"><img src="img/makerparty_attendanevent_illustration2.png" /></a>
+          <h3><a href="https://events.webmaker.org" target="_blank">{{ gettext("Attend an Event") }}</a></h3>
           <p>{{ gettext("Attend an Event Desc") | safe }}</p>
         </div>
         <div class="col-md-4 col-sm-4 modules">
-          <img src="img/makerparty_getsupport_illustration.png" />
-          <h3>{{ gettext("Get Support") }}</h3>
+          <a href="/resources"><img src="img/makerparty_getsupport_illustration.png" /></a>
+          <h3><a href="/resources">{{ gettext("Get Support") }}</a></h3>
           <p>{{ gettext("Get Support Desc") }}</p>
         </div>
       </div>
@@ -171,6 +173,7 @@
             <img src="img/makerparty_openquote.png" id="open-quote" />
             <p class="quote-text">{{ gettext("Testimonials Quote #1") }}</p>
             <p class="quote-text">{{ gettext("Testimonials Quote #2") }}</p>
+            <p class="quote-text">{{ gettext("Testimonials Quote #3") }}</p>
             <img src="img/makerparty_closequote.png" id="close-quote" />
           </div>
           <div class="quote-arrow-right"></div>
@@ -187,6 +190,12 @@
               <p class="quote-source">
                 <span class="lead">{{ gettext("Testimonials Quote #2 Name") }}</span> <br />
                 <span class="job-title">{{ gettext("Testimonials Quote #2 Title") }}</span> <br />
+                <a href="http://www.gmin.org/">{{ gettext("Testimonials Quote #2 Org") }} </a>
+              </p>
+              <p class="quote-source">
+                <span class="lead">{{ gettext("Testimonials Quote #3 Name") }}</span> <br />
+                <span class="job-title">{{ gettext("Testimonials Quote #3 Title") }}</span> <br />
+                <a href="http://nysci.org/">{{ gettext("Testimonials Quote #3 Org") }} </a>
               </p>
             </div>
           </div>

@@ -30,14 +30,15 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <a href="https://blog.webmaker.org/maker-party-by-the-numbers"><img src="img/blog/makerparty-heatmap.png" /></a>
+          <a href="img/blog/makerparty-heatmap.png" class="infographic"><img src="img/blog/makerparty-heatmap.png" /></a>
         </div>
         <div class="col-md-6">
           <h1>{{ gettext("Snapshot of Maker Party 2013") }}</h1>
           <p>{{ gettext("Snapshot of Maker Party 2013 Paragraph 1") }}</p>
-          <p>{{ gettext("Snapshot of Maker Party 2013 Paragraph 2") }}</p>
+          <p>{{ gettext("Snapshot of Maker Party 2013 Paragraph 2") | safe }}</p>
           <p>{{ gettext("Snapshot of Maker Party 2013 Paragraph 3") | safe }}</p>
-          <p>{{ gettext("Snapshot of Maker Party 2013 Paragraph 4") | safe }}</p>
+          <p>{{ gettext("Snapshot of Maker Party 2013 Paragraph 4") }}</p>
+          <p>{{ gettext("Snapshot of Maker Party 2013 Paragraph 5") | safe }}</p>
           <div class="blog-read-more"><a href="https://blog.webmaker.org/maker-party-by-the-numbers">{{ gettext("Read the full blog post") }}</a></div>
         </div>
       </div>
@@ -69,7 +70,7 @@
           </div>
           <div class="col-md-3 col-sm-4">
             <h3>{{ gettext("Blog 2") }}</h3>
-            <p class="blog-date">{{ gettext("Blog 1 Date") }}</p>
+            <p class="blog-date">{{ gettext("Blog 2 Date") }}</p>
             <p class="blog-excerpt">{{ gettext("Blog 2 Desc") }}</p>
             <div class="blog-read-more"><a href="https://blog.webmaker.org/maker-parties-in-asia">{{ gettext("Read more") }}</a></div>
           </div>
@@ -82,7 +83,7 @@
           </div>
           <div class="col-md-3 col-sm-4">
             <h3>{{ gettext("Blog 3") }}</h3>
-            <p class="blog-date">{{ gettext("Blog 1 Date") }}</p>
+            <p class="blog-date">{{ gettext("Blog 3 Date") }}</p>
             <p class="blog-excerpt">{{ gettext("Blog 3 Desc") }}</p>
             <div class="blog-read-more"><a href="https://blog.webmaker.org/jamboree-maker-party">{{ gettext("Read more") }}</a></div>
           </div>
@@ -93,7 +94,7 @@
           </div>
           <div class="col-md-3 col-sm-4">
             <h3>{{ gettext("Blog 4") }}</h3>
-            <p class="blog-date">{{ gettext("Blog 1 Date") }}</p>
+            <p class="blog-date">{{ gettext("Blog 4 Date") }}</p>
             <p class="blog-excerpt">{{ gettext("Blog 4 Desc") }}</p>
             <div class="blog-read-more"><a href="https://blog.webmaker.org/babymaker">{{ gettext("Read more") }}</a></div>
           </div>

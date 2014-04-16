@@ -1,5 +1,9 @@
-$(".collage-pics").colorbox({
+$(".home .collage-pics").colorbox({
                       rel: "collage-pics"
+                   });
+
+$(".history .infographic").colorbox({
+                      rel: "infographic"
                    });
 
 
