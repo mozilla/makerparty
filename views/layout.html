@@ -89,21 +89,29 @@
   <div class="get-mp-updates">
     <div class="container">
       <div class="row">
-        <div class="col-md-2 col-sm-2">
+        <div class="col-md-2 col-sm-2 side-illust">
           <img src="img/makerparty_bullhorn@2x.png" id="bullhorn" />
         </div>
         <div class="col-md-10 col-sm-10">
           <div class="row">
-            <div class="col-md-4 col-sm-7">
+            <div class="col-md-4 col-sm-12">
               <h3>{{ gettext("Get Maker Party Updates") }}</h3>
             </div>
-            <div class="col-md-8">
-              <form id="form-get-updates">
-                <input type="email" class="form-control" placeholder="Sign up for email updates" required />
-                <button type="submit" class="btn btn-mp-green"><i class="fa fa-caret-right"></i></button>
-                <div id="pp-container">
-                  <input type="checkbox" name="privacy" id="privacy" />
-                  <span><small>{{ gettext("Privacy Policy Checkbox") | safe }}</small></span>
+            <div class="col-md-8 col-sm-12">
+              <form id="form-get-updates" method="POST" name="signup" action="https://sendto.mozilla.org/page/s/maker-party-2014-save-the-date">
+                <div class="form-field">
+                  <div id="email-container">
+                    <input type="email" name="email" class="form-control" placeholder="Sign up for email updates"  />
+                    <button type="submit" name="submit-btn" class="btn btn-mp-green"><i class="fa fa-caret-right"></i></button>
+                  </div>
+                  <div class="help-block"><small>{{ gettext("Please enter your e-mail address.") }}</small></div>
+                </div>
+                <div id="pp-container" class="form-field has-error">
+                  <div>
+                    <input type="checkbox" name="custom-2517" id="privacy" />
+                    <span><small>{{ gettext("Privacy Policy Checkbox") | safe }}</small></span>
+                  </div>
+                  <div class="help-block"><small>{{ gettext("Please check this checkbox to proceed.") }}</small></div>
                 </div>
               </form>
             </div>

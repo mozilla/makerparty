@@ -96,6 +96,12 @@
   border-top: 1px solid @lightgrey;
 }
 
+.section-divider.hide-on-desktop-divider {
+  @media (min-width: @screen-sm-min) {
+    display: none;
+  }
+}
+
 .navbar {
   border: none;
 }
@@ -158,12 +164,13 @@ ul.nav-webmaker-logo {
 }
 
 .navbar-makerparty .navbar-toggle {
-  background: @mp-lightblue;
-  color: @mp-darkgreen;
+  background: transparent;
+  color: #fff;
 }
 
 .navbar-makerparty .navbar-toggle:hover {
-  background: @mp-lightyellow;
+  background: @mp-darkgreen;
+  border-color: @mp-darkgreen;
 }
 
 .mp-banner {
@@ -302,10 +309,18 @@ footer {
     }
   }
   #form-get-updates {
+    .help-block {
+      display: none;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    #email-container {
+      overflow: hidden;
+    }
     input[type="email"] {
       float: left;
       width: 80%;
-      width: calc( 100% - 10px );
+      width: calc( 100% - 15px );
       padding-left: 5px;
       margin: 0;
       border: none;
@@ -430,8 +445,17 @@ footer {
 }
 
 .why-throw {
-  img.side-illust {
-    width: 100%;
+  .side-illust {
+    @media (max-width: @screen-xs-max) {
+      .text-center;
+    }
+    img {
+      width: 100%;
+      @media (max-width: @screen-xs-max) {
+        width: 50%;
+        margin-top: -70px;
+      }
+    }
   }
   .wordmarks {
     a img {
@@ -533,7 +557,7 @@ footer {
 .partners {
   .banner {
     .mp-banner;
-    background-image: url('../img/makerparty_partners_header_yellow.jpg');
+    background-image: url('../img/makerparty_partners_alternative.jpg');
   }
 }
 
@@ -563,7 +587,7 @@ footer {
 
 .previous-partners {
   img {
-    width: 100%;
+    width: 80%;
   }
   ul {
     padding-left: 1em;
@@ -602,6 +626,7 @@ footer {
   }
 }
 
+.read-more-links,
 .blog-read-more {
   a::after {
     content: " »";
