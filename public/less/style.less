@@ -360,11 +360,14 @@ footer {
 .home {
   .banner {
     .mp-banner;
-    background-image: url('../img/makerparty_landing_image2.jpg');
+    background-image: url('../img/makerparty_landing_banner-mobile.jpg');
+    @media (min-width: @screen-sm-min) {
+      background-image: url('../img/makerparty_landing_banner.jpg');
+    }
   }
 }
 
-.home-banner-video {
+#home-banner-video {
   padding-bottom: 66.66%;
   height: 0;
   position: relative;
@@ -374,6 +377,7 @@ footer {
     position: absolute;
     width: 100%;
     height: 100%;
+    border: none;
   }
 }
 
@@ -555,7 +559,10 @@ footer {
 .partners {
   .banner {
     .mp-banner;
-    background-image: url('../img/makerparty_partners_alternative.jpg');
+    background-image: url('../img/makerparty_partners_banner-mobile.jpg');
+    @media (min-width: @screen-sm-min) {
+      background-image: url('../img/makerparty_partners_banner.jpg');
+    }
   }
 }
 
@@ -600,7 +607,10 @@ footer {
 .history {
   .banner {
     .mp-banner;
-    background-image: url('../img/makerparty_history_headeryellow2.jpg');
+    background-image: url('../img/makerparty_history_banner-mobile.jpg');
+    @media (min-width: @screen-sm-min) {
+      background-image: url('../img/makerparty_history_banner.jpg');
+    }
   }
 }
 
@@ -773,7 +783,10 @@ footer {
 .resources {
   .banner {
     .mp-banner;
-    background-image: url('../img/makerparty_partners_header_badgeyellow2.jpg');
+    background-image: url('../img/makerparty_resources_banner-mobile.jpg');
+    @media (min-width: @screen-sm-min) {
+      background-image: url('../img/makerparty_resources_banner.jpg');
+    }
   }
   .docs-section {
   }
