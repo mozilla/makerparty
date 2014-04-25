@@ -38,7 +38,7 @@ module.exports = function (env) {
   }));
 
   // Localized Strings
-  app.get("/strings/:lang?", i18n.stringsRoute("en_US"));
+  app.get("/strings/:lang?", i18n.stringsRoute("en-US"));
 
   // Static files
   app.use(express.static('./public'));
