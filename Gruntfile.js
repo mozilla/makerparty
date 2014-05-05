@@ -19,7 +19,7 @@ module.exports = function (grunt) {
         options: {
           async: true
         },
-        command: 'node server/server.js'
+        command: 'node app.js'
       }
     },
     jshint: {
