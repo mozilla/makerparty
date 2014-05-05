@@ -4,7 +4,8 @@
   "description": "Mozilla Maker Party Site",
   "main": "server/js/server.js",
   "scripts": {
-    "postinstall": "bower install; grunt heroku"
+    "postinstall": "bower install; grunt heroku",
+    "download-locales": "webmaker-download-locales makerparty"
   },
   "keywords": [],
   "author": "author",
