@@ -28,7 +28,7 @@ var healthcheck = {
 
 // Setup locales with i18n
 app.use( i18n.middleware({
-  supported_languages: [ 'en-US' ],
+  supported_languages: env.get("SUPPORTED_LANGS"),
   default_lang: 'en-US',
   mappings: require('webmaker-locale-mapping'),
   translation_directory: path.resolve(__dirname, 'locale')
