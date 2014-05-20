@@ -1,16 +1,16 @@
 {
   "name": "makerparty",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Mozilla Maker Party Site",
   "main": "app.js",
   "scripts": {
-    "postinstall": "bower install && grunt heroku && download-locales",
+    "postinstall": "bower install && grunt heroku && npm run download-locales",
     "download-locales": "webmaker-download-locales makerparty"
   },
   "keywords": [],
   "author": "author",
   "dependencies": {
-    "bower": "1.2.8",
+    "bower": "1.3.3",
     "express": "3.4.8",
     "grunt": "0.4.2",
     "grunt-cli": "0.1.13",
