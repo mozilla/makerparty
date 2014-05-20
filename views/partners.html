@@ -142,35 +142,12 @@
   </div>
 
 
-  <div class="big-section previous-partners">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-sm-6">
-          <img src="/img/makerparty_network_illustration.png" alt="{{ gettext('Maker Party Network Illustration') }}" />
-        </div>
-        <div class="col-md-8 col-sm-6">
-          <h2>{{ gettext("Previous Partners") }}</h2>
-          <p>{{ gettext("Previous Partners Desc") }}</p>
-          <ul class="list">
-            <li>{{ gettext("Black Girls Code Desc") | safe }}</li>
-            <li>{{ gettext("MIT Media Lab Desc") | safe }}</li>
-            <li>{{ gettext("DIY.org Desc") | safe }}</li>
-            <li>{{ gettext("Girl Scout Troops Desc") | safe}}</li>
-          </ul>
-          <p class="read-more-links">
-            <a href="/history">{{ gettext("More about the history of Maker Party") }}</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
+  <!-- 2014 Partners starts ===================================== -->
   <div class="big-section" id="partners-2014">
 
     <div class="container">
       <div class="row">
-        <div class="col-md-12 text-center">
+        <div class="col-md-12">
           <h2>{{ gettext('2014 Partners') }}</h2>
         </div>
       </div>
@@ -194,17 +171,23 @@
           <a href="http://www.meetup.com/Code-for-Boston/"><img src="/img/partners/event/CodeForBoston.png" alt="Code for Boston logo" /></a>
         </div>
         <div class="col-md-2 col-sm-3 col-xs-4">
+          <a href="http://dubaiservicejam.com/"><img src="/img/partners/event/DubaiServiceJam.gif" alt="Dubai Service Jam logo" /></a>
+        </div>
+        <div class="col-md-2 col-sm-3 col-xs-4">
+          <a href="http://digitalready.net/"><img src="/img/partners/event/DigitalReady.png" alt="Digital Ready logo" /></a>
+        </div>
+        <div class="col-md-2 col-sm-3 col-xs-4">
           <a href="http://emoti-con.org/"><img src="/img/partners/event/Emoti-con.png" alt="Emoti-con logo" /></a>
         </div>
+      </div>
+      <!-- new row  -->
+      <div class="row logos">
         <div class="col-md-2 col-sm-3 col-xs-4">
           <a href="http://learninglabs.org/members/girls-learning-code/"><img src="/img/partners/event/GirlsLearningCode.png" alt="Girls Learning Code logo" /></a>
         </div>
         <div class="col-md-2 col-sm-3 col-xs-4">
           <a href="http://www.gmin.org/"><img src="/img/partners/event/GMin.jpg" alt="GMin logo" /></a>
         </div>
-      </div>
-      <!-- new row  -->
-      <div class="row logos">
         <div class="col-md-2 col-sm-3 col-xs-4">
           <a href="http://hackeryou.com/"><img src="/img/partners/event/HackerYou.png" alt="HackerYou logo" /></a>
         </div>
@@ -217,15 +200,15 @@
         <div class="col-md-2 col-sm-3 col-xs-4">
           <a href="http://ladieslearningcode.com/"><img src="/img/partners/event/LadiesLearningCode.png" alt="Ladies Learning Code logo" /></a>
         </div>
+      </div>
+      <!-- new row  -->
+      <div class="row logos">
         <div class="col-md-2 col-sm-3 col-xs-4">
           <a href="http://www.maker-state.com/"><img src="/img/partners/event/MakerState.png" alt="Maker State logo" /></a>
         </div>
         <div class="col-md-2 col-sm-3 col-xs-4">
           <a href="http://www.ncsyes.co.uk/"><img src="/img/partners/event/NCS.png" alt="NCS logo" /></a>
         </div>
-      </div>
-      <!-- new row  -->
-      <div class="row logos">
         <div class="col-md-2 col-sm-3 col-xs-4">
           <a href="http://www.mouse.org"><img src="/img/partners/event/Mouse.png" alt="Mouse logo" /></a>
         </div>
@@ -234,6 +217,9 @@
         </div>
         <div class="col-md-2 col-sm-3 col-xs-4">
           <a href="http://peopleandcode.com/"><img src="/img/partners/event/PeopleAndCode.png" alt="People & Code logo" /></a>
+        </div>
+        <div class="col-md-2 col-sm-3 col-xs-4">
+          <a href="http://skilltimes.com/"><img src="/img/partners/event/Skilltimes.png" alt="Skilltimes logo" /></a>
         </div>
       </div>
       <!-- last row ends  -->
@@ -247,6 +233,9 @@
       </div>
       <!-- new row  -->
       <div class="row logos">
+        <div class="col-md-2 col-sm-3 col-xs-4">
+          <a href="http://www.astc.org/index.htm"><img src="/img/partners/promotional/ASTC.jpg" alt="{{ gettext('ASTC Logo') }}" /></a>
+        </div>
         <div class="col-md-2 col-sm-3 col-xs-4">
           <img src="/img/partners/promotional/DevelopHer.png" alt="DevelopHer logo" />
         </div>
@@ -262,12 +251,8 @@
       </div>
       <!-- last row ends  -->
     </div>
-
   </div>
 
-{% endblock %}
-
-{% block sponsorshipPartners %}
   <div class="container" id="sponsorship-partners">
     <div class="row">
       <div class="col-md-12">
@@ -286,5 +271,34 @@
       </div>
     </div>
   </div>
-  {% endblock %}
+  <!-- 2014 Partners ends ===================================== -->
 
+  <!-- Previous Partners starts ===================================== -->
+  <div class="big-section previous-partners">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <img src="/img/makerparty_network_illustration.png" alt="{{ gettext('Maker Party Network Illustration') }}" />
+        </div>
+        <div class="col-md-8 col-sm-6">
+          <h2>{{ gettext("Previous Partners") }}</h2>
+          <p>{{ gettext("Previous Partners Desc") }}</p>
+          <ul class="list">
+            <li>{{ gettext("Black Girls Code Desc") | safe }}</li>
+            <li>{{ gettext("MIT Media Lab Desc") | safe }}</li>
+            <li>{{ gettext("DIY.org Desc") | safe }}</li>
+            <li>{{ gettext("Girl Scout Troops Desc") | safe}}</li>
+          </ul>
+          <p class="read-more-links">
+            <a href="/history">{{ gettext("More about the history of Maker Party") }}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Previous Partners ends ===================================== -->
+
+{% endblock %}
+
+{% block sponsorshipPartners %}
+{% endblock %}
