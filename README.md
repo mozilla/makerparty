@@ -6,7 +6,7 @@ Makerparty 2014 is happening and we need to [spread the word](http://party.webma
 
 To successfully install and run makerparty you must have the following prerequisites installed:
 
-- [nodejs v0.10](http://nodejs.org/download/]
+- [nodejs v0.10](http://nodejs.org/download/)
 
 Once you have installed these prerequisites, you can install makerparty by running the following commands:
 
