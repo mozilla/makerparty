@@ -161,7 +161,7 @@ function generateEventStats() {
       cache.set('eventStats', event_stats);
     }
     else if(error) {
-      cache.set('eventStats', { processing: true });
+      return console.error( 'ERROR: %s', error );
     }
   });
 }
