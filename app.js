@@ -4,8 +4,7 @@ var nunjucks = require('nunjucks');
 var path = require('path');
 var i18n = require('webmaker-i18n');
 var request = require('request');
-var NodeCache = require('node-cache')
-var cache = new NodeCache({stdTTL: 300, checkperiod: 300});
+var event_stats_cache = {};
 var nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader(path.join(__dirname, 'views')));
 
 habitat.load();
@@ -28,6 +27,14 @@ var healthcheck = {
   version: require('./package').version,
   http: 'okay'
 };
+
+function debug() {
+  if( env.get( 'DEBUG' ) ) {
+    return console.log.apply( null, arguments );
+  }
+
+  return;
+}
 
 // Setup locales with i18n
 app.use( i18n.middleware({
@@ -70,14 +77,14 @@ app.listen(env.get('PORT'), function () {
 });
 
 // Maker Party Event Stats
-app.get('/event-stats', function(req, res) {
-  var data = cache.get('eventStats');
-  res.json( data.eventStats );
+app.get( '/event-stats', function( req, res ) {
+  res.json( event_stats_cache );
 });
 
 function generateEventStats() {
-  request.get(env.get('EVENTS_SERVICE') + '/events?after=' + env.get('EVENTS_START_DATE'), function(error, response, events) {
-    if(!error && response.statusCode === 200) {
+  debug('Stats: (re)generating event statistics');
+  request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_START_DATE' ), function( error, response, events ) {
+    if( !error && response.statusCode === 200 ) {
       events = JSON.parse( events );
       // arrays to dedupe things w/
       var event_hosts = [];
@@ -93,7 +100,6 @@ function generateEventStats() {
 
       // aleady know number of events :)
       event_stats.events = events.length;
-      var geocodes = events.length;
 
       // make access to other stats easier to figure
       events.forEach( function( event, idx ) {
@@ -107,8 +113,8 @@ function generateEventStats() {
         event_stats.attendees += event.attendees;
 
         // get host stats
-        if(event_hosts.indexOf(event.organizerId) === -1){
-          event_hosts.push(event.organizerId);
+        if(event_hosts.indexOf( event.organizerId ) === -1){
+          event_hosts.push( event.organizerId );
 
           new_host = 1; // this is a new host, add to country host count ;)
         }
@@ -158,20 +164,12 @@ function generateEventStats() {
 
       event_stats.byCountry = new_byCountry;
 
-      cache.set('eventStats', event_stats);
+      event_stats_cache = event_stats;
     }
-    else if(error) {
+    else if( error ) {
       return console.error( 'ERROR: %s', error );
     }
   });
 }
-cache.set('eventStats', { processing: true });
 generateEventStats();
-
-
-cache.on( 'expired', function( key, value ) {
-  if( key === 'eventStats' ) {
-    cache.set('eventStats', value);
-    generateEventStats();
-  }
-});
+setInterval(generateEventStats, 10000)
