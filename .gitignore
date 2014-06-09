@@ -15,3 +15,5 @@ TODO.txt
 locale/
 !locale/en_US/*
 !locale/localeinfo.json
+
+event-stats.json
