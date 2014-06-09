@@ -50,7 +50,7 @@ request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_S
       /*
         get country level stats
        */
-
+      var origCountry = event.country;
       // if null make unknown (we still want any other info we can extract)
       if( event.country === null ) {
         event.country = 'UNKNOWN';
@@ -67,7 +67,7 @@ request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_S
         }
         else {
           // we didn't  :( add the event to the unknown locations.
-          event.country = 'UNKNOWN';
+          event.country = origCountry;
         }
       }
 
@@ -75,7 +75,7 @@ request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_S
       if( countries.indexOf( event.country ) === -1 ) {
         // if we havent then add it to our output object w/ some defaults
         event_stats.byCountry[ event.country ] = {
-          name: event.country,
+          country: origCountry,
           events: 0,
           hosts: 0,
           attendees: 0
@@ -88,7 +88,7 @@ request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_S
 
       // take new data on this country into account
       country = {
-        name: country.name,
+        country: origCountry,
         events: country.events + 1,
         hosts: country.hosts + new_host,
         attendees: country.attendees + event.attendees
