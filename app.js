@@ -94,6 +94,10 @@ app.get('/heatmap.svg', function(req, res) {
   }
 });
 
+app.get('/heatmap.base.svg', function(req, res) {
+  res.send( heatmap.baseFile );
+});
+
 // Localized Strings
 app.get('/strings/:lang?', i18n.stringsRoute('en-US'));
 
