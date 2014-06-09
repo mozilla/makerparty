@@ -4,6 +4,7 @@ var nunjucks = require('nunjucks');
 var path = require('path');
 var i18n = require('webmaker-i18n');
 var request = require('request');
+var country_data = require('country-data');
 var event_stats_cache = {};
 var nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader(path.join(__dirname, 'views')));
 
@@ -82,7 +83,9 @@ app.get( '/event-stats', function( req, res ) {
 });
 
 function generateEventStats() {
-  debug('Stats: (re)generating event statistics');
+  debug('Stats: (re)generating event statistics'); // debug is only ouput if flagged for
+
+  // request full data from the events api (since specified data)
   request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_START_DATE' ), function( error, response, events ) {
     if( !error && response.statusCode === 200 ) {
       events = JSON.parse( events );
@@ -122,11 +125,30 @@ function generateEventStats() {
         /*
           get country level stats
          */
+
+        // if null make unknown (we still want any other info we can extract)
         if( event.country === null ) {
           event.country = 'UNKNOWN';
         }
+        // else force country code not name
+        else if( event.country.length > 2 ) {
+          // lookup country data based on its name
+          event.country = country_data.lookup.countries( { name: event.country } )[ 0 ];
 
+          // we don't always get a match :( so lets check we did get one
+          if( event.country ) {
+            // we did \o/ lets grab its ISO code :D
+            event.country = event.country.alpha2;
+          }
+          else {
+            // we didn't  :( add the event to the unknown locations.
+            event.country = 'UNKNOWN';
+          }
+        }
+
+        // time to check if we've encountered this country before.
         if( countries.indexOf( event.country ) === -1 ) {
+          // if we havent then add it to our output object w/ some defaults
           event_stats.byCountry[ event.country ] = {
             name: event.country,
             events: 0,
@@ -136,8 +158,10 @@ function generateEventStats() {
           countries.push( event.country );
         }
 
+        // make things a little easier to read below
         var country = event_stats.byCountry[ event.country ];
 
+        // take new data on this country into account
         country = {
           name: country.name,
           events: country.events + 1,
@@ -145,6 +169,7 @@ function generateEventStats() {
           attendees: country.attendees + event.attendees
         };
 
+        // not sure this line is even needed.
         event_stats.byCountry[ event.country ] = country;
       });
 
@@ -164,12 +189,16 @@ function generateEventStats() {
 
       event_stats.byCountry = new_byCountry;
 
+      // save the stats to the "cache" object for use as needed
       event_stats_cache = event_stats;
     }
     else if( error ) {
-      return console.error( 'ERROR: %s', error );
+      return console.error( error );
+
     }
   });
 }
+// run on launch to get some stats
 generateEventStats();
-setInterval(generateEventStats, 10000)
+// get new stats every 5 minutes
+setInterval( generateEventStats, 300000 );
