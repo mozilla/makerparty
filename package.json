@@ -1,6 +1,6 @@
 {
   "name": "makerparty",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Mozilla Maker Party Site",
   "main": "app.js",
   "scripts": {
