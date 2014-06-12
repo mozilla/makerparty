@@ -1,0 +1,52 @@
+{% extends "views/layout.html" %}
+{% block title %} Maker Party - Quilt {% endblock %}
+
+{% block customStyles %}
+  <link href="/bower_components/supportopen-quilt/dist/quilt.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block bodyOpen %}<body class="history">{% endblock %}
+{% block navItems %}
+<ul class="nav navbar-nav">
+  <li><a href="/">{{ gettext("Home") }}</a></li>
+  <li><a href="/partners">{{ gettext("Partners") }}</a></li>
+  <li><a href="/resources">{{ gettext("Resources") }}</a></li>
+  <li class="active"><a href="/history">{{ gettext("History") }}</a></li>
+  <li><a href="https://events.webmaker.org" target="_blank">{{ gettext("Events") }}</a></li>
+</ul>
+{% endblock %}
+
+{% block banner %}
+  <div class="banner jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Quilt</h1>
+          <p class="lead">Some cool cta here</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block mainContent %}
+  <div id="snapshot-2013" class="big-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="quiltContainer">
+            <iframe src="http://pathto.example.com/companion_make.html" frameborder="0" id="makePreview" class="quilt-msnry"></iframe>
+            <ul id="quiltMakes"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block customScripts %}
+  <script src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+  <script src="/bower_components/makeapi-client/src/make-api.js"></script>
+  <script src="/bower_components/supportopen-quilt/dist/quilt.min.js"></script>
+  <script>Quilt();</script>
+{% endblock %}

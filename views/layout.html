@@ -9,6 +9,7 @@
   <link href="//mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/bower_components/jquery-colorbox/example4/colorbox.css" />
   <link rel="stylesheet" href="/compiled/style.min.css">
+  {% block customStyles %}{% endblock %}
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-35433268-12']);
@@ -166,5 +167,7 @@
   <script src="http://mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
 
   <script src="/js/ui.js"></script>
+
+  {% block customScripts %}{% endblock %}
 </body>
 </html>
