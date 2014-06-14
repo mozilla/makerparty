@@ -13,6 +13,11 @@
     "makerstrap": "0.1.1",
     "jquery": "2.1.0",
     "animate.css": "3.1.0",
-    "jquery-colorbox": "1.5.6"
+    "jquery-colorbox": "1.5.6",
+    "supportopen-quilt": "fuzzyfox/supportopen#~0.0.4"
+  },
+  "resolutions": {
+    "makerstrap": "0.1.1",
+    "jquery": "2.1.0"
   }
 }

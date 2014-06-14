@@ -58,6 +58,10 @@ app.get('/history', function(req, res){
   res.render('history.html');
 });
 
+app.get('/live-updates', function(req, res){
+  res.render('live-updates.html');
+});
+
 // Localized Strings
 app.get('/strings/:lang?', i18n.stringsRoute('en-US'));
 
