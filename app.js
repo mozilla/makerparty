@@ -3,6 +3,7 @@ var express = require('express');
 var nunjucks = require('nunjucks');
 var path = require('path');
 var fs = require('fs');
+var heatmap = require('makerparty-heatmap');
 var fork = require( 'child_process' ).fork;
 var i18n = require('webmaker-i18n');
 var nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader(path.join(__dirname, 'views')));
@@ -80,6 +81,25 @@ app.get( '/event-stats', function( req, res ) {
     stats = {};
     res.status( 503 ).json( stats );
   }
+});
+
+app.get('/heatmap.svg', function(req, res) {
+  var stats = {};
+
+  try {
+    stats = fs.readFileSync( './event-stats.json', 'utf-8' );
+    stats = JSON.parse( stats );
+
+    res.send( heatmap.generateHeatmap( stats.byCountry ) );
+  }
+  catch ( e ) {
+    stats = {};
+    res.status( 500 ).send( heatmap.generateHeatmap() );
+  }
+});
+
+app.get('/heatmap.base.svg', function(req, res) {
+  res.send( heatmap.baseFile );
 });
 
 // Localized Strings
