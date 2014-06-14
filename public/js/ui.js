@@ -38,8 +38,9 @@ function autoRotatingQuotes(){
 
 
 
-
-// Sign up to Get Maker Party Update
+/* ****************************************
+*  Sign up to Get Maker Party Update
+*/
 
 $("#form-get-updates").submit(function(event){
   event.preventDefault();
@@ -99,3 +100,26 @@ function displayError(elem) {
 function hideError(elem) {
   elem.parents(".form-field").removeClass("has-error").find(".help-block").hide();
 }
+
+
+
+
+/* ****************************************
+*  Get & show heatmap on the /live-updates page
+*/
+
+$.ajax({
+  url: "/heatmap.svg",
+  type: "GET",
+  crossDomain: true,
+  dataType: "html",
+  error: function(jqXHR, textStatus, errorThrown) {
+    $("#the-heatmap").html("Sorry, the heatmap cannot be loaded at this moment.");
+  },
+  success: function(heatmap, textStatus, jqXHR) {
+    $("#the-heatmap").html(heatmap);
+  },
+  complete: function(jqXHR,textStatus){
+    console.log("AJAX call to /heatmap.svg is done.");
+  }
+});

@@ -28,44 +28,46 @@
 
 {% block mainContent %}
 
-  <div class="big-section" id="heatmap">
+  <div class="big-section jumbotron banner" id="heatmap">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>{{ gettext("Events around the world") }}</h2>
+          <h1>{{ gettext("Events around the world") }}</h1>
           <p>
             Each year Maker Party grows bigger and better! Check out all the places around the world where people are teaching, learning and making together. Want to see your event on the map? Add it to the events page [https://events.webmaker.org].
           </p>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="section-divider">
-    </div>
-  </div>
-
-  <div class="big-section">
-    <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>{{ gettext("Mozilla Webmaker Blog") }}</h2>
+          <div id="the-heatmap">
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <div class="section-divider">
+  <div class="big-section" id="other-feeds">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>{{ gettext("Mozilla Webmaker Blog") }}</h2>
+        </div>
+        <div class="col-md-6">
+          <div id="twitter-feeds">
+            <a class="twitter-timeline"  href="https://twitter.com/search?q=%23makerparty"  data-widget-id="477691708356820992" width="100%" height="400">Tweets about "#makerparty"</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="big-section" id="quilt">
+  <div class="big-section jumbotron" id="quilt">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>{{ gettext("Maker Party Quilt") }}</h2>
+          <h1>{{ gettext("Maker Party Quilt") }}</h1>
           <p>
             Share what you've made and add yourself to this Maker Party quilt by using the #makerparty hashtag on your Thimble [https://webmaker.org/tools] and Popcorn Maker [https://webmaker.org/tools] projects. You'll have the chance to enter your hashtag when you click "Save".
           </p>

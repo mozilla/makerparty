@@ -23,6 +23,7 @@
 @mp-lightyellow: #fbf6b6;
 @mp-grey: #83a4b3;
 
+@heatmap-bg: #6FCCDD;
 
 /* ====================
   Copied from Webmaker Events
@@ -858,7 +859,22 @@ footer {
   Live Updates page
 */
 
+.live-updates {
+  .jumbotron {
+    color: inherit;
+  }
+}
+
+#heatmap {
+  background: @heatmap-bg;
+}
+
+#other-feeds {
+  background: @lightgrey;
+}
+
 #quilt {
+  background: none;
   #quiltContainer {
     background: @lightgrey;
   }
