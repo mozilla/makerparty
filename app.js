@@ -2,6 +2,8 @@ var habitat = require('habitat');
 var express = require('express');
 var nunjucks = require('nunjucks');
 var path = require('path');
+var fs = require('fs');
+var fork = require( 'child_process' ).fork;
 var i18n = require('webmaker-i18n');
 var nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader(path.join(__dirname, 'views')));
 
@@ -58,6 +60,24 @@ app.get('/history', function(req, res){
   res.render('history.html');
 });
 
+// Maker Party Event Stats
+app.get( '/event-stats', function( req, res ) {
+  // res.json( event_stats_cache );
+  // send back contents of cache file, else empty object.
+  var stats = '';
+
+  try {
+    stats = fs.readFileSync( './event-stats.json', 'utf-8' );
+    stats = JSON.parse( stats );
+
+    res.json( stats );
+  }
+  catch ( e ) {
+    stats = {};
+    res.status( 503 ).json( stats );
+  }
+});
+
 // Localized Strings
 app.get('/strings/:lang?', i18n.stringsRoute('en-US'));
 
@@ -65,3 +85,20 @@ app.get('/strings/:lang?', i18n.stringsRoute('en-US'));
 app.listen(env.get('PORT'), function () {
   console.log('Now listening on %d', env.get('PORT'));
 });
+
+// Run event stats generation every 5 minutes
+var getEventStats;
+function getEventStatsFork() {
+  if( getEventStats ) {
+    getEventStats.kill();
+    return;
+  }
+
+  getEventStats = fork( './bin/getEventStats' );
+  getEventStats.on( 'exit', function( code, signal ) {
+    getEventStats = null;
+  });
+}
+setInterval( getEventStatsFork, 300000 );
+getEventStatsFork();
+
