@@ -62,6 +62,7 @@ app.get('/history', function(req, res){
 
 app.get('/live-updates', function(req, res){
   res.render('live-updates.html');
+});
 
 // Maker Party Event Stats
 app.get( '/event-stats', function( req, res ) {
