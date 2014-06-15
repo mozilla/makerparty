@@ -698,18 +698,6 @@ footer {
 
 .blog-posts {
   position: relative;
-  img {
-    width: 100%;
-  }
-  h3 {
-    margin-top: 5px;
-  }
-  .blog-post {
-    .blog-date {
-      font-style: italic;
-      color: @mp-grey;
-    }
-  }
   .blog-row:not(#first-blog-row) {
     @media (min-width: @screen-sm-min) {
       margin-top: 30px;
@@ -721,6 +709,20 @@ footer {
     }
   }
 }
+
+.blog-post {
+  .blog-date {
+    font-style: italic;
+    color: @mp-grey;
+  }
+  img {
+    width: 100%;
+  }
+  h3 {
+    margin-top: 5px;
+  }
+}
+
 
 .past-partners-list {
   @media (max-width: @screen-xs-max) {

@@ -104,22 +104,64 @@ function hideError(elem) {
 
 
 
-/* ****************************************
-*  Get & show heatmap on the /live-updates page
+/* *******************************************************
+*  "Live Updates" page
 */
 
-$.ajax({
-  url: "/heatmap.svg",
-  type: "GET",
-  crossDomain: true,
-  dataType: "html",
-  error: function(jqXHR, textStatus, errorThrown) {
-    $("#the-heatmap").html("Sorry, the heatmap cannot be loaded at this moment.");
-  },
-  success: function(heatmap, textStatus, jqXHR) {
-    $("#the-heatmap").html(heatmap);
-  },
-  complete: function(jqXHR,textStatus){
-    console.log("AJAX call to /heatmap.svg is done.");
-  }
-});
+if ( $("body").hasClass("live-updates") ){
+  /* ****************************************
+  *  Get & show heatmap on the /live-updates page
+  */
+  $.ajax({
+    url: "/heatmap.svg",
+    type: "GET",
+    crossDomain: true,
+    dataType: "html",
+    error: function(jqXHR, textStatus, errorThrown) {
+      $("#the-heatmap").html("Sorry, the heatmap cannot be loaded at this moment.");
+    },
+    success: function(heatmap, textStatus, jqXHR) {
+      $("#the-heatmap").html(heatmap);
+    },
+    complete: function(jqXHR,textStatus){
+      console.log("AJAX call to /heatmap.svg is done.");
+    }
+  });
+
+
+  /* ****************************************
+  *  Load latest Webmaker blog post
+  */
+  var webmakerBlogURL = "https://blog.webmaker.org/feed";
+
+  $.ajax({
+    url: document.location.protocol + "//ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=" + encodeURIComponent(webmakerBlogURL),
+    type: "GET",
+    data: {
+      num: 1,
+      output: "json"
+    },
+    dataType: "jsonp",
+    error: function(jqXHR, textStatus, errorThrown) {
+      console.log("Cannot load Webmaker blog feed.");
+    },
+    success: function(data, textStatus, jqXHR) {
+      var latestPost = data.responseData.feed.entries[0];
+      var elem = $("#blog-feed");
+      // display title
+      elem.find("h3").html(latestPost.title);
+      // display publish date
+      var publishedDate = new Date(latestPost.publishedDate);
+      var month = ["January","February","March","April","May","June","July","August","September","October","November","December"][ publishedDate.getMonth() ];
+      elem.find("p.blog-date").html( month + " " + publishedDate.getDate() + ", " + publishedDate.getFullYear() );
+      // display a 150-word excerpt (and strip off html tags from the original post)
+      var blogExcerpt = elem.find("p.blog-excerpt");
+      blogExcerpt.html(latestPost.content);
+      blogExcerpt.text( blogExcerpt.text().split(" ").slice(0,150).join(" ") + "..." );
+      // display "Read more" link
+      elem.find("p.read-more-links a").attr("href", latestPost.link);
+    }
+  });
+
+}
+
