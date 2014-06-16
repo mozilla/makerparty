@@ -102,6 +102,50 @@ function hideError(elem) {
 }
 
 
+/* *******************************************************
+*  "Landing" page
+*/
+
+if ( $("body").hasClass("home") ){
+
+  $.ajax({
+    url: "/flickr-photos",
+    type: "GET",
+    crossDomain: true,
+    dataType: "json",
+    success: function(data, textStatus, jqXHR) {
+      var photoset = data.photoset;
+      var photos = photoset.photo;
+      $.each(photos, function(idx, photo) {
+        var photoURLs = flickrPhotoUrl(photo);
+        var big = photoURLs[0];
+        var thumb = photoURLs[1];
+        // $("body").append($("<img />").attr("src", big));
+      });
+    }
+  });
+
+  // https://www.flickr.com/services/api/misc.urls.html
+  function flickrPhotoUrl(photo) {
+    // in the format of
+    // farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
+    var urlBase = "//farm" +
+            photo.farm +
+            ".staticflickr.com" +
+            "/" +
+            photo.server +
+            "/" +
+            photo.id +
+            "_" +
+            photo.secret;
+    var originalSize = urlBase + "_b.jpg";
+    var thumbnail = urlBase + "_n.jpg";
+    return [ originalSize, thumbnail ];
+  }
+
+}
+
+
 
 
 /* *******************************************************
@@ -164,4 +208,3 @@ if ( $("body").hasClass("live-updates") ){
   });
 
 }
-
