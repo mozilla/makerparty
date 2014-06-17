@@ -1,3 +1,7 @@
+function addCommasToNumber(num){
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 /* *******************************************************
 *  Colorbox (for photos hosted on our site)
 */
@@ -192,7 +196,7 @@ if ( $("body").hasClass("live-updates") ){
         $("#total-parties").show();
       },
       success: function(eventStats, textStatus, jqXHR) {
-        $("#total-parties > #the-total").html(eventStats.events);
+        $("#total-parties > #the-total").html( addCommasToNumber(eventStats.events)) ;
         $("#total-parties").show();
       },
       complete: function(jqXHR,textStatus){
