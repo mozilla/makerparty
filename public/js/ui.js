@@ -141,9 +141,11 @@ if ( $("body").hasClass("live-updates") ){
       dataType: "json",
       error: function(jqXHR, textStatus, errorThrown) {
         $("#total-parties").html("Sorry, the total number of parties cannot be loaded at this moment.");
+        $("#total-parties").show();
       },
       success: function(eventStats, textStatus, jqXHR) {
         $("#total-parties > #the-total").html(eventStats.events);
+        $("#total-parties").show();
       },
       complete: function(jqXHR,textStatus){
         console.log("AJAX call to /heatmap.svg is done.");
