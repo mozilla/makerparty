@@ -1,41 +1,8 @@
-$(".home .collage-pics").colorbox({
-                      rel: "collage-pics"
-                   });
-
-$(".history .infographic").colorbox({
-                      rel: "infographic"
-                   });
-
-
-// Randomly pick a quote to start
-
-showQuote();
-
-function showQuote() {
-  var totalNum = $(".quote-text").length;
-  var indexShown = Math.floor( Math.random()*totalNum );
-  $(".quote-text").eq(indexShown).addClass("current");
-  $(".quote-source").eq(indexShown).addClass("current");
-  setInterval(autoRotatingQuotes, 13000);
-}
-
-// Auto rotates quotes
-
-function rotate(elemClass) {
-  var current = $("." + elemClass + ".current");
-  current.delay(10000).fadeOut(1000,function(){
-    $(this).toggleClass("current");
-    var nextQuote = ( $(this).next("."+elemClass).length > 0 ) ?
-                          $(this).next("."+elemClass) : $(this).siblings("."+elemClass).eq(0);
-    nextQuote.fadeIn(1000).toggleClass("current");
-  });
-}
-
-function autoRotatingQuotes(){
-  rotate("quote-text");
-  rotate("quote-source");
-}
-
+/* *******************************************************
+*  Colorbox (for photos hosted on our site)
+*/
+$(".history .collage-pics").colorbox({ rel: "collage-pics" });
+$(".history .infographic").colorbox({ rel: "infographic" });
 
 
 /* ****************************************
@@ -61,8 +28,6 @@ $("#form-get-updates").submit(function(event){
       }
     });
   }
-
-
 });
 
 function validateSignUpForm() {
@@ -108,6 +73,37 @@ function hideError(elem) {
 
 if ( $("body").hasClass("home") ){
 
+  /* ****************************************
+  *  Auto-rotating quotes
+  */
+  function showQuote() {
+    var totalNum = $(".quote-text").length;
+    var indexShown = Math.floor( Math.random()*totalNum );
+    $(".quote-text").eq(indexShown).addClass("current");
+    $(".quote-source").eq(indexShown).addClass("current");
+    setInterval(autoRotatingQuotes, 13000);
+  }
+  // Auto rotates quotes
+  function rotate(elemClass) {
+    var current = $("." + elemClass + ".current");
+    current.delay(10000).fadeOut(1000,function(){
+      $(this).toggleClass("current");
+      var nextQuote = ( $(this).next("."+elemClass).length > 0 ) ?
+                            $(this).next("."+elemClass) : $(this).siblings("."+elemClass).eq(0);
+      nextQuote.fadeIn(1000).toggleClass("current");
+    });
+  }
+  function autoRotatingQuotes(){
+    rotate("quote-text");
+    rotate("quote-source");
+  }
+  // Randomly pick a quote to start
+  showQuote();
+
+
+  /* ****************************************
+  *  Display Maker Party 2014 Flickr photos
+  */
   $.ajax({
     url: "/flickr-photos",
     type: "GET",
@@ -120,8 +116,16 @@ if ( $("body").hasClass("home") ){
         var photoURLs = flickrPhotoUrl(photo);
         var big = photoURLs[0];
         var thumb = photoURLs[1];
-        // $("body").append($("<img />").attr("src", big));
+        var listItem = $("<li></li>");
+        var anchor = $("<a></a>").attr("href", big)
+                                 .attr("class", "flickr-pics");
+        var img = $("<img />").attr("src", thumb);
+        $("#flickr-carousel ul").append( listItem.append( anchor.append(img) ) );
       });
+      $(".home .flickr-pics").colorbox({ rel: "flickr-pics" });
+      $("#flickr-carousel ul").elastislide({
+      // minItems: 2
+    });
     }
   });
 
