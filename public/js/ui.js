@@ -1,3 +1,14 @@
+// Check for email sign-up success from welcome.webmaker.org
+(function() {
+  var thanks_re = /thanks=(\w+)/;
+
+  if (thanks_re.test(window.location.search)) {
+    console.log("Visitor signed up on welcome.webmaker.org");
+    analytics.event("Email Sign Up", {label: "Learn More About Webmaker"});
+    analytics.conversionGoal("WebmakerEmailSignUp");
+  }
+}());
+
 $(".home .collage-pics").colorbox({
                       rel: "collage-pics"
                    });
