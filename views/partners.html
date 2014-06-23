@@ -1,17 +1,7 @@
 {% extends "views/layout.html" %}
-{% block title %} Maker Party - Partners {% endblock %}
+{% set page = "partners" %}
 
-{% block bodyOpen %}<body class="partners">{% endblock %}
-{% block navItems %}
-<ul class="nav navbar-nav">
-  <li><a href="/">{{ gettext("Home") }}</a></li>
-  <li class="active"><a href="/partners">{{ gettext("Partners") }}</a></li>
-  <li><a href="/resources">{{ gettext("Resources") }}</a></li>
-  <li><a href="/history">{{ gettext("History") }}</a></li>
-  <li><a href="/live-updates">{{ gettext("Live Updates") }}</a></li>
-  <li><a href="https://events.webmaker.org" target="_blank">{{ gettext("Events") }}</a></li>
-</ul>
-{% endblock %}
+{% block title %} Maker Party - Partners {% endblock %}
 
 {% block banner %}
   <div class="banner jumbotron">

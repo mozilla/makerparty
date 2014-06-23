@@ -24,10 +24,10 @@
   </script>
   <script src="https://stuff.webmaker.org/webmaker-rid/webmaker-rid.js" async></script>
 </head>
-{% block bodyOpen %}
-<body>
-{% endblock %}
+
+<body {% if page %}class="{{ page }}"{% endif %}>
   <div>
+    <!-- Primary nav -->
     <nav class="navbar navbar-default navbar-webmaker navbar-makerparty">
       <div class="container">
         <a href="https://www.mozilla.org/" id="tabzilla">mozilla</a>
@@ -39,17 +39,19 @@
         </div>
       </div>
     </nav>
+    <!-- Primary nav ends -->
 
+    <!-- Secondary nav -->
     <nav class="navbar navbar-inverse navbar-no-header-xs">
       <div class="container">
         <div class="navbar-collapse collapse" id="mp-navbar-row">
           {% block navItems %}
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">{{ gettext("Home") }}</a></li>
-            <li><a href="/partners">{{ gettext("Partners") }}</a></li>
-            <li><a href="/resources">{{ gettext("Resources") }}</a></li>
-            <li><a href="/history">{{ gettext("History") }}</a></li>
-            <li><a href="/live-updates">{{ gettext("Live Updates") }}</a></li>
+            <li {% if page == 'home' %}class="active"{% endif %}><a href="/">{{ gettext("Home") }}</a></li>
+            <li {% if page == 'partners' %}class="active"{% endif %}><a href="/partners">{{ gettext("Partners") }}</a></li>
+            <li {% if page == 'resources' %}class="active"{% endif %}><a href="/resources">{{ gettext("Resources") }}</a></li>
+            <li {% if page == 'history' %}class="active"{% endif %}><a href="/history">{{ gettext("History") }}</a></li>
+            <li {% if page == 'live-updates' %}class="active"{% endif %}><a href="/live-updates">{{ gettext("Live Updates") }}</a></li>
             <li><a href="https://events.webmaker.org" target="_blank">{{ gettext("Events") }}</a></li>
           </ul>
           {% endblock %}
@@ -60,6 +62,35 @@
       </div>
     </nav>
   </div>
+  <!-- Secondary nav ends -->
+
+  <!-- Tertiary nav -->
+  {% if page == "resources" %}
+    <nav class="navbar navbar-no-header-xs navbar-tertiary">
+      <div class="container">
+        <div class="navbar-collapse" collapse="tertiaryCollapse">
+          <ul class="nav navbar-nav">
+            <li class="nav-icon nav-title hidden-xs {% if resoucesSubpage == 'getting-started' %}active{% endif %}">
+              <a href="/resources/getting-started">{{ gettext("Getting Started") }}</a>
+            </li>
+            <li class="nav-icon nav-title hidden-xs {% if resoucesSubpage == 'getting-started-resources' %}active{% endif %}">
+              <a href="/resources/getting-started-resources">{{ gettext("Getting Started Resources") }}</a>
+            </li>
+            <li class="nav-icon nav-title hidden-xs {% if resoucesSubpage == 'planning-your-event' %}active{% endif %}">
+              <a href="/resources/planning-your-event">{{ gettext("Planning Your Event") }}</a>
+            </li>
+            <li class="nav-icon nav-title hidden-xs {% if resoucesSubpage == 'running-your-event' %}active{% endif %}">
+              <a href="/resources/running-your-event">{{ gettext("Running Your Event") }}</a>
+            </li>
+            <li class="nav-icon nav-title hidden-xs {% if resoucesSubpage == 'post-event' %}active{% endif %}">
+              <a href="/resources/post-event">{{ gettext("Post-Event") }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  {% endif %}
+  <!-- Tertiary nav ends-->
 
   <div class="view-animate" role="main">
     {% block banner %}

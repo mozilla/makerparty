@@ -1,21 +1,11 @@
 {% extends "views/layout.html" %}
+{% set page = "home" %}
+
 {% block title %} Maker Party - Home {% endblock %}
 
 {% block customStyles %}
   <link href="/lib/elastislide/css/elastislide.css" rel="stylesheet" />
   <link href="/lib/elastislide/css/custom.css" rel="stylesheet" />
-{% endblock %}
-
-{% block bodyOpen %}<body class="home">{% endblock %}
-{% block navItems %}
-<ul class="nav navbar-nav">
-  <li class="active"><a href="/">{{ gettext("Home") }}</a></li>
-  <li><a href="/partners">{{ gettext("Partners") }}</a></li>
-  <li><a href="/resources">{{ gettext("Resources") }}</a></li>
-  <li><a href="/history">{{ gettext("History") }}</a></li>
-  <li><a href="/live-updates">{{ gettext("Live Updates") }}</a></li>
-  <li><a href="https://events.webmaker.org" target="_blank">{{ gettext("Events") }}</a></li>
-</ul>
 {% endblock %}
 
 {% block banner %}

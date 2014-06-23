@@ -22,8 +22,10 @@
 @mp-lightblue: #99d2d4;
 @mp-lightyellow: #fbf6b6;
 @mp-grey: #83a4b3;
+@mp-nav-lighter-blue: #01527D;
 
 @heatmap-bg: #6FCCDD;
+
 
 /* ====================
   Copied from Webmaker Events
@@ -103,8 +105,22 @@
   }
 }
 
+/* ====================
+  Nav
+*/
+
 .navbar {
   border: none;
+}
+
+.navbar-nav {
+  margin: 0 -15px;
+}
+
+.navbar-inverse .navbar-nav {
+  li > a {
+    color: fade(#fff,70%);
+  }
 }
 
 .navbar-webmaker {
@@ -145,7 +161,7 @@ ul.nav-webmaker-logo {
     display: block;
   }
   a:hover {
-    background: #01527D;
+    background: @mp-nav-lighter-blue;
   };
   img {
     max-height: 60px;
@@ -157,11 +173,6 @@ ul.nav-webmaker-logo {
 
 .navbar.navbar-inverse.navbar-no-header-xs {
   margin-bottom: 0;
-  .navbar-collapse {
-    @media (min-width: @screen-sm-min) {
-      padding-left: 0;
-    }
-  }
 }
 
 .navbar-makerparty .navbar-toggle {
@@ -173,6 +184,55 @@ ul.nav-webmaker-logo {
   background: @mp-darkgreen;
   border-color: @mp-darkgreen;
 }
+
+.navbar.navbar-tertiary {
+  background: @mp-nav-lighter-blue;
+  font-weight: normal;
+  font-size: 13px;
+  .nav > li > a {
+    color: fade(white, 80%);
+    &:hover {
+      background: none;
+      color: white;
+    }
+  }
+  .nav > li.active > a {
+    color: white;
+  }
+  .nav .open > a,
+  .nav .open > a:hover,
+  .nav .open > a:focus {
+    background-color: @mp-nav-lighter-blue;
+  }
+}
+
+.navbar-btn {
+  margin-right: 1em;
+}
+
+.navbar-affix-top {
+  @media (min-width: @screen-sm-min) {
+    .navbar-fixed-top;
+  }
+}
+
+.navbar.navbar-no-header-xs {
+  margin-bottom: 0;
+  border: none;
+
+  @media (max-width: @grid-float-breakpoint) {
+    border: none;
+    min-height: 0;
+    .navbar-header {
+      display: none;
+    }
+  }
+}
+
+
+/* ====================
+  Banner
+*/
 
 .mp-banner {
   background: @mp-lightyellow;
@@ -196,6 +256,10 @@ ul.nav-webmaker-logo {
     margin-right: 10px;
   }
 }
+
+/* ====================
+  Call out
+*/
 
 .call-out {
   color: #fff;
@@ -230,6 +294,10 @@ ul.nav-webmaker-logo {
     }
   }
 }
+
+/* ====================
+  Footer
+*/
 
 footer {
   .big-section;
@@ -274,6 +342,11 @@ footer {
 
 }
 
+
+/* ====================
+  Sponsorship Partners
+*/
+
 #sponsorship-partners {
   .big-section;
   padding-top: 0;
@@ -294,6 +367,10 @@ footer {
     }
   }
 }
+
+/* ====================
+  E-mail Sign Up Form
+*/
 
 .get-mp-updates {
   padding-top: 5px;
@@ -485,6 +562,9 @@ footer {
   }
   .flickr-pics {
     height: 200px;
+  }
+  .elastislide-horizontal nav span {
+    background-color: @mp-green;
   }
 }
 
@@ -857,6 +937,7 @@ footer {
 */
 
 .resources {
+
   .banner {
     .mp-banner;
     background-image: url('../img/makerparty_resources_banner-mobile.jpg');
@@ -868,6 +949,34 @@ footer {
 
   }
 }
+
+#event-guide {
+  .event-guide-tile {
+    .text-center;
+    a {
+      display: block;
+      margin: 30px auto;
+      width: 120px;
+      height: 120px;
+      line-height: 120px;
+      background: @lightgrey;
+      border-radius: 50%;
+      color: @brand-primary;
+      font-size: 60px;
+    }
+    a:hover {
+      background: @brand-info;
+      color: #fff;
+    }
+  }
+}
+
+.resources-side-nav {
+}
+
+.resources-main {
+}
+
 
 
 /* ====================

@@ -209,7 +209,7 @@ if ( $("body").hasClass("live-updates") ){
   /* ****************************************
   *  Load latest Webmaker blog post
   */
-  var webmakerBlogURL = "https://blog.webmaker.org/feed";
+  var webmakerBlogURL = "https://blog.webmaker.org/tag/maker-party/feed";
 
   $.ajax({
     url: document.location.protocol + "//ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=" + encodeURIComponent(webmakerBlogURL),

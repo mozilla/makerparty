@@ -1,17 +1,7 @@
 {% extends "views/layout.html" %}
-{% block title %} Maker Party - History {% endblock %}
+{% set page = "history" %}
 
-{% block bodyOpen %}<body class="history">{% endblock %}
-{% block navItems %}
-<ul class="nav navbar-nav">
-  <li><a href="/">{{ gettext("Home") }}</a></li>
-  <li><a href="/partners">{{ gettext("Partners") }}</a></li>
-  <li><a href="/resources">{{ gettext("Resources") }}</a></li>
-  <li class="active"><a href="/history">{{ gettext("History") }}</a></li>
-  <li><a href="/live-updates">{{ gettext("Live Updates") }}</a></li>
-  <li><a href="https://events.webmaker.org" target="_blank">{{ gettext("Events") }}</a></li>
-</ul>
-{% endblock %}
+{% block title %} Maker Party - History {% endblock %}
 
 {% block banner %}
   <div class="banner jumbotron">

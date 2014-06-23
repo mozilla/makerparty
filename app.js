@@ -58,6 +58,30 @@ app.get('/resources', function(req, res){
   res.render('resources.html');
 });
 
+app.get('/resources/getting-started', function(req, res){
+  res.render('resources-getting-started.html');
+});
+
+app.get('/resources/getting-started-resources', function(req, res){
+  res.render('resources-getting-started-resources.html');
+});
+
+app.get('/resources/planning-your-event', function(req, res){
+  res.render('resources-planning-your-event.html');
+});
+
+app.get('/resources', function(req, res){
+  res.render('resources.html');
+});
+
+app.get('/resources/running-your-event', function(req, res){
+  res.render('resources-running-your-event.html');
+});
+
+app.get('/resources/post-event', function(req, res){
+  res.render('resources-post-event.html');
+});
+
 app.get('/history', function(req, res){
   res.render('history.html');
 });

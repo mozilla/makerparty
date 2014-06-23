@@ -1,0 +1,39 @@
+{% extends "views/layout.html" %}
+
+{% block title %} Maker Party - Resources {% endblock %}
+
+{% block banner %}
+  <div class="banner jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block callout %}
+{% endblock %}
+
+{% block mainContent %}
+  <div class="big-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="resources-side-nav">
+          {% block resourcesSideNav %}
+          {% endblock %}
+          </div>
+        </div>
+        <div class="col-md-10">
+          <div class="resources-main">
+          {% block resourcesMain %}
+          {% endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

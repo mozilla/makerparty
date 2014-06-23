@@ -1,20 +1,10 @@
 {% extends "views/layout.html" %}
+{% set page = "live-updates" %}
+
 {% block title %} Maker Party - Live Updates {% endblock %}
 
 {% block customStyles %}
   <link href="/bower_components/supportopen-quilt/dist/quilt.min.css" rel="stylesheet">
-{% endblock %}
-
-{% block bodyOpen %}<body class="live-updates">{% endblock %}
-{% block navItems %}
-<ul class="nav navbar-nav">
-  <li><a href="/">{{ gettext("Home") }}</a></li>
-  <li><a href="/partners">{{ gettext("Partners") }}</a></li>
-  <li><a href="/resources">{{ gettext("Resources") }}</a></li>
-  <li><a href="/history">{{ gettext("History") }}</a></li>
-  <li class="active"><a href="/live-updates">{{ gettext("Live Updates") }}</a></li>
-  <li><a href="https://events.webmaker.org" target="_blank">{{ gettext("Events") }}</a></li>
-</ul>
 {% endblock %}
 
 {% block banner %}
