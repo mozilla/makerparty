@@ -971,10 +971,74 @@ footer {
   }
 }
 
-.resources-side-nav {
-}
+.resources.resources-subpage {
+  .banner.jumbotron {
+    background-color: @mp-yellow;
+    background-image: url("../img/makerparty_pattern_light.png");
+    background-size: 314px 200px;
+    background-repeat: repeat repeat;
+    .container {
+      margin-bottom: 0;
+    }
+    i.fa {
+      color: @mp-green;
+      margin-right: 15px;
+    }
+  }
 
-.resources-main {
+  .resources-side-nav {
+  }
+
+  .resources-main {
+    .section {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid @lightgrey;
+      .intro {
+        margin-bottom: 25px;
+        h2 {
+          margin-bottom: 20px;
+        }
+        h4 {
+          line-height: 1.3;
+        }
+      }
+      .details {
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          li:not(:last-child) {
+            margin-bottom: 15px;
+          }
+          .item-title {
+            display: inline;
+            font-weight: bold;
+          }
+          .item-title::after {
+            content: ":";
+            margin-right: 5px;
+          }
+          .item-description {
+            display: inline;
+          }
+        }
+        ul.nested-list {
+          list-style-type: disc;
+          margin-top: 20px;
+          margin-left: 50px;
+          li {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .section:first-of-type {
+      padding-top: 0;
+    }
+    .section:last-of-type {
+      border-bottom: none;
+    }
+  }
 }
 
 

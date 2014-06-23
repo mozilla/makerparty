@@ -25,7 +25,7 @@
   <script src="https://stuff.webmaker.org/webmaker-rid/webmaker-rid.js" async></script>
 </head>
 
-<body {% if page %}class="{{ page }}"{% endif %}>
+<body class="{% if page %}{{ page }}{% endif %} {% if resoucesSubpage %}resources-subpage{% endif %}">
   <div>
     <!-- Primary nav -->
     <nav class="navbar navbar-default navbar-webmaker navbar-makerparty">
