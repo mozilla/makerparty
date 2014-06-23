@@ -22,9 +22,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>{{ gettext("Events around the world") }}</h1>
+          <h1>{{ gettext("Heatmap Title") }}</h1>
           <p>
-            Each year Maker Party grows bigger and better! Check out all the places around the world where people are teaching, learning and making together. Want to see your event on the map? Add it to the events page [https://events.webmaker.org].
+            {{ gettext("Heatmap Desc") | safe }}
           </p>
         </div>
       </div>
@@ -69,9 +69,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>{{ gettext("Maker Party Quilt") }}</h1>
+          <h1>{{ gettext("Maker Party Quilt Title") }}</h1>
           <p>
-            Share what you've made and add yourself to this Maker Party quilt by using the #makerparty hashtag on your Thimble [https://webmaker.org/tools] and Popcorn Maker [https://webmaker.org/tools] projects. You'll have the chance to enter your hashtag when you click "Save".
+            {{ gettext("Maker Party Quilt Desc") }}
           </p>
         </div>
       </div>
