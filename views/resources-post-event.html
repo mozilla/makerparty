@@ -24,31 +24,24 @@
 {% endblock %}
 
 {% block resourcesSideNav %}
+  <li><a href="#Reflection">{{ gettext("Reflection Title") }}</a></li>
+  <li><a href="#Feedback-for-Mozilla">{{ gettext("Feedback for Mozilla Title") }}</a></li>
+  <li><a href="#Documentation">{{ gettext("Documentation Title") }}</a></li>
+  <li><a href="#Thank-You">{{ gettext("Thank You Title") }}</a></li>
 {% endblock %}
 
 {% block resourcesMain %}
   <!-- New section =================== -->
-  <div class="section" id="">
+  <div class="section" id="Reflection">
     <div class="row intro">
       <div class="col-md-12">
-        <h2>{{ gettext(" Title") }}</h2>
-        <h4>{{ gettext(" Desc") }}</h4>
-      </div>
-    </div>
-    <div class="row details">
-      <div class="col-md-12">
+        <h2>{{ gettext("Reflection Title") }}</h2>
+        <h4>{{ gettext("Reflection Desc") }}</h4>
         <ul>
           <li>
-            <div class="item-title">{{ gettext(" Title") }}</div>
-            <div class="item-description">{{ gettext(" Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext(" Title") }}</div>
-            <div class="item-description">{{ gettext(" Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext(" Title") }}</div>
-            <div class="item-description">{{ gettext(" Desc") | safe }}</div>
+            <ul class="list nested-list">
+              <li>{{ gettext("Sample Feedback Forms to Event Attendees") | safe }}</li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -56,27 +49,45 @@
   </div>
 
   <!-- New section =================== -->
-  <div class="section" id="">
+  <div class="section" id="Feedback-for-Mozilla">
     <div class="row intro">
       <div class="col-md-12">
-        <h2>{{ gettext(" Title") }}</h2>
-        <h4>{{ gettext(" Desc") }}</h4>
+        <h2>{{ gettext("Feedback for Mozilla Title") }}</h2>
+        <h4>{{ gettext("Feedback for Mozilla Desc") }}</h4>
+        <ul>
+          <li>
+            <ul class="list nested-list">
+              <li>{{ gettext("What I made website") | safe }}</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- New section =================== -->
+  <div class="section" id="Documentation">
+    <div class="row intro">
+      <div class="col-md-12">
+        <h2>{{ gettext("Documentation (Post-Event Page) Title") }}</h2>
+        <h4>{{ gettext("Documentation (Post-Event Page) Desc") }}</h4>
       </div>
     </div>
     <div class="row details">
       <div class="col-md-12">
         <ul>
           <li>
-            <div class="item-title">{{ gettext(" Title") }}</div>
-            <div class="item-description">{{ gettext(" Desc") | safe }}</div>
+            <div class="item-title">{{ gettext("Teach Title") }}</div>
+            <div class="item-description">{{ gettext("Teach Desc") | safe }}</div>
           </li>
           <li>
-            <div class="item-title">{{ gettext(" Title") }}</div>
-            <div class="item-description">{{ gettext(" Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext(" Title") }}</div>
-            <div class="item-description">{{ gettext(" Desc") | safe }}</div>
+            <div class="item-title">{{ gettext("Share (Post-Event Page) Title") }}</div>
+            <div class="item-description">{{ gettext("Share (Post-Event Page) Desc") | safe }}</div>
+            <ul class="list nested-list">
+              <li>{{ gettext("Sample Blog Post Guidelines") | safe }}</li>
+              <li>{{ gettext("Sample Popcorn Maker Event Recap") | safe }}</li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -84,58 +95,26 @@
   </div>
 
   <!-- New section =================== -->
-  <div class="section" id="">
+  <div class="section" id="Thank-You">
     <div class="row intro">
       <div class="col-md-12">
-        <h2>{{ gettext(" Title") }}</h2>
-        <h4>{{ gettext(" Desc") }}</h4>
+        <h2>{{ gettext("Thank You Title") }}</h2>
+        <h4>{{ gettext("Thank You Desc") }}</h4>
       </div>
     </div>
     <div class="row details">
       <div class="col-md-12">
         <ul>
           <li>
-            <div class="item-title">{{ gettext(" Title") }}</div>
-            <div class="item-description">{{ gettext(" Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext(" Title") }}</div>
-            <div class="item-description">{{ gettext(" Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext(" Title") }}</div>
-            <div class="item-description">{{ gettext(" Desc") | safe }}</div>
+            <div class="item-title">{{ gettext("Thank You Title") }}</div>
+            <div class="item-description">{{ gettext("Thank You Desc") | safe }}</div>
+            <ul class="list nested-list">
+              <li>{{ gettext("Sample Thank You Letters") | safe }}</li>
+            </ul>
           </li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- New section =================== -->
-  <div class="section" id="">
-    <div class="row intro">
-      <div class="col-md-12">
-        <h2>{{ gettext(" Title") }}</h2>
-        <h4>{{ gettext(" Desc") }}</h4>
-      </div>
-    </div>
-    <div class="row details">
-      <div class="col-md-12">
-        <ul>
-          <li>
-            <div class="item-title">{{ gettext(" Title") }}</div>
-            <div class="item-description">{{ gettext(" Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext(" Title") }}</div>
-            <div class="item-description">{{ gettext(" Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext(" Title") }}</div>
-            <div class="item-description">{{ gettext(" Desc") | safe }}</div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
 {% endblock %}
