@@ -30,19 +30,19 @@
       <div class="row">
         <div class="col-md-4 col-sm-4">
           <div class="event-guide-tile">
-            <a href="/resources/getting-started"><i class="fa fa-rocket"></i></a>
+            <a href="/resources/getting-started" class="icon-link"><i class="fa fa-rocket"></i></a>
             <h3>{{ gettext("Getting Started") }}</h3>
           </div>
         </div>
         <div class="col-md-4 col-sm-4">
           <div class="event-guide-tile">
-            <a href="/resources/getting-started-resources"><i class="fa fa-briefcase"></i></a>
+            <a href="/resources/getting-started-resources" class="icon-link"><i class="fa fa-briefcase"></i></a>
             <h3>{{ gettext("Getting Started Resources") }}</h3>
           </div>
         </div>
         <div class="col-md-4 col-sm-4">
           <div class="event-guide-tile">
-            <a href="/resources/planning-your-event"><i class="fa fa-flag"></i></a>
+            <a href="/resources/planning-your-event" class="icon-link"><i class="fa fa-flag"></i></a>
             <h3>{{ gettext("Planning Your Event") }}</h3>
           </div>
         </div>
@@ -50,19 +50,23 @@
       <div class="row">
         <div class="col-md-4 col-sm-4">
           <div class="event-guide-tile">
-            <a href="/resources/running-your-event"><i class="fa fa-users"></i></a>
+            <a href="/resources/running-your-event" class="icon-link"><i class="fa fa-users"></i></a>
             <h3>{{ gettext("Running Your Event") }}</h3>
           </div>
         </div>
         <div class="col-md-4 col-sm-4">
           <div class="event-guide-tile">
-            <a href="/resources/post-event"><i class="fa fa-archive"></i></a>
+            <a href="/resources/post-event" class="icon-link"><i class="fa fa-archive"></i></a>
             <h3>{{ gettext("Post-Event") }}</h3>
           </div>
         </div>
         <div class="col-md-4 col-sm-4">
-          <div class="event-guide-tile">
-
+          <div class="event-guide-tile" id="quick-links">
+            <h3>{{ gettext("Quick Links") }}</h3>
+            <ul>
+              <li>{{ gettext("Add your event to the Events page") | safe }}</li>
+              <li>{{ gettext("Share what you made") | safe }}</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -111,6 +115,98 @@
           </div>
         </div>
         <div class="col-md-3 col-sm-3 col-xs-6 asset">
+          <h3>{{ gettext("Banner") }}</h3>
+          <div class="preview">
+            <img src="/party-resources/MakerPartyBanner-thumb.png" alt="{{ gettext('Maker Party Asset Banner thumbnail') }}" />
+          </div>
+          <div class="download-links">
+            <a href="/party-resources/MakerPartyBanner.eps" target="_blank"><i class="fa fa-download"></i>EPS</a>
+            <a href="/party-resources/MakerPartyBanner.png" target="_blank" target="_blank"><i class="fa fa-download"></i>PNG</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
+          <h3>{{ gettext("Table Cloth Design") }}</h3>
+          <div class="preview">
+            <img src="/party-resources/MakerPartyTableClothDesign-thumb.png" alt="{{ gettext('Maker Party Asset Table Cloth Design thumbnail') }}" />
+          </div>
+          <div class="download-links">
+            <a href="/party-resources/MakerPartyTableClothDesign.eps" target="_blank"><i class="fa fa-download"></i>EPS</a>
+            <a href="/party-resources/MakerPartyTableClothDesign.png" target="_blank" target="_blank"><i class="fa fa-download"></i>PNG</a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
+          <h3>{{ gettext("Buttons") }}</h3>
+          <div class="preview">
+            <img src="/party-resources/MakerPartyButtons-thumb.png" alt="{{ gettext('Maker Party Asset Buttons thumbnail') }}" />
+          </div>
+          <div class="download-links">
+            <a href="/party-resources/MakerPartyButtons.eps" target="_blank"><i class="fa fa-download"></i>EPS</a>
+            <a href="/party-resources/MakerPartyButtons.png" target="_blank" target="_blank"><i class="fa fa-download"></i>PNG</a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
+          <h3>{{ gettext("Desktop Wallpapers") }}</h3>
+          <div class="preview">
+            <img src="/party-resources/MakerPartyWallpaper-1-thumb.png" alt="{{ gettext('Maker Party Asset  thumbnail') }}" />
+          </div>
+          <div class="download-links">
+            <a href="/party-resources/" target="_blank"><i class="fa fa-download"></i>EPS</a>
+            <a href="/party-resources/" target="_blank" target="_blank"><i class="fa fa-download"></i>PNG</a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
+          <h3>{{ gettext("Desktop Wallpapers") }}</h3>
+          <div class="preview">
+            <img src="/party-resources/.png" alt="{{ gettext('Maker Party Asset  thumbnail') }}" />
+          </div>
+          <div class="download-links">
+            <a href="/party-resources/" target="_blank"><i class="fa fa-download"></i>EPS</a>
+            <a href="/party-resources/" target="_blank" target="_blank"><i class="fa fa-download"></i>PNG</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
+          <h3>{{ gettext("Desktop Wallpapers") }}</h3>
+          <div class="preview">
+            <img src="/party-resources/.png" alt="{{ gettext('Maker Party Asset  thumbnail') }}" />
+          </div>
+          <div class="download-links">
+            <a href="/party-resources/" target="_blank"><i class="fa fa-download"></i>EPS</a>
+            <a href="/party-resources/" target="_blank" target="_blank"><i class="fa fa-download"></i>PNG</a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
+          <h3>{{ gettext("Certificate Thimble Make") }}</h3>
+          <div class="preview">
+            <img src="/party-resources/.png" alt="{{ gettext('Maker Party Asset  thumbnail') }}" />
+          </div>
+          <div class="download-links">
+            <a href="/party-resources/" target="_blank"><i class="fa fa-download"></i>EPS</a>
+            <a href="/party-resources/" target="_blank" target="_blank"><i class="fa fa-download"></i>PNG</a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
+          <h3>{{ gettext("Flyer Thimble Make") }}</h3>
+          <div class="preview">
+            <img src="/party-resources/.png" alt="{{ gettext('Maker Party Asset  thumbnail') }}" />
+          </div>
+          <div class="download-links">
+            <a href="/party-resources/" target="_blank"><i class="fa fa-download"></i>EPS</a>
+            <a href="/party-resources/" target="_blank" target="_blank"><i class="fa fa-download"></i>PNG</a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6 asset">
+          <h3>{{ gettext("") }}</h3>
+          <div class="preview">
+            <img src="/party-resources/.png" alt="{{ gettext('Maker Party Asset  thumbnail') }}" />
+          </div>
+          <div class="download-links">
+            <a href="/party-resources/" target="_blank"><i class="fa fa-download"></i>EPS</a>
+            <a href="/party-resources/" target="_blank" target="_blank"><i class="fa fa-download"></i>PNG</a>
+          </div>
         </div>
       </div>
     </div>
