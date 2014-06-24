@@ -946,14 +946,18 @@ footer {
     }
   }
   .graphics-section {
-
+    .wallpapers {
+      a {
+        display: block;
+      }
+    }
   }
 }
 
 #event-guide {
   .event-guide-tile {
     .text-center;
-    a {
+    a.icon-link {
       display: block;
       margin: 30px auto;
       width: 120px;
@@ -967,6 +971,12 @@ footer {
     a:hover {
       background: @brand-info;
       color: #fff;
+    }
+  }
+  #quick-links.event-guide-tile {
+    .text-left;
+    ul {
+      padding-left: 20px;
     }
   }
 }
