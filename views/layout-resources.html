@@ -22,14 +22,46 @@
     <div class="container">
       <div class="row">
         <div class="col-md-2">
-          <div class="resources-side-nav">
-          {% block resourcesSideNav %}
-          {% endblock %}
+          <div class="hidden-xs hidden-sm" id="resources-side-nav">
+            <ul class="nav" data-spy="affix" data-offset-top="400">
+              {% block resourcesSideNav %}
+              {% endblock %}
+            </ul>
           </div>
         </div>
         <div class="col-md-10">
-          <div class="resources-main">
+
+          <div id="resources-main">
           {% block resourcesMain %}
+          {% endblock %}
+          </div>
+
+          <div class="subpages-nav">
+          {% block subpagesNav %}
+            <div class="row">
+              <div class="col-md-6">
+                {% if prevSection == true %}
+                <a id="to-prev" {% if prevSectionLink %}href="{{ prevSectionLink }}"{% endif %}>
+                  <div class="icon"><i class="fa fa-chevron-circle-left"></i></div>
+                  <div class="text">
+                    <div class="nav-type">{{ gettext("previous section") }}</div>
+                    <div class="section-title">{% if prevSectionTitle %}{{ gettext(prevSectionTitle) }}{% endif %}</div>
+                  </div>
+                </a>
+                {% endif %}
+              </div>
+              <div class="col-md-6">
+                {% if nextSection == true %}
+                <a id="to-next" {% if nextSectionLink %}href="{{ nextSectionLink }}"{% endif %}>
+                  <div class="text">
+                    <div class="nav-type">{{ gettext("next section") }}</div>
+                    <div class="section-title">{% if nextSectionTitle %}{{ gettext(nextSectionTitle) }}{% endif %}</div>
+                  </div>
+                  <div class="icon"><i class="fa fa-chevron-circle-right"></i></div>
+                </a>
+                {% endif %}
+              </div>
+            </div>
           {% endblock %}
           </div>
         </div>

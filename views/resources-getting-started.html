@@ -1,6 +1,10 @@
 {% extends "views/layout-resources.html" %}
 {% set page = "resources" %}
 {% set resoucesSubpage = "getting-started" %}
+{% set prevSection = false %}
+{% set nextSection = true %}
+{% set nextSectionLink = '/resources/getting-started-resources' %}
+{% set nextSectionTitle = 'Getting Started Resources' %}
 
 {% block title %} Maker Party - Resources {% endblock %}
 
@@ -19,8 +23,6 @@
 {% block callout %}
 {% endblock %}
 
-{% block resourcesSideNav %}
-{% endblock %}
 
 {% block resourcesMain %}
   <!-- New section =================== -->
