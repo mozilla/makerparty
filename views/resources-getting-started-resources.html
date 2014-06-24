@@ -1,6 +1,12 @@
 {% extends "views/layout-resources.html" %}
 {% set page = "resources" %}
 {% set resoucesSubpage = "getting-started-resources" %}
+{% set prevSection = true %}
+{% set prevSectionLink = '/resources/getting-started' %}
+{% set prevSectionTitle = 'Getting Started' %}
+{% set nextSection = true %}
+{% set nextSectionLink = '/resources/planning-your-event' %}
+{% set nextSectionTitle = 'Planning Your Event' %}
 
 {% block title %} Maker Party - Resources {% endblock %}
 
@@ -20,11 +26,17 @@
 {% endblock %}
 
 {% block resourcesSideNav %}
+  <li><a href="#Tips-for-Small-Events">{{ gettext("Tips for Small Events Title") }}</a></li>
+  <li><a href="#Tools-to-Teach-the-Web">{{ gettext("Tools to Teach the Web Title") }}</a></li>
+  <li><a href="#Web-Literacy-Map">{{ gettext("Web Literacy Map Title") }}</a></li>
+  <li><a href="#Webmaker-Training">{{ gettext("Webmaker Training Title") }}</a></li>
+  <li><a href="#Community-Resources">{{ gettext("Community Resources Title") }}</a></li>
+  <li><a href="#Requesting-Support">{{ gettext("Requesting Support Title") }}</a></li>
 {% endblock %}
 
 {% block resourcesMain %}
   <!-- New section =================== -->
-  <div class="section">
+  <div class="section" id="Tips-for-Small-Events">
     <div class="row intro">
       <div class="col-md-12">
         <h2>{{ gettext("Tips for Small Events Title") }}</h2>
@@ -68,7 +80,7 @@
   </div>
 
   <!-- New section =================== -->
-  <div class="section">
+  <div class="section" id="Tools-to-Teach-the-Web">
     <div class="row intro">
       <div class="col-md-12">
         <h2>{{ gettext("Tools to Teach the Web Title") }}</h2>
@@ -104,7 +116,7 @@
   </div>
 
   <!-- New section =================== -->
-  <div class="section">
+  <div class="section" id="Web-Literacy-Map">
     <div class="row intro">
       <div class="col-md-12">
         <h2>{{ gettext("Web Literacy Map Title") }}</h2>
@@ -114,7 +126,7 @@
   </div>
 
   <!-- New section =================== -->
-  <div class="section">
+  <div class="section" id="Webmaker-Training">
     <div class="row intro">
       <div class="col-md-12">
         <h2>{{ gettext("Webmaker Training Title") }}</h2>
@@ -124,7 +136,7 @@
   </div>
 
   <!-- New section =================== -->
-  <div class="section">
+  <div class="section" id="Community-Resources">
     <div class="row intro">
       <div class="col-md-12">
         <h2>{{ gettext("Community Resources Title") }}</h2>
@@ -167,7 +179,7 @@
   </div>
 
   <!-- New section =================== -->
-  <div class="section">
+  <div class="section" id="Requesting-Support">
     <div class="row intro">
       <div class="col-md-12">
         <h2>{{ gettext("Requesting Support Title") }}</h2>
