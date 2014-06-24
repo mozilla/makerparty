@@ -1,17 +1,7 @@
 {% extends "views/layout.html" %}
-{% block title %} Maker Party - Resources {% endblock %}
+{% set page = "resources" %}
 
-{% block bodyOpen %}<body class="resources">{% endblock %}
-{% block navItems %}
-<ul class="nav navbar-nav">
-  <li><a href="/">{{ gettext("Home") }}</a></li>
-  <li><a href="/partners">{{ gettext("Partners") }}</a></li>
-  <li class="active"><a href="/resources">{{ gettext("Resources") }}</a></li>
-  <li><a href="/history">{{ gettext("History") }}</a></li>
-  <li><a href="/live-updates">{{ gettext("Live Updates") }}</a></li>
-  <li><a href="https://events.webmaker.org" target="_blank">{{ gettext("Events") }}</a></li>
-</ul>
-{% endblock %}
+{% block title %} Maker Party - Resources {% endblock %}
 
 {% block banner %}
   <div class="banner jumbotron">
@@ -19,14 +9,68 @@
       <div class="row">
         <div class="col-md-12">
           <h1>{{ gettext("Resources") }}</h1>
-          <p class="lead">{{ gettext("Resources Banner Desc") | safe }}</p>
+          <p class="lead">{{ gettext("Resources Banner Desc") }}</p>
         </div>
       </div>
     </div>
   </div>
 {% endblock %}
 
+{% block callout %}
+{% endblock %}
+
 {% block mainContent %}
+  <div class="big-section" id="event-guide">
+    <div class="container">
+     <div class="row">
+        <div class="col-md-12">
+          <h2>{{ gettext("Event Guide") }}</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <div class="event-guide-tile">
+            <a href="/resources/getting-started"><i class="fa fa-rocket"></i></a>
+            <h3>{{ gettext("Getting Started") }}</h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="event-guide-tile">
+            <a href="/resources/getting-started-resources"><i class="fa fa-briefcase"></i></a>
+            <h3>{{ gettext("Getting Started Resources") }}</h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="event-guide-tile">
+            <a href="/resources/planning-your-event"><i class="fa fa-flag"></i></a>
+            <h3>{{ gettext("Planning Your Event") }}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <div class="event-guide-tile">
+            <a href="/resources/running-your-event"><i class="fa fa-users"></i></a>
+            <h3>{{ gettext("Running Your Event") }}</h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="event-guide-tile">
+            <a href="/resources/post-event"><i class="fa fa-archive"></i></a>
+            <h3>{{ gettext("Post-Event") }}</h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="event-guide-tile">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
   <div class="big-section graphics-section">
     <div class="container">
       <div class="row">
