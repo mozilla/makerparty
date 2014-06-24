@@ -1005,8 +1005,6 @@ footer {
       }
       .details {
         ul {
-          list-style-type: none;
-          padding-left: 0;
           li:not(:last-child) {
             margin-bottom: 15px;
           }
@@ -1022,18 +1020,23 @@ footer {
             display: inline;
           }
         }
-        ul.nested-list {
-          list-style-type: disc;
-          margin-top: 20px;
-          margin-left: 50px;
-          li {
-            margin-bottom: 0;
-          }
-        }
       }
       .cta {
         .text-center;
         margin-top: 30px;
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      .intro ul.nested-list,
+      .details ul.nested-list {
+        list-style-type: disc;
+        margin-top: 20px;
+        margin-left: 50px;
+        li {
+          margin-bottom: 0;
+        }
       }
     }
     .section:first-of-type {
