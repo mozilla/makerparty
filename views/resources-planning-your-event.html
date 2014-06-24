@@ -26,11 +26,19 @@
 {% endblock %}
 
 {% block resourcesSideNav %}
+  <li><a href="#Find-a-venue">{{ gettext("Find a venue Title") }}</a></li>
+  <li><a href="#Design-a-fun-experience">{{ gettext("Design a fun experience Title") }}</a></li>
+  <li><a href="#Speakers">{{ gettext("Speakers Title") }}</a></li>
+  <li><a href="#Schedule">{{ gettext("Schedule Title") }}</a></li>
+  <li><a href="#Activities">{{ gettext("Activities Title") }}</a></li>
+  <li><a href="#Volunteers_and_Collaborators">{{ gettext("Volunteers & Collaborators Title") }}</a></li>
+  <li><a href="#Promotion">{{ gettext("Promotion Title") }}</a></li>
+  <li><a href="#Tech">{{ gettext("Tech Title") }}</a></li>
 {% endblock %}
 
 {% block resourcesMain %}
   <!-- New section =================== -->
-  <div class="section">
+  <div class="section" id="Find-a-venue">
     <div class="row intro">
       <div class="col-md-12">
         <h2>{{ gettext("Find a venue Title") }}</h2>
@@ -40,7 +48,7 @@
   </div>
 
   <!-- New section =================== -->
-  <div class="section">
+  <div class="section" id="Design-a-fun-experience">
     <div class="row intro">
       <div class="col-md-12">
         <h2>{{ gettext("Design a fun experience Title") }}</h2>
@@ -57,7 +65,7 @@
   </div>
 
   <!-- New section =================== -->
-  <div class="section">
+  <div class="section" id="Speakers">
     <div class="row intro">
       <div class="col-md-12">
         <h2>{{ gettext("Speakers Title") }}</h2>
@@ -75,7 +83,7 @@
   </div>
 
   <!-- New section =================== -->
-  <div class="section">
+  <div class="section" id="Schedule">
     <div class="row intro">
       <div class="col-md-12">
         <h2>{{ gettext("Schedule Title") }}</h2>
@@ -93,7 +101,7 @@
   </div>
 
   <!-- New section =================== -->
-  <div class="section">
+  <div class="section" id="Activities">
     <div class="row intro">
       <div class="col-md-12">
         <h2>{{ gettext("Activities (Planning Your Event Page) Title") }}</h2>
@@ -124,8 +132,8 @@
     </div>
   </div>
 
-<!-- New section =================== -->
-  <div class="section">
+  <!-- New section =================== -->
+  <div class="section" id="Volunteers_and_Collaborators">
     <div class="row intro">
       <div class="col-md-12">
         <h2>{{ gettext("Volunteers & Collaborators Title") }}</h2>
@@ -159,7 +167,7 @@
   </div>
 
 <!-- New section =================== -->
-  <div class="section">
+  <div class="section" id="Promotion">
     <div class="row intro">
       <div class="col-md-12">
         <h2>{{ gettext("Promotion Title") }}</h2>
@@ -250,7 +258,7 @@
   </div>
 
   <!-- New section =================== -->
-  <div class="section">
+  <div class="section" id="Tech">
     <div class="row intro">
       <div class="col-md-12">
         <h2>{{ gettext("Tech Title") }}</h2>
