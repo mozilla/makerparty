@@ -1,8 +1,17 @@
 // Check for email sign-up success from welcome.webmaker.org
 (function() {
   var thanks_re = /thanks=(\w+)/;
-
+  var $modalBackdrop = $('.modal-backdrop');
+  var $thanksModal = $('#thanks-modal');
   if (thanks_re.test(window.location.search)) {
+    $modalBackdrop.addClass('in');
+    $thanksModal.addClass('in').css({
+      display: 'block'
+    });
+    window.setTimeout(function() {
+      $modalBackdrop.removeClass('in');
+      $thanksModal.removeClass('in');
+    }, 1500)
     console.log("Visitor signed up on welcome.webmaker.org");
     analytics.event("Email Sign Up", {label: "Learn More About Webmaker"});
     analytics.conversionGoal("WebmakerEmailSignUp");
