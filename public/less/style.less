@@ -451,9 +451,6 @@ footer {
   .download-links {
     .text-center;
     margin-top: 10px;
-    a:not(:first-child) {
-      margin-left: 15px;
-    };
     i {
       margin-right: 5px;
     }
@@ -702,18 +699,6 @@ footer {
   }
 }
 
-.partner-yellow-cta .container {
-  background-color: @mp-yellow;
-  background-image: url("../img/makerparty_pattern_light.png");
-  background-size: 314px 200px;
-  background-repeat: repeat repeat;
-
-  h2 {
-    color: @mp-green;
-    margin-bottom: 0;
-  }
-}
-
 .previous-partners {
   img {
     width: 80%;
@@ -957,7 +942,7 @@ footer {
 #event-guide {
   .event-guide-tile {
     .text-center;
-    a.icon-link {
+    a .icon-link {
       display: block;
       margin: 30px auto;
       width: 120px;
@@ -965,11 +950,11 @@ footer {
       line-height: 120px;
       background: @lightgrey;
       border-radius: 50%;
-      color: @brand-primary;
+      color: @mp-green;
       font-size: 60px;
     }
-    a:hover {
-      background: @brand-info;
+    a:hover .icon-link {
+      background: @link-color;
       color: #fff;
     }
   }
@@ -1089,8 +1074,15 @@ footer {
       .text-right;
       float: right;
     }
+    #to-prev:hover,
+    #to-next:hover {
+      .icon,
+      .section-title {
+        color: @link-hover-color;
+      }
+    }
     .icon {
-      color: @mp-green;
+      color: @link-color;
       float: left;
       font-size: 35px;
     }
