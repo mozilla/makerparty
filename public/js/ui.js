@@ -1,8 +1,27 @@
 // Check for email sign-up success from welcome.webmaker.org
 (function() {
   var thanks_re = /thanks=(\w+)/;
-
+  var $body = $('body');
+  var $thanksModal = $('#thanks-modal');
+  var $backdrop;
+  var TRANSITION_TIME = 150;
+  var PAUSE_TIME = 1500;
   if (thanks_re.test(window.location.search)) {
+    $backdrop = $('<div class="modal-backdrop fade" />')
+      .appendTo($body)
+      .addClass('in');
+    $thanksModal
+      .css({ display: 'block' })
+      .addClass('in');
+    window.setTimeout(function() {
+      $backdrop.removeClass('in');
+      $thanksModal.removeClass('in');
+      window.setTimeout(function() {
+        $thanksModal
+          .css({ display: 'none' });
+        $backdrop.remove();
+      }, TRANSITION_TIME);
+    }, PAUSE_TIME)
     console.log("Visitor signed up on welcome.webmaker.org");
     analytics.event("Email Sign Up", {label: "Learn More About Webmaker"});
     analytics.conversionGoal("WebmakerEmailSignUp");
