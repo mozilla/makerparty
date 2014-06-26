@@ -1,6 +1,6 @@
 {
   "name": "makerparty",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -18,7 +18,7 @@
     "webmaker-analytics": "0.1.0"
   },
   "resolutions": {
-    "makerstrap": "0.1.8",
+    "makerstrap": "0.1.1",
     "jquery": "2.1.0"
   }
 }
