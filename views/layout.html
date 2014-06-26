@@ -51,7 +51,34 @@
           <ul class="nav navbar-nav">
             <li {% if page == 'home' %}class="active"{% endif %}><a href="/">{{ gettext("Home") }}</a></li>
             <li {% if page == 'partners' %}class="active"{% endif %}><a href="/partners">{{ gettext("Partners") }}</a></li>
-            <li {% if page == 'resources' %}class="active"{% endif %}><a href="/resources">{{ gettext("Resources") }}</a></li>
+            <li {% if page == 'resources' %}class="active"{% endif %}>
+              <a href="/resources">{{ gettext("Resources") }}</a>
+              {% if page == 'resources' %}
+              <nav class="navbar navbar-tertiary visible-xs">
+                <div class="container">
+                  <div class="navbar-collapse" collapse="tertiaryCollapse">
+                    <ul class="nav navbar-nav">
+                      <li class="nav-icon nav-title {% if resoucesSubpage == 'getting-started' %}active{% endif %}">
+                        <a href="/resources/getting-started">{{ gettext("Getting Started") }}</a>
+                      </li>
+                      <li class="nav-icon nav-title {% if resoucesSubpage == 'getting-started-resources' %}active{% endif %}">
+                        <a href="/resources/getting-started-resources">{{ gettext("Getting Started Resources") }}</a>
+                      </li>
+                      <li class="nav-icon nav-title {% if resoucesSubpage == 'planning-your-event' %}active{% endif %}">
+                        <a href="/resources/planning-your-event">{{ gettext("Planning Your Event") }}</a>
+                      </li>
+                      <li class="nav-icon nav-title {% if resoucesSubpage == 'running-your-event' %}active{% endif %}">
+                        <a href="/resources/running-your-event">{{ gettext("Running Your Event") }}</a>
+                      </li>
+                      <li class="nav-icon nav-title {% if resoucesSubpage == 'post-event' %}active{% endif %}">
+                        <a href="/resources/post-event">{{ gettext("Post-Event") }}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              {% endif %}
+            </li>
             <li {% if page == 'history' %}class="active"{% endif %}><a href="/history">{{ gettext("History") }}</a></li>
             <li {% if page == 'live-updates' %}class="active"{% endif %}><a href="/live-updates">{{ gettext("Live Updates") }}</a></li>
             <li><a href="https://events.webmaker.org" target="_blank">{{ gettext("Events") }}</a></li>
@@ -68,23 +95,23 @@
 
   <!-- Tertiary nav -->
   {% if page == "resources" %}
-    <nav class="navbar navbar-no-header-xs navbar-tertiary">
+    <nav class="navbar navbar-no-header-xs navbar-tertiary hidden-xs">
       <div class="container">
         <div class="navbar-collapse" collapse="tertiaryCollapse">
           <ul class="nav navbar-nav">
-            <li class="nav-icon nav-title hidden-xs {% if resoucesSubpage == 'getting-started' %}active{% endif %}">
+            <li class="nav-icon nav-title {% if resoucesSubpage == 'getting-started' %}active{% endif %}">
               <a href="/resources/getting-started">{{ gettext("Getting Started") }}</a>
             </li>
-            <li class="nav-icon nav-title hidden-xs {% if resoucesSubpage == 'getting-started-resources' %}active{% endif %}">
+            <li class="nav-icon nav-title {% if resoucesSubpage == 'getting-started-resources' %}active{% endif %}">
               <a href="/resources/getting-started-resources">{{ gettext("Getting Started Resources") }}</a>
             </li>
-            <li class="nav-icon nav-title hidden-xs {% if resoucesSubpage == 'planning-your-event' %}active{% endif %}">
+            <li class="nav-icon nav-title {% if resoucesSubpage == 'planning-your-event' %}active{% endif %}">
               <a href="/resources/planning-your-event">{{ gettext("Planning Your Event") }}</a>
             </li>
-            <li class="nav-icon nav-title hidden-xs {% if resoucesSubpage == 'running-your-event' %}active{% endif %}">
+            <li class="nav-icon nav-title {% if resoucesSubpage == 'running-your-event' %}active{% endif %}">
               <a href="/resources/running-your-event">{{ gettext("Running Your Event") }}</a>
             </li>
-            <li class="nav-icon nav-title hidden-xs {% if resoucesSubpage == 'post-event' %}active{% endif %}">
+            <li class="nav-icon nav-title {% if resoucesSubpage == 'post-event' %}active{% endif %}">
               <a href="/resources/post-event">{{ gettext("Post-Event") }}</a>
             </li>
           </ul>
