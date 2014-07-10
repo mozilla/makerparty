@@ -13,7 +13,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1><i class="fa fa-rocket"></i>{{ gettext("Getting Started") }}</h1>
+          <h1><i class="fa fa-rocket"></i>{{ gettext("Choose Your Event Type") }}</h1>
+          <p></p>
+          <a class="btn btn-banner btn-mp-green btn-lg" href="https://events.webmaker.org/">
+            {{ gettext("Register Your Event") }}
+          </a>
         </div>
       </div>
     </div>
@@ -29,7 +33,6 @@
   <div class="section">
     <div class="row intro">
       <div class="col-md-12">
-        <h2>{{ gettext("Choose your Event Type Title") }}</h2>
         <h4>{{ gettext("Choose your Event Type Desc") }}</h4>
       </div>
     </div>
@@ -37,15 +40,15 @@
       <div class="col-md-12">
         <ul>
           <li>
-            <div class="item-title">{{ gettext("Small Event Title") }}</div>
+            <div class="item-title">{{ gettext("Small Event Title") | safe }}</div>
             <div class="item-description">{{ gettext("Small Event Desc") | safe }}</div>
           </li>
           <li>
-            <div class="item-title">{{ gettext("Medium Event Title") }}</div>
+            <div class="item-title">{{ gettext("Medium Event Title") | safe }}</div>
             <div class="item-description">{{ gettext("Medium Event Desc") | safe }}</div>
           </li>
           <li>
-            <div class="item-title">{{ gettext("Large Event Title") }}</div>
+            <div class="item-title">{{ gettext("Large Event Title") | safe }}</div>
             <div class="item-description">{{ gettext("Large Event Desc") | safe }}</div>
           </li>
         </ul>

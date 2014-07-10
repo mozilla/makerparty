@@ -3,7 +3,7 @@
 {% set resoucesSubpage = "planning-your-event" %}
 {% set prevSection = true %}
 {% set prevSectionLink = '/resources/getting-started-resources' %}
-{% set prevSectionTitle = 'Getting Started Resources' %}
+{% set prevSectionTitle = 'Getting Started' %}
 {% set nextSection = true %}
 {% set nextSectionLink = '/resources/running-your-event' %}
 {% set nextSectionTitle = 'Running Your Event' %}
@@ -16,6 +16,10 @@
       <div class="row">
         <div class="col-md-12">
           <h1><i class="fa fa-flag"></i>{{ gettext("Planning Your Event") }}</h1>
+          <p></p>
+          <a class="btn btn-banner btn-mp-green btn-lg" href="https://events.webmaker.org/">
+            {{ gettext("Register Your Event") }}
+          </a>
         </div>
       </div>
     </div>
@@ -33,6 +37,7 @@
   <li><a href="#Activities">{{ gettext("Activities Title") }}</a></li>
   <li><a href="#Volunteers_and_Collaborators">{{ gettext("Volunteers & Collaborators Title") }}</a></li>
   <li><a href="#Promotion">{{ gettext("Promotion Title") }}</a></li>
+  <li><a href="#Gear">{{ gettext("Gear Title") }}</a></li>
   <li><a href="#Tech">{{ gettext("Tech Title") }}</a></li>
 {% endblock %}
 
@@ -53,13 +58,7 @@
       <div class="col-md-12">
         <h2>{{ gettext("Design a fun experience Title") }}</h2>
         <h4>{{ gettext("Design a fun experience Desc") }}</h4>
-        <ul>
-          <li>
-            <ul class="list nested-list">
-              <li>{{ gettext("Stencil a t-shirt guide") | safe }}</li>
-            </ul>
-          </li>
-        </ul>
+        <p>{{ gettext("Stencil a t-shirt guide") | safe }}</p>
       </div>
     </div>
   </div>
@@ -70,14 +69,32 @@
       <div class="col-md-12">
         <h2>{{ gettext("Speakers Title") }}</h2>
         <h4>{{ gettext("Speakers Desc") }}</h4>
-        <ul>
-          <li>
-            <ul class="list nested-list">
-              <li>{{ gettext("Delivering a Talk or a Workshop") | safe }}</li>
-              <li>{{ gettext("Preparing a Great Slideshow") | safe }}</li>
-            </ul>
-          </li>
-        </ul>
+      </div>
+    </div>
+    <div class="row details">
+      <div class="col-md-12">
+        <div class="subsection">
+          <p>{{ gettext("Speakers Details Opening Paragraph") | safe }}</p>
+        </div>
+
+        <div class="subsection">
+          <p>{{ gettext("Here's what the \"add a mentor\" form looks like:") }}</p>
+          <div class="screencap-container">
+            <img src="/img/add-a-mentor-form.png" class="screencap" />
+          </div>
+        </div>
+
+        <div class="subsection">
+          <p>{{ gettext("Here are some helpful speaker-resources:") }}</p>
+          <ul>
+            <li>
+              <ul class="list nested-list">
+                <li>{{ gettext("Delivering a Talk or a Workshop") | safe }}</li>
+                <li>{{ gettext("Preparing a Great Slideshow") | safe }}</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -88,14 +105,6 @@
       <div class="col-md-12">
         <h2>{{ gettext("Schedule Title") }}</h2>
         <h4>{{ gettext("Schedule Desc") }}</h4>
-        <ul>
-          <li>
-            <ul class="list nested-list">
-              <li>{{ gettext("Sample Event Schedule") | safe }}</li>
-              <li>{{ gettext("Sample Event Agenda") | safe }}</li>
-            </ul>
-          </li>
-        </ul>
       </div>
     </div>
   </div>
@@ -166,7 +175,7 @@
     </div>
   </div>
 
-<!-- New section =================== -->
+  <!-- New section =================== -->
   <div class="section" id="Promotion">
     <div class="row intro">
       <div class="col-md-12">
@@ -186,13 +195,11 @@
             <ul class="list nested-list">
               <li><a href='/resources/#downloadable-graphics'>{{ gettext("Maker Party logo") }}</a></li>
               <li><a href='/resources/#downloadable-graphics'>{{ gettext("Maker Party wordmark") }}</a></li>
-              <li><a href='/resources/#downloadable-graphics'>{{ gettext("Maker Party banner") }}</a></li>
-              <li><a href='/resources/#downloadable-graphics'>{{ gettext("Maker Party email graphic") }}</a></li>
               <li><a href='/resources/#downloadable-graphics'>{{ gettext("Maker Party brand palette") }}</a></li>
-              <li><a href='/resources/#downloadable-graphics'>{{ gettext("Maker Party animated GIFs") }}</a></li>
-              <li><a href='/resources/#downloadable-graphics'>{{ gettext("Maker Party stencil") }}</a></li>
-              <li><a href='/resources/#downloadable-graphics'>{{ gettext("Maker Party wallpaper") }}</a></li>
+              <li><a href='/resources/#downloadable-graphics'>{{ gettext("Maker Party banner") }}</a></li>
+              <li><a href='/resources/#downloadable-graphics'>{{ gettext("Maker Party table cloth design") }}</a></li>
               <li><a href='/resources/#downloadable-graphics'>{{ gettext("Maker Party buttons") }}</a></li>
+              <li><a href='/resources/#downloadable-graphics'>{{ gettext("Maker Party desktop wallpaper") }}</a></li>
             </ul>
           </li>
           <li>
@@ -235,24 +242,33 @@
               <li>{{ gettext("Sample Invitation Make") | safe }}</li>
             </ul>
           </li>
-          <li>
-            <div class="item-title">{{ gettext("Signage & Gear Title") }}</div>
-            <div class="item-description">{{ gettext("Signage & Gear Desc") | safe }}</div>
-            <ul class="list nested-list">
-              <li>
-                <div class="item-title">{{ gettext("Gear Title") }}</div>
-                <div class="item-description">{{ gettext("Gear (Planning Your Event Page) Desc") }}</div>
-              </li>
-              <li>
-                <div class="item-title">{{ gettext("Signage Title") }}</div>
-                <div class="item-description">{{ gettext("Signage Desc") | safe }}</div>
-              </li>
-              <li>
-                {{ gettext("Request gear for your event") }}
-              </li>
-            </ul>
-          </li>
         </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- New section =================== -->
+  <div class="section" id="Gear">
+    <div class="row intro">
+      <div class="col-md-12">
+        <h2>{{ gettext("Gear Title") }}</h2>
+        <h4>{{ gettext("Gear Desc") }}</h4>
+      </div>
+    </div>
+    <div class="row details">
+      <div class="col-md-12">
+        <div class="subsection">
+          <h3>{{ gettext("Make your own party favors! Title") }}</h3>
+          <p>{{ gettext("Make your own party favors! Desc") | safe }}</p>
+        </div>
+        <div class="subsection">
+          <h3>{{ gettext("Signage Title") }}</h3>
+          <p>{{ gettext("Signage Desc") | safe }}</p>
+        </div>
+        <div class="subsection">
+          <h3>{{ gettext("Request Maker Party gear Title") }}</h3>
+          <p>{{ gettext("Request Maker Party gear Desc") | safe }}</p>
+        </div>
       </div>
     </div>
   </div>
