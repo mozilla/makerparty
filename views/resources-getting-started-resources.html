@@ -3,7 +3,7 @@
 {% set resoucesSubpage = "getting-started-resources" %}
 {% set prevSection = true %}
 {% set prevSectionLink = '/resources/getting-started' %}
-{% set prevSectionTitle = 'Getting Started' %}
+{% set prevSectionTitle = 'Choose Your Event Type' %}
 {% set nextSection = true %}
 {% set nextSectionLink = '/resources/planning-your-event' %}
 {% set nextSectionTitle = 'Planning Your Event' %}
@@ -32,58 +32,14 @@
 {% endblock %}
 
 {% block resourcesSideNav %}
-  <li><a href="#Tips-for-Small-Events">{{ gettext("Tips for Small Events Title") }}</a></li>
   <li><a href="#Tools-to-Teach-the-Web">{{ gettext("Tools to Teach the Web Title") }}</a></li>
-  <li><a href="#Web-Literacy-Map">{{ gettext("Web Literacy Map Title") }}</a></li>
+  <li><a href="#Web-Literacy-Map">{{ gettext("Web Literacy Teaching Resources Title") }}</a></li>
+  <li><a href="#Community-Resources">{{ gettext("Meet Other Event Hosts Title") }}</a></li>
   <li><a href="#Webmaker-Training">{{ gettext("Webmaker Training Title") }}</a></li>
-  <li><a href="#Community-Resources">{{ gettext("Community Resources Title") }}</a></li>
   <li><a href="#Requesting-Support">{{ gettext("Requesting Support Title") }}</a></li>
 {% endblock %}
 
 {% block resourcesMain %}
-  <!-- New section =================== -->
-  <div class="section" id="Tips-for-Small-Events">
-    <div class="row intro">
-      <div class="col-md-12">
-        <h2>{{ gettext("Tips for Small Events Title") }}</h2>
-        <h4>{{ gettext("Tips for Small Events Desc") }}</h4>
-      </div>
-    </div>
-    <div class="row details">
-      <div class="col-md-12">
-        <ul>
-          <li>
-            <div class="item-title">{{ gettext("Venue Title") }}</div>
-            <div class="item-description">{{ gettext("Venue Desc") }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext("Planning Your Activities Title") }}</div>
-            <div class="item-description">{{ gettext("Planning Your Activities Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext("Activities Title") }}</div>
-            <div class="item-description">{{ gettext("Activities Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext("Share Your Event Title") }}</div>
-            <div class="item-description">{{ gettext("Share Your Event Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext("Gear Title") }}</div>
-            <div class="item-description">{{ gettext("Gear Desc") }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext("Post-Event (Getting Started Resources Page) Title") }}</div>
-            <div class="item-description">{{ gettext("Post-Event (Getting Started Resources Page) Desc") | safe }}</div>
-            <ul class="list nested-list">
-              <li>{{ gettext("Sample Blog Post Guidelines") | safe }}</li>
-              <li>{{ gettext("Sample Popcorn Maker Event Recap") | safe }}</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
   <!-- New section =================== -->
   <div class="section" id="Tools-to-Teach-the-Web">
@@ -97,24 +53,16 @@
       <div class="col-md-12">
         <ul>
           <li>
-            <div class="item-title">{{ gettext("Popcorn Maker Title") }}</div>
             <div class="item-description">{{ gettext("Popcorn Maker Desc") | safe }}</div>
           </li>
           <li>
-            <div class="item-title">{{ gettext("Thimble Title") }}</div>
             <div class="item-description">{{ gettext("Thimble Desc") | safe }}</div>
           </li>
           <li>
-            <div class="item-title">{{ gettext("X-Ray Goggles Title") }}</div>
             <div class="item-description">{{ gettext("X-Ray Goggles Desc") | safe }}</div>
           </li>
           <li>
-            <div class="item-title">{{ gettext("Appmaker Title") }}</div>
             <div class="item-description">{{ gettext("Appmaker Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext("MiniCade Title") }}</div>
-            <div class="item-description">{{ gettext("MiniCade Desc") | safe }}</div>
           </li>
         </ul>
       </div>
@@ -125,8 +73,34 @@
   <div class="section" id="Web-Literacy-Map">
     <div class="row intro">
       <div class="col-md-12">
-        <h2>{{ gettext("Web Literacy Map Title") }}</h2>
-        <h4>{{ gettext("Web Literacy Map Desc") | safe }}</h4>
+        <h2>{{ gettext("Web Literacy Teaching Resources Title") }}</h2>
+        <h4>{{ gettext("Web Literacy Teaching Resources Desc") | safe }}</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- New section =================== -->
+  <div class="section" id="Community-Resources">
+    <div class="row intro">
+      <div class="col-md-12">
+        <h2>{{ gettext("Meet Other Event Hosts Title") }}</h2>
+        <h4>{{ gettext("Meet Other Event Hosts Desc") }}</h4>
+      </div>
+    </div>
+    <div class="row details">
+      <div class="col-md-12">
+        <div class="subsection">
+          <h3>{{ gettext("Have questions Title") | safe }}</h3>
+          <p>{{ gettext("Have questions Desc") | safe }}</p>
+        </div>
+        <div class="subsection">
+          <h3>{{ gettext("#MakerParty Title") | safe }}</h3>
+          <p>{{ gettext("#MakerParty Desc") }}</p>
+        </div>
+        <div class="subsection">
+          <h3>{{ gettext("Your Maker Party event page Title") | safe }}</h3>
+          <p>{{ gettext("Your Maker Party event page Desc") }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -137,49 +111,6 @@
       <div class="col-md-12">
         <h2>{{ gettext("Webmaker Training Title") }}</h2>
         <h4>{{ gettext("Webmaker Training Desc") | safe }}</h4>
-      </div>
-    </div>
-  </div>
-
-  <!-- New section =================== -->
-  <div class="section" id="Community-Resources">
-    <div class="row intro">
-      <div class="col-md-12">
-        <h2>{{ gettext("Community Resources Title") }}</h2>
-        <h4>{{ gettext("Community Resources Desc") }}</h4>
-      </div>
-    </div>
-    <div class="row details">
-      <div class="col-md-12">
-        <ul>
-          <li>
-            <div class="item-title">{{ gettext("Google+ Title") }}</div>
-            <div class="item-description">{{ gettext("Google+ Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext("Webmaker Listserv Title") }}</div>
-            <div class="item-description">{{ gettext("Webmaker Listserv Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext("Weekly Open Community Calls Title") }}</div>
-            <div class="item-description">{{ gettext("Weekly Open Community Calls Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext("Twitter Title") }}</div>
-            <div class="item-description">{{ gettext("Twitter Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext("Maker Party Events Page Title") }}</div>
-            <div class="item-description">
-              {{ gettext("Maker Party Events Page Desc") }}
-            </div>
-            <div class="cta">
-              <a class="btn btn-banner btn-mp-green btn-lg" href="https://events.webmaker.org/">
-                {{ gettext("Register Your Event") }}
-              </a>
-            </div>
-          </li>
-        </ul>
       </div>
     </div>
   </div>

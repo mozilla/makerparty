@@ -13,9 +13,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1><i class="fa fa-archive"></i>{{ gettext("Post-Event") }}</h1>
+          <h1><i class="fa fa-archive"></i>{{ gettext("After Your Event") }}</h1>
           <p>
-            {{ gettext("Post-Event Desc") }}
+            {{ gettext("After Your Event Desc") }}
           </p>
           <a class="btn btn-banner btn-mp-green btn-lg" href="https://mozteach.makes.org/thimble/what-i-made-maker-party">
             {{ gettext("Share what you made button text") }}
@@ -32,7 +32,8 @@
 {% block resourcesSideNav %}
   <li><a href="#Reflection">{{ gettext("Reflection Title") }}</a></li>
   <li><a href="#Feedback-for-Mozilla">{{ gettext("Feedback for Mozilla Title") }}</a></li>
-  <li><a href="#Documentation">{{ gettext("Documentation Title") }}</a></li>
+  <li><a href="#Share-on-Social-Media">{{ gettext("Share on Social Media Title") }}</a></li>
+  <li><a href="#Share-Your-Curriculum">{{ gettext("Share Your Curriculum Title") }}</a></li>
   <li><a href="#Thank-You">{{ gettext("Thank You Title") }}</a></li>
 {% endblock %}
 
@@ -59,11 +60,22 @@
     <div class="row intro">
       <div class="col-md-12">
         <h2>{{ gettext("Feedback for Mozilla Title") }}</h2>
-        <h4>{{ gettext("Feedback for Mozilla Desc") }}</h4>
+        <h4>{{ gettext("Feedback for Mozilla Desc") | safe }}</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- New section =================== -->
+  <div class="section" id="Share-on-Social-Media">
+    <div class="row intro">
+      <div class="col-md-12">
+        <h2>{{ gettext("Share on Social Media Title") }}</h2>
+        <h4>{{ gettext("Share on Social Media Desc") }}</h4>
         <ul>
           <li>
             <ul class="list nested-list">
-              <li>{{ gettext("Share what you made") | safe }}</li>
+              <li>{{ gettext("Sample Blog Post Guidelines") | safe }}</li>
+              <li>{{ gettext("Sample Popcorn Maker Event Recap") | safe }}</li>
             </ul>
           </li>
         </ul>
@@ -71,31 +83,12 @@
     </div>
   </div>
 
-
   <!-- New section =================== -->
-  <div class="section" id="Documentation">
+  <div class="section" id="Share-Your-Curriculum">
     <div class="row intro">
       <div class="col-md-12">
-        <h2>{{ gettext("Documentation (Post-Event Page) Title") }}</h2>
-        <h4>{{ gettext("Documentation (Post-Event Page) Desc") }}</h4>
-      </div>
-    </div>
-    <div class="row details">
-      <div class="col-md-12">
-        <ul>
-          <li>
-            <div class="item-title">{{ gettext("Teach Title") }}</div>
-            <div class="item-description">{{ gettext("Teach Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext("Share (Post-Event Page) Title") }}</div>
-            <div class="item-description">{{ gettext("Share (Post-Event Page) Desc") | safe }}</div>
-            <ul class="list nested-list">
-              <li>{{ gettext("Sample Blog Post Guidelines") | safe }}</li>
-              <li>{{ gettext("Sample Popcorn Maker Event Recap") | safe }}</li>
-            </ul>
-          </li>
-        </ul>
+        <h2>{{ gettext("Share Your Curriculum Title") }}</h2>
+        <h4>{{ gettext("Share Your Curriculum Desc") }}</h4>
       </div>
     </div>
   </div>

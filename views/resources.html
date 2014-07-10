@@ -10,6 +10,9 @@
         <div class="col-md-12">
           <h1>{{ gettext("Resources") }}</h1>
           <p class="lead">{{ gettext("Resources Banner Desc") }}</p>
+          <a class="btn btn-banner btn-mp-green btn-lg" href="http://party.webmaker.org/resources/getting-started-resources">
+            {{ gettext("Register Your Event") }}
+          </a>
         </div>
       </div>
     </div>
@@ -22,17 +25,12 @@
 {% block mainContent %}
   <div class="big-section" id="event-guide">
     <div class="container">
-     <div class="row">
-        <div class="col-md-12">
-          <h2>{{ gettext("Event Guide") }}</h2>
-        </div>
-      </div>
       <div class="row">
         <div class="col-md-4 col-sm-4">
           <div class="event-guide-tile">
             <a href="/resources/getting-started">
               <div class="icon-link"><i class="fa fa-rocket"></i></div>
-              <h3>{{ gettext("Getting Started") }}</h3>
+              <h3>{{ gettext("Choose Your Event Type") }}</h3>
             </a>
           </div>
         </div>
@@ -40,7 +38,7 @@
           <div class="event-guide-tile">
             <a href="/resources/getting-started-resources">
               <div class="icon-link"><i class="fa fa-briefcase"></i></div>
-              <h3>{{ gettext("Getting Started Resources") }}</h3>
+              <h3>{{ gettext("Getting Started") }}</h3>
             </a>
           </div>
         </div>
@@ -66,18 +64,11 @@
           <div class="event-guide-tile">
             <a href="/resources/post-event" class="icon-link">
               <div class="icon-link"><i class="fa fa-archive"></i></div>
-              <h3>{{ gettext("Post-Event") }}</h3>
+              <h3>{{ gettext("After Your Event") }}</h3>
             </a>
           </div>
         </div>
         <div class="col-md-4 col-sm-4">
-          <div class="event-guide-tile" id="quick-links">
-            <h3>{{ gettext("Quick Links") }}</h3>
-            <ul>
-              <li>{{ gettext("Add your event to the Events page") | safe }}</li>
-              <li>{{ gettext("Share what you made") | safe }}</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -198,7 +189,7 @@
           </div>
         </div>
         <div class="col-md-3 col-sm-3 col-xs-6 asset">
-          <h4>{{ gettext("Certificate Thimble Make") }}</h4>
+          <h4>{{ gettext("Printable Certificate") }}</h4>
           <div class="preview">
             <img src="/party-resources/MakerPartyCertificateMake-thumb.png" alt="{{ gettext('Maker Party Asset Certificate Thimble Make thumbnail') }}" />
           </div>
@@ -209,7 +200,7 @@
           </div>
         </div>
         <div class="col-md-3 col-sm-3 col-xs-6 asset">
-          <h4>{{ gettext("Flyer Thimble Make") }}</h4>
+          <h4>{{ gettext("Printable Flyer") }}</h4>
           <div class="preview">
             <img src="/party-resources/MakerPartyFlyerMake-thumb.png" alt="{{ gettext('Maker Party Asset Flyer Thimble Make thumbnail') }}" />
           </div>

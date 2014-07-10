@@ -6,7 +6,7 @@
 {% set prevSectionTitle = 'Planning Your Event' %}
 {% set nextSection = true %}
 {% set nextSectionLink = '/resources/post-event' %}
-{% set nextSectionTitle = 'Post-Event' %}
+{% set nextSectionTitle = 'After Your Event' %}
 
 {% block title %} Maker Party - Resources {% endblock %}
 
@@ -16,6 +16,10 @@
       <div class="row">
         <div class="col-md-12">
           <h1><i class="fa fa-users"></i>{{ gettext("Running Your Event") }}</h1>
+          <p></p>
+          <a class="btn btn-banner btn-mp-green btn-lg" href="https://events.webmaker.org/">
+            {{ gettext("Register Your Event") }}
+          </a>
         </div>
       </div>
     </div>
@@ -91,8 +95,8 @@
           </li>
           <li>
             <div class="item-title">{{ gettext("Live Share Title") }}</div>
-            <div class="item-description">{{ gettext("Live Share Desc") }}</div>
             <ul class="list nested-list">
+              <li>{{ gettext("Use the hashtag #makerparty everywhere!") }}</li>
               <li>{{ gettext("Tweet at @Webmaker") | safe }}</li>
               <li>{{ gettext("Social Media best practices") | safe }}</li>
             </ul>
