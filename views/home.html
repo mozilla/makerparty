@@ -25,7 +25,7 @@
               <a class="btn btn-banner btn-mp-green btn-lg" href="https://events.webmaker.org">
                 {{ gettext("Attend an Event") }}
               </a>
-              <a class="btn btn-banner btn-mp-green btn-lg" href="/resources">
+              <a class="btn btn-banner btn-mp-green btn-lg" href="/{{localeInfo.lang}}/resources">
                 {{ gettext("Host an Event") }}
               </a>
             </p>
@@ -46,8 +46,8 @@
       </div>
       <div class="row">
         <div class="col-md-4 col-sm-4 modules">
-          <a href="/resources"><img src="/img/makerparty_hostanevent_illustration.png" alt="{{ gettext('Maker Party Host An Event Illustration') }}" /></a>
-          <h3><a href="/resources">{{ gettext("Host an Event") }}</a></h3>
+          <a href="/{{localeInfo.lang}}/resources"><img src="/img/makerparty_hostanevent_illustration.png" alt="{{ gettext('Maker Party Host An Event Illustration') }}" /></a>
+          <h3><a href="/{{localeInfo.lang}}/resources">{{ gettext("Host an Event") }}</a></h3>
           <p>{{ gettext("Host an Event Desc") }}</p>
         </div>
         <div class="col-md-4 col-sm-4 modules">
@@ -56,8 +56,8 @@
           <p>{{ gettext("Attend an Event Desc") | safe }}</p>
         </div>
         <div class="col-md-4 col-sm-4 modules">
-          <a href="/resources"><img src="/img/makerparty_getsupport_illustration.png" alt="{{ gettext('Maker Party Get Support Illustration') }}" /></a>
-          <h3><a href="/resources">{{ gettext("Get Support") }}</a></h3>
+          <a href="/{{localeInfo.lang}}/resources"><img src="/img/makerparty_getsupport_illustration.png" alt="{{ gettext('Maker Party Get Support Illustration') }}" /></a>
+          <h3><a href="/{{localeInfo.lang}}/resources">{{ gettext("Get Support") }}</a></h3>
           <p>{{ gettext("Get Support Desc") }}</p>
         </div>
       </div>
