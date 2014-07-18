@@ -8,7 +8,7 @@ var fs = require('fs');
 
 var env = new habitat();
 
-console.log( '[%s] Generating event statistics since %s', Date(), env.get( 'EVENTS_START_DATE' ) );
+console.log( '[%s] Generating event statistics between %s and %s', Date(), env.get( 'EVENTS_START_DATE' ), env.get( 'EVENTS_END_DATE' ) );
 
 // request full data from the events api (since specified data)
 request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_START_DATE' ), function( error, response, events ) {
@@ -17,21 +17,38 @@ request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_S
     // arrays to dedupe things w/
     var event_hosts = [];
     var countries = [];
+    var cities = [];
+    var mentors = [];
+    var coorganizers = [];
 
     // init stats object
     var event_stats = {
       hosts: 0,
       attendees: 0,
       events: 0,
+      countries:0,
+      cities:0,
+      mentors: 0,
+      coorganizers: 0,
       byCountry: {}
     };
 
-    // aleady know number of events :)
-    event_stats.events = events.length;
-
     // make access to other stats easier to figure
     events.forEach( function( event, idx ) {
-      var new_host = 0; // little trick to count hosts per country
+      // we have to check ourselves as the events platform
+      // does not support checking for events before a date.
+      if( (new Date( event.beginDate )) > (new Date( env.get( 'EVENTS_END_DATE' ) )) ) {
+        return;
+      }
+
+      // up the number of events by one each time we have an event in out timeframe
+      event_stats.events += 1;
+
+      // little trick to count hosts/mentors/coorganizers per country
+      var new_host = 0;
+      var new_mentors = 0;
+      var new_coorganizers = 0;
+      var new_city = 0;
 
       /*
         get people stats
@@ -47,12 +64,49 @@ request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_S
         new_host = 1; // this is a new host, add to country host count ;)
       }
 
+      // get mentor stats
+      if ( event.mentors && (event.mentors.length > 0) ) {
+        event.mentors.forEach( function( mentor, idx ) {
+          if ( mentor.userId ) {
+            if( mentors.indexOf( mentor.userId ) === -1){
+              mentors.push( mentor.userId );
+
+              new_mentors += 1;  // this is a new mentor, add to country mentor count
+            }
+          }
+        });
+      }
+
+      // get coorganizers stats
+      if ( event.coorganizers && (event.coorganizers.length > 0) ) {
+        event.coorganizers.forEach( function( coorganizer, idx ) {
+          if ( coorganizer.userId ) {
+            if( coorganizers.indexOf( coorganizer.userId ) === -1){
+              coorganizers.push( coorganizer.userId );
+
+              new_coorganizers += 1;  // this is a new mentor, add to country mentor count
+            }
+          }
+        });
+      }
+
+      /*
+        Get city stats
+       */
+      if( event.city ) {
+        if(cities.indexOf( event.city ) === -1){
+          cities.push( event.city );
+
+          new_city = 1;
+        }
+      }
+
       /*
         get country level stats
        */
       var origCountry = event.country;
       // if null make unknown (we still want any other info we can extract)
-      if( event.country === null ) {
+      if( event.country === null || event.country === '') {
         event.country = 'UNKNOWN';
       }
       // else force country code not name
@@ -78,7 +132,10 @@ request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_S
           country: origCountry,
           events: 0,
           hosts: 0,
-          attendees: 0
+          mentors: 0,
+          coorganizers: 0,
+          attendees: 0,
+          cities: 0
         };
         countries.push( event.country );
       }
@@ -91,7 +148,10 @@ request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_S
         country: origCountry,
         events: country.events + 1,
         hosts: country.hosts + new_host,
-        attendees: country.attendees + event.attendees
+        mentors: country.mentors + new_mentors,
+        coorganizers: country.coorganizers + new_coorganizers,
+        attendees: country.attendees + event.attendees,
+        cities: country.cities + new_city
       };
 
       // not sure this line is even needed.
@@ -113,6 +173,12 @@ request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_S
     }
 
     event_stats.byCountry = new_byCountry;
+
+    // include theses counts for quick reading by humans
+    event_stats.countries = countries.length;
+    event_stats.cities = cities.length;
+    event_stats.mentors = mentors.length;
+    event_stats.coorganizers = coorganizers.length;
 
     // save the results in a cache file
     fs.writeFileSync( './event-stats.json', JSON.stringify( event_stats ) );
