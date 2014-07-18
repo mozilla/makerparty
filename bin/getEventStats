@@ -8,7 +8,7 @@ var fs = require('fs');
 
 var env = new habitat();
 
-console.log( '[%s] Generating event statistics since %s', Date(), env.get( 'EVENTS_START_DATE' ) );
+console.log( '[%s] Generating event statistics between %s and %s', Date(), env.get( 'EVENTS_START_DATE' ), env.get( 'EVENTS_END_DATE' ) );
 
 // request full data from the events api (since specified data)
 request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_START_DATE' ), function( error, response, events ) {
@@ -33,11 +33,17 @@ request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_S
       byCountry: {}
     };
 
-    // aleady know number of events :)
-    event_stats.events = events.length;
-
     // make access to other stats easier to figure
     events.forEach( function( event, idx ) {
+      // we have to check ourselves as the events platform
+      // does not support checking for events before a date.
+      if( (new Date( event.beginDate )) > (new Date( env.get( 'EVENTS_END_DATE' ) )) ) {
+        return;
+      }
+
+      // up the number of events by one each time we have an event in out timeframe
+      event_stats.events += 1;
+
       // little trick to count hosts/mentors/coorganizers per country
       var new_host = 0;
       var new_mentors = 0;
