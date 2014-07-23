@@ -50,21 +50,22 @@ requirejs.config({
 
 require([
   'jquery',
-  // 'quilt',
+  'quilt',
   'languages',
   'selectize',
   'elastislide',
   'makerparty-ui',
   'tabzilla'
-], function($, languages) {
+], function($, Quilt, languages) {
   'use strict';
-  // var quiltConfig = {
-  //       tags: [ 'makerparty', 'maker party', '#makerparty' ],
-  //       execution: 'or',
-  //       limit: 50,
-  //       duration: 7000
-  // };
-  // Quilt(quiltConfig);
+
+  var quiltConfig = {
+        tags: [ 'makerparty', 'maker party', '#makerparty' ],
+        execution: 'or',
+        limit: 50,
+        duration: 7000
+  };
+  Quilt(quiltConfig);
 
   // Call this when the element is ready
   languages.ready({
