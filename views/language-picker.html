@@ -1,0 +1,18 @@
+<div class="language-picker">
+  <div id="list-of-languages" class="language-picker-box" dir="{{localeInfo.direction}}">
+
+    <!-- some ugly hack, we need a fake `list` element here -->
+    <ul class="list col col-spacing hide">
+      <li><a></a></li>
+    </ul>
+    <!-- ugly hack ends -->
+
+    <select name="supportedLocales" id="supportedLocales" class="form-control" data-supported="{{languages}}">
+      {% for locale in languages %}
+        <option class="langList" data-value="{{ locale }}" value="{{ locale }}" {%if locale == localeInfo.lang %} selected="selected"{% endif %}>
+        {{ languageNameFor(locale) }}
+        </option>
+      {% endfor %}
+    </select>
+  </div>
+</div>

@@ -41,6 +41,11 @@ app.use( i18n.middleware({
 // Static files
 app.use(express.static(path.resolve(__dirname, 'public')));
 
+app.locals({
+  languages: i18n.getSupportLanguages()
+});
+
+
 // Healthcheck
 app.get('/healthcheck', function (req, res) {
   res.json(healthcheck);
