@@ -24,7 +24,7 @@ request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_S
     // init stats object
     var event_stats = {
       hosts: 0,
-      attendees: 0,
+      estimatedAttendees: 0,
       events: 0,
       countries:0,
       cities:0,
@@ -55,7 +55,7 @@ request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_S
        */
 
       // get attendee stats
-      event_stats.attendees += event.attendees;
+      event_stats.estimatedAttendees += event.estimatedAttendees;
 
       // get host stats
       if(event_hosts.indexOf( event.organizerId ) === -1){
@@ -134,7 +134,7 @@ request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_S
           hosts: 0,
           mentors: 0,
           coorganizers: 0,
-          attendees: 0,
+          estimatedAttendees: 0,
           cities: 0
         };
         countries.push( event.country );
@@ -150,7 +150,7 @@ request.get( env.get( 'EVENTS_SERVICE' ) + '/events?after=' + env.get( 'EVENTS_S
         hosts: country.hosts + new_host,
         mentors: country.mentors + new_mentors,
         coorganizers: country.coorganizers + new_coorganizers,
-        attendees: country.attendees + event.attendees,
+        estimatedAttendees: country.estimatedAttendees + event.estimatedAttendees,
         cities: country.cities + new_city
       };
 
