@@ -56,16 +56,17 @@ require([
   'elastislide',
   'makerparty-ui',
   'tabzilla'
-], function($, Quilt, languages) {
+], function($, quilt, languages) {
   'use strict';
 
   var quiltConfig = {
-        tags: [ 'makerparty', 'maker party', '#makerparty' ],
-        execution: 'or',
-        limit: 50,
-        duration: 7000
+    tags: [ 'makerparty', 'maker party', '#makerparty' ],
+    execution: 'or',
+    limit: 50,
+    duration: 7000,
+    $preview: $( '#makePreview' )
   };
-  Quilt(quiltConfig);
+  quilt(quiltConfig);
 
   // Call this when the element is ready
   languages.ready({
