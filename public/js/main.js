@@ -56,16 +56,8 @@ require([
   'elastislide',
   'makerparty-ui',
   'tabzilla'
-], function($, Quilt, languages) {
+], function($, quilt, languages) {
   'use strict';
-
-  var quiltConfig = {
-        tags: [ 'makerparty', 'maker party', '#makerparty' ],
-        execution: 'or',
-        limit: 50,
-        duration: 7000
-  };
-  Quilt(quiltConfig);
 
   // Call this when the element is ready
   languages.ready({
@@ -75,6 +67,18 @@ require([
 
   //initialized language selectize
   $('select[name=supportedLocales]').selectize();
+
+  // we display Quilt on /live-updates page, so only initiate it on that page
+  if ( $("body").hasClass("live-updates") ) {
+    var quiltConfig = {
+      tags: [ 'makerparty', 'maker party', '#makerparty' ],
+      execution: 'or',
+      limit: 50,
+      duration: 7000,
+      $preview: $( '#makePreview' )
+    };
+    quilt(quiltConfig);
+  }
 });
 
 
