@@ -34,17 +34,18 @@ requirejs.config({
     'bootstrap-collapse': ['jquery'],
     'bootstrap-scrollspy': ['jquery'],
     'elastislide.modernizr': ['jquery'],
-    'elastislide.jquerypp': ['jquery', 'elastislide.modernizr' ],
+    'elastislide.jquerypp': ['jquery', 'elastislide.modernizr'],
     'elastislide': ['jquery', 'elastislide.modernizr', 'elastislide.jquerypp'],
     'quilt': ['jquery', 'makeapi', 'masonry'],
     'makerparty-ui': [
-            'jquery',
-            'jquery-colorbox',
-            'bootstrap-affix',
-            'bootstrap-collapse',
-            'bootstrap-scrollspy',
-            'elastislide.modernizr',
-            'elastislide.jquerypp']
+      'jquery',
+      'jquery-colorbox',
+      'bootstrap-affix',
+      'bootstrap-collapse',
+      'bootstrap-scrollspy',
+      'elastislide.modernizr',
+      'elastislide.jquerypp'
+    ]
   }
 });
 
@@ -56,7 +57,7 @@ require([
   'elastislide',
   'makerparty-ui',
   'tabzilla'
-], function($, quilt, languages) {
+], function ($, quilt, languages) {
   'use strict';
 
   // Call this when the element is ready
@@ -69,17 +70,16 @@ require([
   $('select[name=supportedLocales]').selectize();
 
   // we display Quilt on /live-updates page, so only initiate it on that page
-  if ( $("body").hasClass("live-updates") ) {
+  if ($("body").hasClass("live-updates")) {
     var quiltConfig = {
-      tags: [ 'makerparty', 'maker party', '#makerparty' ],
+      tags: ['makerparty', 'maker party', '#makerparty'],
       execution: 'or',
       limit: 50,
       duration: 7000,
-      $preview: $( '#makePreview' )
+      $preview: $('#makePreview')
     };
     quilt(quiltConfig);
   }
 });
-
 
 console.log("reading main.js ends");
