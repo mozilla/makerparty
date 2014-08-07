@@ -41,6 +41,15 @@ app.use( i18n.middleware({
 // Static files
 app.use(express.static(path.resolve(__dirname, 'public')));
 
+app.use(app.router);
+// We've run out of known routes, 404
+app.use(function (req, res, next) {
+  res.status(404);
+  res.render('error.html', {
+    code: 404
+  });
+});
+
 app.locals({
   languages: i18n.getSupportLanguages()
 });

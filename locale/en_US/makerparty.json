@@ -1,5 +1,6 @@
 {
     "320x480": "320x480",
+    "404 Error Message": "Mozilla's Maker Party is over <a href=\"https://party.webmaker.org/\"> here. </a> Learn and teach the web with others at <a href=\"https://events.webmaker.org\"> events around the world. </a>",
     "640x1136": "640x1136",
     "768x1280": "768x1280",
     "1920x1200": "1920x1200",
@@ -317,6 +318,7 @@
     "Tools to Teach the Web Desc": "Here are some <a href='https://webmaker.org/tools'>tools</a> to get you started; they're free and suitable for beginners and experts alike. You can use them at your  event, or to polish up your own skills. Remember: all Webmaker projects are remixable so <a href='https://webmaker.org/explore'>browse the gallery</a> and see what inspires you!",
     "Twitter": "Twitter",
     "Tweet at @Webmaker": "Tweet at <a href='https://twitter.com/webmaker'>@Webmaker</a> to say hi to the team",
+    "Uh oh... that page couldn't be found.": "Uh oh... that page couldn't be found.",
     "Use Lists Title": "Use Lists",
     "Use Lists Desc": "Send event details to  local  forums or listserves that have an  audience who would be interested  in  attending. You can start by using the <a href='https://lists.mozilla.org/listinfo/webmaker'>Webmaker list</a>",
     "Use the hashtag #makerparty everywhere!": "Use the hashtag #makerparty everywhere!",
