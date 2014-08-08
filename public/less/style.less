@@ -500,6 +500,30 @@ footer {
   }
 }
 
+/* ====================
+  Error/404 page
+*/
+
+body.error {
+  .banner {
+    .mp-banner;
+    background-color: @mp-yellow;
+    background-image: url('../img/makerparty_pattern_light.png');
+    background-size: 20%;
+    .container {
+      margin-top: 50px;
+    }
+    img {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+  .big-section.not-found {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
 
 /* ====================
   HOME page
@@ -1201,7 +1225,7 @@ footer {
 
   #the-total {
     font-size: 8rem;
-    color: #FFE600;
+    color: @mp-yellow;
   }
 }
 

@@ -1,0 +1,45 @@
+{% extends "views/layout.html" %}
+{% set page = "error" %}
+
+{% block title %} Maker Party - 404 {% endblock %}
+
+{% block customStyles %}
+{% endblock %}
+
+{% block banner %}
+  <div class="banner jumbotron text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="/img/404.png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h1>{{ gettext("Uh oh... that page couldn't be found.") }}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block mainContent %}
+  {% block callout %}
+  {% endblock %}
+  <div class="big-section not-found">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <h2>{{ gettext("404 Error Message") | safe }}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% block sponsorshipPartners %}
+  {% endblock %}
+{% endblock %}
+
+{% block customScripts %}
+{% endblock %}
+
