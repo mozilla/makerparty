@@ -3,6 +3,27 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta charset="utf-8">
+
+  <!-- For sharing & search engines -->
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://party.webmaker.org/img/logo-og.png" />
+  <meta property="og:image:width" content="1400" />
+  <meta property="og:image:height" content="1400" />
+  <meta property="og:site_name" content="Maker Party" />
+  <meta property="og:determiner" content="" />
+  <meta property="og:locale" content="{{ localeInfo.lang | replace('-', '_') }}" />
+  {% for language in languages %}
+  <meta property="og:locale:alternate" content="{{ language | replace('-', '_') }}" />
+  {% endfor %}
+  <meta property="og:title" content="Maker Party" />
+  <meta property="og:description" content="Maker Party is Mozilla's global campaign to teach the web. Through thousands of community-run events around the world, Maker Party unites educators, organizations and enthusiastic web users with hands-on learning and making." />
+  <meta property="og:url" content="https://party.webmaker.org/{{ localeInfo.lang }}{{ currentPath }}" />
+
+  <link rel="canonical" href="https://party.webmaker.org/{{ localeInfo.lang }}{{ currentPath }}" />
+  <meta property="description" content="Maker Party is Mozilla's global campaign to teach the web. Through thousands of community-run events around the world, Maker Party unites educators, organizations and enthusiastic web users with hands-on learning and making." />
+  <!-- /sharing -->
+
+
   <title>{% block title %}{% endblock %}</title>
   <link rel="icon" type="image/png" href="img/makerparty_favicon.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
