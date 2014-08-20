@@ -22,7 +22,7 @@
     "grunt-shell": "0.6.1",
     "grunt-shell-spawn": "0.3.0",
     "habitat": "1.1.0",
-    "makerparty-heatmap": "git://github.com/mozilla/makerparty-heatmap",
+    "makerparty-heatmap": "^0.1.4",
     "nunjucks": "0.1.10",
     "request": "^2.36.0",
     "webmaker-download-locales": "^0.1.3",
