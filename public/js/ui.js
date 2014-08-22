@@ -32,7 +32,7 @@ $("#form-get-updates").submit(function (event) {
       dataType: "json",
       complete: function (jqXHR, textStatus) {
         // redirect to thank you page
-        window.location.href = "https://sendto.mozilla.org/page/st/maker-party-2014-save-the-date?action_code=FgxRWxYUOVIKQV0YAFcDTFM&td=TVHLTsMwEPwVKyeQmmD3FRouHBCIQwUSFyRA1sbZJBaOHflRURD_zoZWFMsH78x4Zz3-ynAAbbIqi70OOkQMUdtucd1NcKHckM2ymsBcORtBxTzqAUlOsMdGe1RRJm8OiOySbo5HWYMxLh4rN0a5mzibjJllwSWvjm1Cqv-XY-8s_umiIxfZaoMhq17eCNGdTaNsnR_kr5eYc7qlPEJE2Ux-cy6WOV_mYs34vFqVFV-fFHqU0DSeZOvLQpSbYl0WZXniU0AvoUM7ddq6T20MvF6sCs7OtqC0jS70V-zeRjSMAPbwxJ6Z4MXmivldNb8s-Dm7Q_XuXi9oDk5bsFuKqXUfhBA9WfUwRrKZ5hcUr0k0OeiwJ0Lbw7NWbb2EElSuVrzOhcBFvmmgzfm_Ra2mHCz8_sgW3tGzR_Bxz6YI2BPskMUe2Q09jLSDa5LBo_qQY_b9Aw";
+        window.location.href = "https://sendto.mozilla.org/page/st/maker-party-signup";
       }
     });
   }
