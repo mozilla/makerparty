@@ -38,20 +38,37 @@
     </div>
     <div class="row details">
       <div class="col-md-12">
-        <ul>
-          <li>
-            <div class="item-title">{{ gettext("Small Event Title") | safe }}</div>
-            <div class="item-description">{{ gettext("Small Event Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext("Medium Event Title") | safe }}</div>
-            <div class="item-description">{{ gettext("Medium Event Desc") | safe }}</div>
-          </li>
-          <li>
-            <div class="item-title">{{ gettext("Large Event Title") | safe }}</div>
-            <div class="item-description">{{ gettext("Large Event Desc") | safe }}</div>
-          </li>
-        </ul>
+        {% if localeInfo.lang == 'es-CL' or localeInfo.lang == 'es-MX' or localeInfo.lang == 'es' %}
+          <ul>
+            <li>
+              <div class="item-title">{{ gettext("Small Event Title") | safe }}</div>
+              <div class="item-description">{{ gettext("Small Event Desc - Spanish") | safe }}</div>
+            </li>
+            <li>
+              <div class="item-title">{{ gettext("Medium Event Title") | safe }}</div>
+              <div class="item-description">{{ gettext("Medium Event Desc - Spanish") | safe }}</div>
+            </li>
+            <li>
+              <div class="item-title">{{ gettext("Large Event Title") | safe }}</div>
+              <div class="item-description">{{ gettext("Large Event Desc - Spanish") | safe }}</div>
+            </li>
+          </ul>
+        {% else %}
+          <ul>
+            <li>
+              <div class="item-title">{{ gettext("Small Event Title") | safe }}</div>
+              <div class="item-description">{{ gettext("Small Event Desc") | safe }}</div>
+            </li>
+            <li>
+              <div class="item-title">{{ gettext("Medium Event Title") | safe }}</div>
+              <div class="item-description">{{ gettext("Medium Event Desc") | safe }}</div>
+            </li>
+            <li>
+              <div class="item-title">{{ gettext("Large Event Title") | safe }}</div>
+              <div class="item-description">{{ gettext("Large Event Desc") | safe }}</div>
+            </li>
+          </ul>
+        {% endif %}
       </div>
     </div>
   </div>

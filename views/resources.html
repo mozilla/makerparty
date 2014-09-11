@@ -198,7 +198,11 @@
             <img src="/party-resources/MakerPartyCertificateMake-thumb.png" alt="{{ gettext('Maker Party Asset Certificate Thimble Make thumbnail') }}" />
           </div>
           <div class="download-links">
+            {% if localeInfo.lang == 'es-CL' or localeInfo.lang == 'es-MX' or localeInfo.lang == 'es' %}
+            <a href="https://melissa.makes.org/thimble/LTE3MjgwNTI5OTI=/certificado-de-reconocimiento"  class="btn btn-primary" role="button">
+            {% else %}
             <a href="https://makerparty2014.makes.org/thimble/LTEzNDM3NTAxNDQ=/maker-party-love-bomb"  class="btn btn-primary" role="button">
+            {% endif %}
               <i class="fa fa-code-fork"></i>{{ gettext("Remix") }}
             </a>
           </div>
