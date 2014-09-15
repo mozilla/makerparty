@@ -8,6 +8,7 @@ var heatmap = require('makerparty-heatmap');
 var fork = require( 'child_process' ).fork;
 var i18n = require('webmaker-i18n');
 var nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader(path.join(__dirname, 'views')));
+var getEventStats = require('./lib/getEventStats');
 
 habitat.load();
 
@@ -104,37 +105,35 @@ app.get('/live-updates', function(req, res){
   res.render('live-updates.html');
 });
 
+// Run event stats generation every 5 minutes
+var eventStatsObject = {};
+var eventStatsBuffer = new Buffer("{}");
+var refreshEventStatsBuffer = function() {
+  getEventStats({
+    url: env.get('EVENTS_SERVICE'),
+    start_date: env.get('EVENTS_START_DATE'),
+    end_date: env.get('EVENTS_END_DATE')
+  }, function(error, event_stats) {
+    if (error) {
+      return console.log(error);
+    }
+
+    eventStatsObject = event_stats;
+    eventStatsBuffer = new Buffer(JSON.stringify(event_stats));
+  });
+};
+setInterval(refreshEventStatsBuffer, 300000);
+refreshEventStatsBuffer();
+
 // Maker Party Event Stats
 app.get( '/event-stats', function( req, res ) {
-  // res.json( event_stats_cache );
-  // send back contents of cache file, else empty object.
-  var stats = '';
-
-  try {
-    stats = fs.readFileSync( './event-stats.json', 'utf-8' );
-    stats = JSON.parse( stats );
-
-    res.json( stats );
-  }
-  catch ( e ) {
-    stats = {};
-    res.status( 503 ).json( stats );
-  }
+  res.type('application/json');
+  res.send(eventStatsBuffer);
 });
 
 app.get('/heatmap.svg', function(req, res) {
-  var stats = {};
-
-  try {
-    stats = fs.readFileSync( './event-stats.json', 'utf-8' );
-    stats = JSON.parse( stats );
-
-    res.send( heatmap.generateHeatmap( stats.byCountry ) );
-  }
-  catch ( e ) {
-    stats = {};
-    res.status( 500 ).send( heatmap.generateHeatmap() );
-  }
+  res.type('image/svg+xml');
+  res.send( heatmap.generateHeatmap( eventStatsObject.byCountry ) );
 });
 
 app.get('/heatmap.base.svg', function(req, res) {
@@ -177,20 +176,3 @@ app.get('/strings/:lang?', i18n.stringsRoute('en-US'));
 app.listen(env.get('PORT'), function () {
   console.log('Now listening on %d', env.get('PORT'));
 });
-
-// Run event stats generation every 5 minutes
-var getEventStats;
-function getEventStatsFork() {
-  if( getEventStats ) {
-    getEventStats.kill();
-    return;
-  }
-
-  getEventStats = fork( './bin/getEventStats' );
-  getEventStats.on( 'exit', function( code, signal ) {
-    getEventStats = null;
-  });
-}
-setInterval( getEventStatsFork, 300000 );
-getEventStatsFork();
-
