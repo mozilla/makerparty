@@ -109,7 +109,6 @@
               {% endif %}
             </li>
             <li {% if page == 'history' %}class="active"{% endif %}><a href="/{{localeInfo.lang}}/history">{{ gettext("History") }}</a></li>
-            <li {% if page == 'live-updates' %}class="active"{% endif %}><a href="/{{localeInfo.lang}}/live-updates">{{ gettext("Live Updates") }}</a></li>
             <li><a href="https://events.webmaker.org" target="_blank">{{ gettext("Events") }}</a></li>
           </ul>
           {% endblock %}
@@ -150,7 +149,7 @@
   {% endif %}
   <!-- Tertiary nav ends-->
 
-  <div class="view-animate" role="main">
+  <div role="main">
     {% block banner %}
     {% endblock %}
     {% block callout %}
@@ -161,12 +160,12 @@
           <div class="row">
             <div class="col-md-12 text-center">
               <h2>{{ gettext("Callout") }}</h2>
-              <p>{{ gettext("Callout Desc") }}</p>
+              <p><a href="/{{localeInfo.lang}}/resources">{{ gettext("Callout Desc") }}</a></p>
             </div>
           </div>
         </div>
       </div>
-      {% endblock %}
+    {% endblock %}
     {% block mainContent %}
     {% endblock %}
   </div>

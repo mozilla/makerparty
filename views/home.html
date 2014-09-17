@@ -11,28 +11,24 @@
 {% block banner %}
   <div class="banner jumbotron">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div id="home-banner-video">
-            {% if localeInfo.locale == "es" or localeInfo.locale == "es_CL" or localeInfo.locale == "es_MX"  %}
-              <iframe src='https://melissa.makes.org/popcorn/25tu_' width='560' height='358' frameborder='0' mozallowfullscreen webkitallowfullscreen allowfullscreen></iframe>
-            {% else %}
-              <iframe width="853" height="480" src="//www.youtube.com/embed/oko6TzPQE6Y" frameborder="0" allowfullscreen></iframe>
-            {% endif %}
-          </div>
+      <div class="row" id="infographic-2014">
+        <div class="col-md-12">
+          heatmap placeholder
         </div>
-        <div class="col-md-6">
-          <h1>{{ gettext("Teach, Learn & Make") }}</h1>
-          <p class="lead">{{ gettext("Home Banner Desc") }}</p>
-          <div class="cta-button-container">
-            <p>
-              <a class="btn btn-banner btn-mp-green btn-lg" href="https://events.webmaker.org">
-                {{ gettext("Attend an Event") }}
-              </a>
-              <a class="btn btn-banner btn-mp-green btn-lg" href="/{{localeInfo.lang}}/resources">
-                {{ gettext("Host an Event") }}
-              </a>
-            </p>
+      </div>
+      <div class="row" id="thank-you-note">
+        <div class="col-md-3 col-sm-3">
+          <a href="https://webmaker.org/badges/skill-sharer"><img src="/img/badge_skill_sharer.png"></a>
+        </div>
+        <div class="col-md-9 col-sm-9">
+          <h2>{{ gettext("Thank You Note Title") }}</h2>
+          <!-- <h2>We couldn't have done it without you</h2> -->
+          <p>{{ gettext("Thank You Note Desc") }}</p>
+          <!-- <p>Maker Party 2014 was a success thanks to people like you who shared a web literacy skill with someone else. Claim your Web Literacy Skill Sharer badge now to earn recognition for your effort!</p> -->
+          <div class="text-center">
+            <a class="btn btn-banner btn-mp-green btn-lg" href="https://webmaker.org/badges/skill-sharer ">
+              {{ gettext("Claim Your Badge") }}
+            </a>
           </div>
         </div>
       </div>
@@ -149,10 +145,59 @@
     </div>
   </div>
 
-  <div class="testimonials big-section">
+
+  <div class="big-section" id="testimonials-and-twitter">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6" id="testimonials">
+          <h2>{{ gettext("See what people are saying about Maker Party") }}</h2>
+          <div class="quote-container">
+            <div class="quote">
+              <img src="/img/makerparty_openquote.png" id="open-quote" alt="{{ gettext('Open Quote Illustration') }}" />
+              <p class="quote-text">{{ gettext("Testimonials Quote #1") }}</p>
+              <p class="quote-text">{{ gettext("Testimonials Quote #2") }}</p>
+              <p class="quote-text">{{ gettext("Testimonials Quote #3") }}</p>
+              <img src="/img/makerparty_closequote.png" id="close-quote" alt="{{ gettext('Close Quote Illustration') }}" />
+            </div>
+            <div class="quote-arrow-down"></div>
+          </div>
+          <div class="avatar-container">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="quote-source">
+                  <span class="lead">{{ gettext("Testimonials Quote #1 Name") }}</span> <br />
+                  <span class="job-title">{{ gettext("Testimonials Quote #1 Title") }}</span> <br />
+                  <a href="https://www.ywcatoronto.org/page.asp?l1=54&pid=162">{{ gettext("Testimonials Quote #1 Org") }} </a>
+                </p>
+                <p class="quote-source">
+                  <span class="lead">{{ gettext("Testimonials Quote #2 Name") }}</span> <br />
+                  <span class="job-title">{{ gettext("Testimonials Quote #2 Title") }}</span> <br />
+                  <a href="http://www.gmin.org/">{{ gettext("Testimonials Quote #2 Org") }} </a>
+                </p>
+                <p class="quote-source">
+                  <span class="lead">{{ gettext("Testimonials Quote #3 Name") }}</span> <br />
+                  <span class="job-title">{{ gettext("Testimonials Quote #3 Title") }}</span> <br />
+                  <a href="http://nysci.org/">{{ gettext("Testimonials Quote #3 Org") }} </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="twitter-feeds">
+            <a class="twitter-timeline"  href="https://twitter.com/search?q=%23makerparty"  data-widget-id="477691708356820992" width="100%" height="500px">Tweets about "#makerparty"</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="testimonials big-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
           <h2>{{ gettext("See what people are saying about Maker Party") }}</h2>
         </div>
       </div>
@@ -191,7 +236,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 {% endblock %}
 
 {% block customScripts %}
