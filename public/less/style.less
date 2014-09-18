@@ -660,6 +660,9 @@ body.error {
     animation-fill-mode: both;
     animation-name: bounceIn;
   }
+  @media (max-width: @screen-sm-max) {
+    display: none;
+  }
 }
 
 #infographic-2014,
@@ -696,10 +699,18 @@ body.error {
   }
   .graphic-container {
     position: relative;
+    margin-top: 30px;
     p.legend {
       color: @mp-green;
       position: absolute;
-      bottom: 20%;
+      bottom: 30%;
+      @media (max-width: @screen-sm-max) {
+        font-size: 15px;
+      }
+      @media (max-width: @screen-xs-max) {
+        bottom: 7%;
+        left: 50%;
+      }
     }
   }
 }
