@@ -23,6 +23,9 @@
 @mp-lightyellow: #fbf6b6;
 @mp-grey: #83a4b3;
 @mp-nav-lighter-blue: #01527D;
+@red-ribbon-body: #e8282f;
+@red-ribbon-side: #dd001c;
+@red-ribbon-shadow: #213c3f;
 
 @heatmap-bg: #6FCCDD;
 
@@ -530,15 +533,239 @@ body.error {
 */
 
 .home {
+  overflow-x: hidden;
   .banner {
     background: linear-gradient(to bottom, @mp-lightblue, fade(@mp-lightblue,50%) );
+  }
+}
+
+/* Cloud animation based on http://thecodeplayer.com/walkthrough/pure-css3-animated-clouds-background */
+#clouds {
+  position: absolute;
+  .cloud {
+    width: 200px;
+    height: 60px;
+    position: relative;
+  }
+
+  /*Time to animate*/
+  .x1 {
+    top: -50px;
+    left: 100px;
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    transform: scale(0.4);
+
+    -webkit-animation: moveclouds 70s linear infinite;
+    -moz-animation: moveclouds 70s linear infinite;
+    -o-animation: moveclouds 70s linear infinite;
+  }
+
+  /*variable speed, opacity, and position of clouds for realistic effect*/
+  .x2 {
+    left: 300px;
+
+    -webkit-transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    transform: scale(0.2);
+    opacity: 0.9; /*opacity proportional to the size*/
+
+    /*Speed will also be proportional to the size and opacity*/
+    /*More the speed. Less the time in 's' = seconds*/
+    -webkit-animation: moveclouds 100s linear infinite;
+    -moz-animation: moveclouds 100s linear infinite;
+    -o-animation: moveclouds 100s linear infinite;
+  }
+
+  .x3 {
+    top: -20px;
+    left: -350px;
+
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    transform: scale(0.3);
+    opacity: 0.8; /*opacity proportional to the size*/
+
+    -webkit-animation: moveclouds 90s linear infinite;
+    -moz-animation: moveclouds 90s linear infinite;
+    -o-animation: moveclouds 90s linear infinite;
+  }
+
+  .x4 {
+    left: 500px;
+    top: -250px;
+
+    -webkit-transform: scale(0.25);
+    -moz-transform: scale(0.25);
+    transform: scale(0.25);
+    opacity: 0.6; /*opacity proportional to the size*/
+
+    -webkit-animation: moveclouds 80s linear infinite;
+    -moz-animation: moveclouds 80s linear infinite;
+    -o-animation: moveclouds 80s linear infinite;
+  }
+
+  .x5 {
+    left: -50px;
+    top: -250px;
+
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    transform: scale(0.3);
+    opacity: 0.8; /*opacity proportional to the size*/
+
+    -webkit-animation: moveclouds 90s linear infinite;
+    -moz-animation: moveclouds 90s linear infinite;
+    -o-animation: moveclouds 90s linear infinite;
+  }
+
+  .x6 {
+    left: 700px;
+    top: -150px;
+
+    -webkit-transform: scale(0.35);
+    -moz-transform: scale(0.35);
+    transform: scale(0.35);
+    opacity: 0.9; /*opacity proportional to the size*/
+
+    -webkit-animation: moveclouds 90s linear infinite;
+    -moz-animation: moveclouds 90s linear infinite;
+    -o-animation: moveclouds 90s linear infinite;
+  }
+
+  @-webkit-keyframes moveclouds {
+    0% {margin-left: 1000px;}
+    100% {margin-left: -1000px;}
+  }
+  @-moz-keyframes moveclouds {
+    0% {margin-left: 1000px;}
+    100% {margin-left: -1000px;}
+  }
+  @-o-keyframes moveclouds {
+    0% {margin-left: 1000px;}
+    100% {margin-left: -1000px;}
+  }
+
+}
+/* clound animation sample code ends */
+
+#rocket {
+  position: absolute;
+  img {
+    position: relative;
+    top: 100px;
+    width: 100px;
+    height: 100px;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: bounceIn;
+  }
+}
+
+#infographic-2014,
+#thank-you-note {
+  h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    color: @mp-green;
   }
 }
 
 #infographic-2014 {
   margin-top: 50px;
   margin-bottom: 70px;
+  img {
+    width: 100%;
+  }
+  img.illustration {
+    max-width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  p {
+    line-height: 1.2;
+  }
+  p.stats-heading {
+    font-size: 45px;
+    margin-bottom: 0;
+    color: @brand-secondary;
+  }
+  .stats {
+    font-weight: 700;
+  }
 }
+
+.infographic-ribbon {
+  margin-bottom: 30px;
+  .ribbon-body {
+    h1 {
+      color: #fff;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Based on ribbon tutorial: http://css-tricks.com/snippets/css/ribbon/ */
+
+.ribbon-container {
+  position: relative;
+  z-index: 1;
+}
+
+.infographic-ribbon {
+  font-size: 16px !important;
+  width: 80%;
+  position: relative;
+  background: @red-ribbon-body;
+  color: #fff;
+  text-align: center;
+  padding: 1em 2em;
+  margin: 0 auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.infographic-ribbon:before,
+.infographic-ribbon:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -1em;
+  border: 3em solid @red-ribbon-side;
+  z-index: -1;
+}
+.infographic-ribbon:before {
+  left: -4em;
+  border-right-width: 2em;
+  border-left-color: transparent;
+}
+.infographic-ribbon:after {
+  right: -4em;
+  border-left-width: 2em;
+  border-right-color: transparent;
+}
+.infographic-ribbon .ribbon-body:before,
+.infographic-ribbon .ribbon-body:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: @red-ribbon-shadow transparent transparent transparent;
+  bottom: -1em;
+}
+.infographic-ribbon .ribbon-body:before {
+   left: 0;
+   border-width: 1em 0 0 1em;
+}
+.infographic-ribbon .ribbon-body:after {
+   right: 0;
+   border-width: 1em 1em 0 0;
+}
+
+/* ribbon tutorial sample code ends */
+
+
 
 #thank-you-note {
   background: @mp-yellow;
