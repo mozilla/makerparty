@@ -670,6 +670,9 @@ body.error {
     font-weight: 700;
     color: @mp-green;
   }
+  p {
+    line-height: 1.2;
+  }
 }
 
 #infographic-2014 {
@@ -683,9 +686,6 @@ body.error {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  p {
-    line-height: 1.2;
-  }
   p.stats-heading {
     font-size: 45px;
     margin-bottom: 0;
@@ -693,6 +693,14 @@ body.error {
   }
   .stats {
     font-weight: 700;
+  }
+  .graphic-container {
+    position: relative;
+    p.legend {
+      color: @mp-green;
+      position: absolute;
+      bottom: 20%;
+    }
   }
 }
 
@@ -778,9 +786,6 @@ body.error {
   }
   p {
     margin-bottom: 0;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
   }
   .btn {
     margin-top: 25px;
