@@ -55,6 +55,10 @@
   }
 }
 
+.btn {
+  white-space: normal;
+}
+
 .btn-cta {
   background: @mp-yellow;
   color: @mp-green;
@@ -260,13 +264,15 @@ ul.nav-webmaker-logo {
   color: inherit;
   background: none;
   margin-bottom: 0;
+  @media (max-width: @screen-xs-max) {
+    padding: 10px;
+  }
   h1 {
     line-height: 100%;
   }
   .container {
     margin-bottom: 50px;
   }
-
   .cta-button-container a:first-child {
     margin-right: 10px;
   }
@@ -536,118 +542,188 @@ body.error {
   overflow-x: hidden;
   .banner {
     background: linear-gradient(to bottom, @mp-lightblue, fade(@mp-lightblue,50%) );
+    overflow-x: hidden;
   }
 }
 
 /* Cloud animation based on http://thecodeplayer.com/walkthrough/pure-css3-animated-clouds-background */
 #clouds {
   position: absolute;
-  .cloud {
-    width: 200px;
-    height: 60px;
-    position: relative;
+
+  @media (min-width: @screen-sm-min) {
+    .cloud {
+      width: 200px;
+      height: 60px;
+      position: relative;
+    }
+
+    /*Time to animate*/
+    .x1 {
+      top: -50px;
+      left: 100px;
+      -webkit-transform: scale(0.4);
+      -moz-transform: scale(0.4);
+      transform: scale(0.4);
+
+      -webkit-animation: moveclouds 70s linear infinite;
+      -moz-animation: moveclouds 70s linear infinite;
+      -o-animation: moveclouds 70s linear infinite;
+    }
+
+    /*variable speed, opacity, and position of clouds for realistic effect*/
+    .x2 {
+      left: 300px;
+
+      -webkit-transform: scale(0.2);
+      -moz-transform: scale(0.2);
+      transform: scale(0.2);
+      opacity: 0.9; /*opacity proportional to the size*/
+
+      /*Speed will also be proportional to the size and opacity*/
+      /*More the speed. Less the time in 's' = seconds*/
+      -webkit-animation: moveclouds 100s linear infinite;
+      -moz-animation: moveclouds 100s linear infinite;
+      -o-animation: moveclouds 100s linear infinite;
+    }
+
+    .x3 {
+      top: -20px;
+      left: -350px;
+
+      -webkit-transform: scale(0.3);
+      -moz-transform: scale(0.3);
+      transform: scale(0.3);
+      opacity: 0.8; /*opacity proportional to the size*/
+
+      -webkit-animation: moveclouds 90s linear infinite;
+      -moz-animation: moveclouds 90s linear infinite;
+      -o-animation: moveclouds 90s linear infinite;
+    }
+
+    .x4 {
+      left: 500px;
+      top: -250px;
+
+      -webkit-transform: scale(0.25);
+      -moz-transform: scale(0.25);
+      transform: scale(0.25);
+      opacity: 0.6; /*opacity proportional to the size*/
+
+      -webkit-animation: moveclouds 80s linear infinite;
+      -moz-animation: moveclouds 80s linear infinite;
+      -o-animation: moveclouds 80s linear infinite;
+    }
+
+    .x5 {
+      left: -50px;
+      top: -250px;
+
+      -webkit-transform: scale(0.3);
+      -moz-transform: scale(0.3);
+      transform: scale(0.3);
+      opacity: 0.8; /*opacity proportional to the size*/
+
+      -webkit-animation: moveclouds 90s linear infinite;
+      -moz-animation: moveclouds 90s linear infinite;
+      -o-animation: moveclouds 90s linear infinite;
+    }
+
+    .x6 {
+      left: 700px;
+      top: -150px;
+
+      -webkit-transform: scale(0.35);
+      -moz-transform: scale(0.35);
+      transform: scale(0.35);
+      opacity: 0.9; /*opacity proportional to the size*/
+
+      -webkit-animation: moveclouds 90s linear infinite;
+      -moz-animation: moveclouds 90s linear infinite;
+      -o-animation: moveclouds 90s linear infinite;
+    }
+
+    @-webkit-keyframes moveclouds {
+      0% {margin-left: 1000px;}
+      100% {margin-left: -1000px;}
+    }
+    @-moz-keyframes moveclouds {
+      0% {margin-left: 1000px;}
+      100% {margin-left: -1000px;}
+    }
+    @-o-keyframes moveclouds {
+      0% {margin-left: 1000px;}
+      100% {margin-left: -1000px;}
+    }
   }
 
-  /*Time to animate*/
-  .x1 {
-    top: -50px;
-    left: 100px;
-    -webkit-transform: scale(0.4);
-    -moz-transform: scale(0.4);
-    transform: scale(0.4);
+  @media (max-width: @screen-xs-max) {
+    .cloud {
+      width: 200px;
+      height: 60px;
+      position: relative;
+    }
 
-    -webkit-animation: moveclouds 70s linear infinite;
-    -moz-animation: moveclouds 70s linear infinite;
-    -o-animation: moveclouds 70s linear infinite;
+    /*Time to animate*/
+    .x1 {
+      top: -50px;
+      left: 120px;
+      -webkit-transform: scale(0.4);
+      -moz-transform: scale(0.4);
+      transform: scale(0.4);
+
+      -webkit-animation: moveclouds 50s linear infinite;
+      -moz-animation: moveclouds 50s linear infinite;
+      -o-animation: moveclouds 50s linear infinite;
+    }
+
+    .x2 {
+      left: 0px;
+
+      -webkit-transform: scale(0.2);
+      -moz-transform: scale(0.2);
+      transform: scale(0.2);
+      opacity: 0.9;
+
+      -webkit-animation: moveclouds 30s linear infinite;
+      -moz-animation: moveclouds 30s linear infinite;
+      -o-animation: moveclouds 30s linear infinite;
+    }
+
+    .x3 {
+      top: 30px;
+      left: 50px;
+
+      -webkit-transform: scale(0.3);
+      -moz-transform: scale(0.3);
+      transform: scale(0.3);
+      opacity: 0.8;
+
+      -webkit-animation: moveclouds 60s linear infinite;
+      -moz-animation: moveclouds 60s linear infinite;
+      -o-animation: moveclouds 60s linear infinite;
+    }
+
+    .x4,
+    .x5,
+    .x6 {
+      display: none;
+    }
+
+    @-webkit-keyframes moveclouds {
+      0% {margin-left: 0;}
+      100% {margin-left: -@screen-xs-max;}
+    }
+    @-moz-keyframes moveclouds {
+      0% {margin-left: 0;}
+      100% {margin-left: -@screen-xs-max;}
+    }
+    @-o-keyframes moveclouds {
+      0% {margin-left: 0;}
+      100% {margin-left: -@screen-xs-max;}
+    }
   }
-
-  /*variable speed, opacity, and position of clouds for realistic effect*/
-  .x2 {
-    left: 300px;
-
-    -webkit-transform: scale(0.2);
-    -moz-transform: scale(0.2);
-    transform: scale(0.2);
-    opacity: 0.9; /*opacity proportional to the size*/
-
-    /*Speed will also be proportional to the size and opacity*/
-    /*More the speed. Less the time in 's' = seconds*/
-    -webkit-animation: moveclouds 100s linear infinite;
-    -moz-animation: moveclouds 100s linear infinite;
-    -o-animation: moveclouds 100s linear infinite;
-  }
-
-  .x3 {
-    top: -20px;
-    left: -350px;
-
-    -webkit-transform: scale(0.3);
-    -moz-transform: scale(0.3);
-    transform: scale(0.3);
-    opacity: 0.8; /*opacity proportional to the size*/
-
-    -webkit-animation: moveclouds 90s linear infinite;
-    -moz-animation: moveclouds 90s linear infinite;
-    -o-animation: moveclouds 90s linear infinite;
-  }
-
-  .x4 {
-    left: 500px;
-    top: -250px;
-
-    -webkit-transform: scale(0.25);
-    -moz-transform: scale(0.25);
-    transform: scale(0.25);
-    opacity: 0.6; /*opacity proportional to the size*/
-
-    -webkit-animation: moveclouds 80s linear infinite;
-    -moz-animation: moveclouds 80s linear infinite;
-    -o-animation: moveclouds 80s linear infinite;
-  }
-
-  .x5 {
-    left: -50px;
-    top: -250px;
-
-    -webkit-transform: scale(0.3);
-    -moz-transform: scale(0.3);
-    transform: scale(0.3);
-    opacity: 0.8; /*opacity proportional to the size*/
-
-    -webkit-animation: moveclouds 90s linear infinite;
-    -moz-animation: moveclouds 90s linear infinite;
-    -o-animation: moveclouds 90s linear infinite;
-  }
-
-  .x6 {
-    left: 700px;
-    top: -150px;
-
-    -webkit-transform: scale(0.35);
-    -moz-transform: scale(0.35);
-    transform: scale(0.35);
-    opacity: 0.9; /*opacity proportional to the size*/
-
-    -webkit-animation: moveclouds 90s linear infinite;
-    -moz-animation: moveclouds 90s linear infinite;
-    -o-animation: moveclouds 90s linear infinite;
-  }
-
-  @-webkit-keyframes moveclouds {
-    0% {margin-left: 1000px;}
-    100% {margin-left: -1000px;}
-  }
-  @-moz-keyframes moveclouds {
-    0% {margin-left: 1000px;}
-    100% {margin-left: -1000px;}
-  }
-  @-o-keyframes moveclouds {
-    0% {margin-left: 1000px;}
-    100% {margin-left: -1000px;}
-  }
-
 }
-/* clound animation sample code ends */
+/* cloud animation sample code ends */
 
 #rocket {
   position: absolute;
@@ -672,15 +748,25 @@ body.error {
     font-size: 30px;
     font-weight: 700;
     color: @mp-green;
+    @media (max-width: @screen-xs-max) {
+      font-size: 25px;
+    }
   }
   p {
     line-height: 1.2;
+    @media (max-width: @screen-xs-max) {
+      font-size: 16px;
+    }
   }
 }
 
 #infographic-2014 {
   margin-top: 50px;
   margin-bottom: 70px;
+  @media (max-width: @screen-xs-max) {
+    margin-top: 20px;
+  }
+
   img {
     width: 100%;
   }
@@ -693,6 +779,9 @@ body.error {
     font-size: 45px;
     margin-bottom: 0;
     color: @brand-secondary;
+    @media (max-width: @screen-xs-max) {
+      font-size: 25px;
+    }
   }
   .stats {
     font-weight: 700;
@@ -744,6 +833,9 @@ body.error {
   text-align: center;
   padding: 1em 2em;
   margin: 0 auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+  @media (max-width: @screen-xs-max) {
+    width: 100%;
+  }
 }
 .infographic-ribbon:before,
 .infographic-ribbon:after {
@@ -758,11 +850,19 @@ body.error {
   left: -4em;
   border-right-width: 2em;
   border-left-color: transparent;
+  @media (max-width: @screen-xs-max) {
+    left: -5.5em;
+    border-right-width: 3.5em;
+  }
 }
 .infographic-ribbon:after {
   right: -4em;
   border-left-width: 2em;
   border-right-color: transparent;
+  @media (max-width: @screen-xs-max) {
+    right: -5.5em;
+    border-left-width: 3.5em;
+  }
 }
 .infographic-ribbon .ribbon-body:before,
 .infographic-ribbon .ribbon-body:after {
@@ -789,6 +889,9 @@ body.error {
 #thank-you-note {
   background: @mp-yellow;
   padding: 30px;
+  @media (max-width: @screen-xs-max) {
+    padding: 20px 5px;
+  }
   img {
     width: 100%;
   }
@@ -1056,10 +1159,7 @@ body.error {
       margin-right: 10%;
       @media (max-width: @screen-sm-max) {
         margin-bottom: 20px;
-        max-width: 100px;
-      }
-      @media (max-width: 400px) {
-        max-width: 80px;
+        max-width: 100%;
       }
     }
   }
