@@ -1,0 +1,785 @@
+{
+  "hosts": 662,
+  "estimatedAttendees": 127165,
+  "events": 2511,
+  "countries": 86,
+  "cities": 450,
+  "mentors": 184,
+  "coorganizers": 188,
+  "byCountry": {
+    "AE": {
+      "country": "United Arab Emirates",
+      "events": 1,
+      "hosts": 0,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 5,
+      "cities": 0
+    },
+    "AL": {
+      "country": "Albania",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 35,
+      "cities": 1
+    },
+    "AR": {
+      "country": "Argentina",
+      "events": 5,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 2,
+      "estimatedAttendees": 1130,
+      "cities": 1
+    },
+    "AU": {
+      "country": "Australia",
+      "events": 2,
+      "hosts": 2,
+      "mentors": 0,
+      "coorganizers": 1,
+      "estimatedAttendees": 185,
+      "cities": 1
+    },
+    "Algérie": {
+      "country": "Algérie",
+      "events": 2,
+      "hosts": 2,
+      "mentors": 0,
+      "coorganizers": 2,
+      "estimatedAttendees": 50,
+      "cities": 2
+    },
+    "BD": {
+      "country": "Bangladesh",
+      "events": 47,
+      "hosts": 30,
+      "mentors": 6,
+      "coorganizers": 8,
+      "estimatedAttendees": 1475,
+      "cities": 5
+    },
+    "BH": {
+      "country": "Bahrain",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 35,
+      "cities": 1
+    },
+    "BR": {
+      "country": "Brazil",
+      "events": 23,
+      "hosts": 2,
+      "mentors": 0,
+      "coorganizers": 2,
+      "estimatedAttendees": 260,
+      "cities": 3
+    },
+    "België": {
+      "country": "België",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 15,
+      "cities": 1
+    },
+    "Bosnia and Herzegovina": {
+      "country": "Bosnia and Herzegovina",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 15,
+      "cities": 0
+    },
+    "Brasil": {
+      "country": "Brasil",
+      "events": 3,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 2,
+      "estimatedAttendees": 125,
+      "cities": 1
+    },
+    "CA": {
+      "country": "Canada",
+      "events": 170,
+      "hosts": 27,
+      "mentors": 5,
+      "coorganizers": 6,
+      "estimatedAttendees": 4385,
+      "cities": 17
+    },
+    "CH": {
+      "country": "Switzerland",
+      "events": 3,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 300,
+      "cities": 2
+    },
+    "CO": {
+      "country": "Colombia",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 1,
+      "estimatedAttendees": 15,
+      "cities": 1
+    },
+    "Cameroun": {
+      "country": "Cameroun",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 5,
+      "cities": 1
+    },
+    "Côte d'Ivoire": {
+      "country": "Côte d'Ivoire",
+      "events": 3,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 105,
+      "cities": 1
+    },
+    "Côte d’Ivoire": {
+      "country": "Côte d’Ivoire",
+      "events": 2,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 1,
+      "estimatedAttendees": 225,
+      "cities": 1
+    },
+    "DE": {
+      "country": "Germany",
+      "events": 6,
+      "hosts": 1,
+      "mentors": 4,
+      "coorganizers": 0,
+      "estimatedAttendees": 680,
+      "cities": 2
+    },
+    "EG": {
+      "country": "Egypt",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 5,
+      "cities": 0
+    },
+    "ET": {
+      "country": "Ethiopia",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 150,
+      "cities": 1
+    },
+    "Espanya": {
+      "country": "Espanya",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 35,
+      "cities": 0
+    },
+    "España": {
+      "country": "España",
+      "events": 2,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 10,
+      "cities": 1
+    },
+    "FI": {
+      "country": "Finland",
+      "events": 4,
+      "hosts": 2,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 170,
+      "cities": 1
+    },
+    "FR": {
+      "country": "France",
+      "events": 5,
+      "hosts": 3,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 610,
+      "cities": 5
+    },
+    "GB": {
+      "country": "United Kingdom",
+      "events": 178,
+      "hosts": 25,
+      "mentors": 9,
+      "coorganizers": 5,
+      "estimatedAttendees": 5510,
+      "cities": 94
+    },
+    "GH": {
+      "country": "Ghana",
+      "events": 2,
+      "hosts": 1,
+      "mentors": 1,
+      "coorganizers": 1,
+      "estimatedAttendees": 70,
+      "cities": 1
+    },
+    "HR": {
+      "country": "Croatia",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 35,
+      "cities": 1
+    },
+    "HU": {
+      "country": "Hungary",
+      "events": 3,
+      "hosts": 0,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 0,
+      "cities": 3
+    },
+    "ID": {
+      "country": "Indonesia",
+      "events": 20,
+      "hosts": 14,
+      "mentors": 10,
+      "coorganizers": 6,
+      "estimatedAttendees": 1860,
+      "cities": 8
+    },
+    "IE": {
+      "country": "Ireland",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 75,
+      "cities": 0
+    },
+    "IN": {
+      "country": "India",
+      "events": 252,
+      "hosts": 135,
+      "mentors": 51,
+      "coorganizers": 63,
+      "estimatedAttendees": 23745,
+      "cities": 88
+    },
+    "IS": {
+      "country": "Iceland",
+      "events": 1,
+      "hosts": 0,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 0,
+      "cities": 1
+    },
+    "IT": {
+      "country": "Italy",
+      "events": 2,
+      "hosts": 0,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 150,
+      "cities": 1
+    },
+    "Iran": {
+      "country": "Iran",
+      "events": 5,
+      "hosts": 5,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 85,
+      "cities": 5
+    },
+    "Italia": {
+      "country": "Italia",
+      "events": 2,
+      "hosts": 2,
+      "mentors": 2,
+      "coorganizers": 1,
+      "estimatedAttendees": 110,
+      "cities": 2
+    },
+    "JM": {
+      "country": "Jamaica",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 35,
+      "cities": 1
+    },
+    "JO": {
+      "country": "Jordan",
+      "events": 5,
+      "hosts": 3,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 145,
+      "cities": 4
+    },
+    "JP": {
+      "country": "Japan",
+      "events": 5,
+      "hosts": 2,
+      "mentors": 1,
+      "coorganizers": 1,
+      "estimatedAttendees": 135,
+      "cities": 3
+    },
+    "KE": {
+      "country": "Kenya",
+      "events": 18,
+      "hosts": 11,
+      "mentors": 0,
+      "coorganizers": 1,
+      "estimatedAttendees": 980,
+      "cities": 8
+    },
+    "LK": {
+      "country": "Sri Lanka",
+      "events": 2,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 75,
+      "cities": 2
+    },
+    "LT": {
+      "country": "Lithuania",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 0,
+      "cities": 1
+    },
+    "ML": {
+      "country": "Mali",
+      "events": 1,
+      "hosts": 0,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 0,
+      "cities": 1
+    },
+    "MN": {
+      "country": "Mongolia",
+      "events": 3,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 0,
+      "cities": 1
+    },
+    "MU": {
+      "country": "Mauritius",
+      "events": 9,
+      "hosts": 2,
+      "mentors": 2,
+      "coorganizers": 4,
+      "estimatedAttendees": 140,
+      "cities": 4
+    },
+    "MX": {
+      "country": "Mexico",
+      "events": 2,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 75,
+      "cities": 1
+    },
+    "MY": {
+      "country": "Malaysia",
+      "events": 7,
+      "hosts": 2,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 230,
+      "cities": 6
+    },
+    "México": {
+      "country": "México",
+      "events": 3,
+      "hosts": 3,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 230,
+      "cities": 3
+    },
+    "NG": {
+      "country": "Nigeria",
+      "events": 8,
+      "hosts": 7,
+      "mentors": 1,
+      "coorganizers": 0,
+      "estimatedAttendees": 525,
+      "cities": 4
+    },
+    "NI": {
+      "country": "Nicaragua",
+      "events": 2,
+      "hosts": 1,
+      "mentors": 1,
+      "coorganizers": 0,
+      "estimatedAttendees": 35,
+      "cities": 1
+    },
+    "NL": {
+      "country": "Netherlands",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 1,
+      "coorganizers": 0,
+      "estimatedAttendees": 35,
+      "cities": 0
+    },
+    "NO": {
+      "country": "Norway",
+      "events": 2,
+      "hosts": 2,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 535,
+      "cities": 2
+    },
+    "NP": {
+      "country": "Nepal",
+      "events": 1,
+      "hosts": 0,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 0,
+      "cities": 1
+    },
+    "NZ": {
+      "country": "New Zealand",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 75,
+      "cities": 0
+    },
+    "PE": {
+      "country": "Peru",
+      "events": 1,
+      "hosts": 0,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 0,
+      "cities": 1
+    },
+    "PH": {
+      "country": "Philippines",
+      "events": 18,
+      "hosts": 6,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 1210,
+      "cities": 11
+    },
+    "PK": {
+      "country": "Pakistan",
+      "events": 1,
+      "hosts": 0,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 15,
+      "cities": 1
+    },
+    "PL": {
+      "country": "Poland",
+      "events": 9,
+      "hosts": 0,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 445,
+      "cities": 4
+    },
+    "PT": {
+      "country": "Portugal",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 1,
+      "estimatedAttendees": 15,
+      "cities": 1
+    },
+    "PY": {
+      "country": "Paraguay",
+      "events": 13,
+      "hosts": 3,
+      "mentors": 6,
+      "coorganizers": 0,
+      "estimatedAttendees": 395,
+      "cities": 4
+    },
+    "RW": {
+      "country": "Rwanda",
+      "events": 1,
+      "hosts": 0,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 0,
+      "cities": 1
+    },
+    "Republic of Kosovo": {
+      "country": "Republic of Kosovo",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 5,
+      "cities": 0
+    },
+    "República Federativa do Brasil": {
+      "country": "República Federativa do Brasil",
+      "events": 1,
+      "hosts": 0,
+      "mentors": 2,
+      "coorganizers": 0,
+      "estimatedAttendees": 75,
+      "cities": 1
+    },
+    "SD": {
+      "country": "Sudan",
+      "events": 2,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 225,
+      "cities": 1
+    },
+    "SE": {
+      "country": "Sweden",
+      "events": 3,
+      "hosts": 2,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 20,
+      "cities": 0
+    },
+    "SI": {
+      "country": "Slovenia",
+      "events": 2,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 50,
+      "cities": 1
+    },
+    "Sverige": {
+      "country": "Sverige",
+      "events": 7,
+      "hosts": 4,
+      "mentors": 5,
+      "coorganizers": 4,
+      "estimatedAttendees": 125,
+      "cities": 2
+    },
+    "Sénégal": {
+      "country": "Sénégal",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 1,
+      "estimatedAttendees": 35,
+      "cities": 1
+    },
+    "TN": {
+      "country": "Tunisia",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 15,
+      "cities": 1
+    },
+    "TR": {
+      "country": "Turkey",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 5,
+      "cities": 0
+    },
+    "Taiwan": {
+      "country": "Taiwan",
+      "events": 1,
+      "hosts": 0,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 0,
+      "cities": 1
+    },
+    "Tanzania": {
+      "country": "Tanzania",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 5,
+      "cities": 1
+    },
+    "The Netherlands": {
+      "country": "The Netherlands",
+      "events": 4,
+      "hosts": 2,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 170,
+      "cities": 3
+    },
+    "Türkiye": {
+      "country": "Türkiye",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 500,
+      "cities": 1
+    },
+    "UA": {
+      "country": "Ukraine",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 5,
+      "cities": 1
+    },
+    "UG": {
+      "country": "Uganda",
+      "events": 7,
+      "hosts": 4,
+      "mentors": 1,
+      "coorganizers": 1,
+      "estimatedAttendees": 2010,
+      "cities": 3
+    },
+    "UNKNOWN": {
+      "country": null,
+      "events": 1111,
+      "hosts": 205,
+      "mentors": 56,
+      "coorganizers": 60,
+      "estimatedAttendees": 51520,
+      "cities": 1
+    },
+    "US": {
+      "country": "United States",
+      "events": 480,
+      "hosts": 107,
+      "mentors": 19,
+      "coorganizers": 14,
+      "estimatedAttendees": 24175,
+      "cities": 101
+    },
+    "Venezuela": {
+      "country": "Venezuela",
+      "events": 3,
+      "hosts": 2,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 50,
+      "cities": 2
+    },
+    "Vietnam": {
+      "country": "Vietnam",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 5,
+      "cities": 1
+    },
+    "Việt Nam": {
+      "country": "Việt Nam",
+      "events": 2,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 10,
+      "cities": 1
+    },
+    "ZA": {
+      "country": "South Africa",
+      "events": 3,
+      "hosts": 2,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 50,
+      "cities": 2
+    },
+    "ZM": {
+      "country": "Zambia",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 350,
+      "cities": 1
+    },
+    "ZW": {
+      "country": "Zimbabwe",
+      "events": 3,
+      "hosts": 2,
+      "mentors": 1,
+      "coorganizers": 0,
+      "estimatedAttendees": 535,
+      "cities": 2
+    },
+    "Ελλάδα": {
+      "country": "Ελλάδα",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 5,
+      "cities": 1
+    },
+    "বাংলাদেশ": {
+      "country": "বাংলাদেশ",
+      "events": 1,
+      "hosts": 1,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 150,
+      "cities": 1
+    },
+    "日本": {
+      "country": "日本",
+      "events": 1,
+      "hosts": 0,
+      "mentors": 0,
+      "coorganizers": 0,
+      "estimatedAttendees": 75,
+      "cities": 1
+    }
+  }
+}

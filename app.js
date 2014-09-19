@@ -2,12 +2,12 @@ var habitat = require('habitat');
 var express = require('express');
 var nunjucks = require('nunjucks');
 var path = require('path');
-var fs = require('fs');
 var https = require('https');
 var heatmap = require('makerparty-heatmap');
 var fork = require( 'child_process' ).fork;
 var i18n = require('webmaker-i18n');
 var nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader(path.join(__dirname, 'views')));
+var getEventStats = require('./lib/getEventStats');
 
 habitat.load();
 
@@ -101,74 +101,44 @@ app.get('/history', function(req, res){
 });
 
 app.get('/live-updates', function(req, res){
-  res.render('live-updates.html');
+  res.redirect("/");
 });
+
+// Run event stats generation every 1 hour
+var stats_cache = require("./stats_cache/makerparty2014-2014-09-16");
+var eventStatsBuffer = new Buffer(JSON.stringify(stats_cache));
+var heatmapBuffer = new Buffer(heatmap.generateHeatmap(stats_cache.byCountry));
+var refreshEventStatsBuffer = function() {
+  getEventStats({
+    url: env.get('EVENTS_SERVICE'),
+    start_date: env.get('EVENTS_START_DATE'),
+    end_date: env.get('EVENTS_END_DATE')
+  }, function(error, event_stats) {
+    if (error) {
+      return console.log(error);
+    }
+
+    eventStatsBuffer = new Buffer(JSON.stringify(event_stats));
+    heatmapBuffer = new Buffer(heatmap.generateHeatmap(event_stats.byCountry));
+  });
+};
+setInterval(refreshEventStatsBuffer, 3600000);
+refreshEventStatsBuffer();
 
 // Maker Party Event Stats
 app.get( '/event-stats', function( req, res ) {
-  // res.json( event_stats_cache );
-  // send back contents of cache file, else empty object.
-  var stats = '';
-
-  try {
-    stats = fs.readFileSync( './event-stats.json', 'utf-8' );
-    stats = JSON.parse( stats );
-
-    res.json( stats );
-  }
-  catch ( e ) {
-    stats = {};
-    res.status( 503 ).json( stats );
-  }
+  res.type('application/json; charset=utf-8');
+  res.send(eventStatsBuffer);
 });
 
 app.get('/heatmap.svg', function(req, res) {
-  var stats = {};
-
-  try {
-    stats = fs.readFileSync( './event-stats.json', 'utf-8' );
-    stats = JSON.parse( stats );
-
-    res.send( heatmap.generateHeatmap( stats.byCountry ) );
-  }
-  catch ( e ) {
-    stats = {};
-    res.status( 500 ).send( heatmap.generateHeatmap() );
-  }
+  res.type('image/svg+xml; charset=utf-8');
+  res.send(heatmapBuffer);
 });
 
 app.get('/heatmap.base.svg', function(req, res) {
   res.send( heatmap.baseFile );
 });
-
-// get the latest 10 photos from Maker Party 2014 Flickr album
-app.get('/flickr-photos', function(req, res) {
-  var output = '';
-  var options = {
-    host: 'api.flickr.com',
-    path: '/services/rest/?' +
-          'method=flickr.photosets.getPhotos' +
-          '&photoset_id=72157644395497439' +
-          '&privacy_filter=1' + // public photos only
-          '&per_page=10' +
-          '&page=1' +
-          '&format=json' +
-          '&nojsoncallback=1' +
-          '&api_key=' + env.get('FLICKR_API_KEY'),
-    method: 'GET'
-  };
-  // Calling Flickr API can only be made via SSL
-  https.request(options, function(response) {
-    response.on('data', function (chunk) {
-      output += chunk;
-    });
-    response.on('end',function() {
-      res.setHeader('Content-Type', 'application/json');
-      res.send(JSON.parse(output));
-    });
-  }).end();
-});
-
 
 // Localized Strings
 app.get('/strings/:lang?', i18n.stringsRoute('en-US'));
@@ -177,20 +147,3 @@ app.get('/strings/:lang?', i18n.stringsRoute('en-US'));
 app.listen(env.get('PORT'), function () {
   console.log('Now listening on %d', env.get('PORT'));
 });
-
-// Run event stats generation every 5 minutes
-var getEventStats;
-function getEventStatsFork() {
-  if( getEventStats ) {
-    getEventStats.kill();
-    return;
-  }
-
-  getEventStats = fork( './bin/getEventStats' );
-  getEventStats.on( 'exit', function( code, signal ) {
-    getEventStats = null;
-  });
-}
-setInterval( getEventStatsFork, 300000 );
-getEventStatsFork();
-

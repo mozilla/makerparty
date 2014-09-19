@@ -17,20 +17,135 @@
 {% endblock %}
 
 {% block mainContent %}
-  <div id="snapshot-2013" class="big-section">
+  <div id="snapshot-2014" class="big-section">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <a href="/img/blog/makerparty-heatmap.png" class="infographic"><img src="/img/blog/makerparty-heatmap.png" alt="{{ gettext('2013 Maker Party Heatmap image') }}" /></a>
+          <div id="maker-party-video">
+            {% if localeInfo.locale == "es" or localeInfo.locale == "es_CL" or localeInfo.locale == "es_MX"  %}
+              <iframe src='https://melissa.makes.org/popcorn/25tu_' width='560' height='358' frameborder='0' mozallowfullscreen webkitallowfullscreen allowfullscreen></iframe>
+            {% else %}
+              <iframe width="853" height="480" src="//www.youtube.com/embed/oko6TzPQE6Y" frameborder="0" allowfullscreen></iframe>
+            {% endif %}
+          </div>
         </div>
         <div class="col-md-6">
-          <h1>{{ gettext("Snapshot of Maker Party 2013") }}</h1>
-          <p>{{ gettext("Snapshot of Maker Party 2013 Paragraph 1") }}</p>
-          <p>{{ gettext("Snapshot of Maker Party 2013 Paragraph 2") | safe }}</p>
-          <p>{{ gettext("Snapshot of Maker Party 2013 Paragraph 3") | safe }}</p>
-          <p>{{ gettext("Snapshot of Maker Party 2013 Paragraph 4") }}</p>
-          <p>{{ gettext("Snapshot of Maker Party 2013 Paragraph 5") | safe }}</p>
-          <div class="blog-read-more"><a href="https://blog.webmaker.org/maker-party-by-the-numbers">{{ gettext("Read the full blog post") }}</a></div>
+          <h1>{{ gettext("Snapshot of Maker Party 2014") }}</h1>
+          <!-- <p>{{ gettext("Snapshot of Maker Party 2014 Paragraph 1") }}</p> -->
+          <p>This week we celebrate the record-breaking 2,513 events in 86 countries that made up Maker Party 2014.</p>
+          <!-- <p>{{ gettext("Snapshot of Maker Party 2014 Paragraph 2") }}</p> -->
+          <p>All told, our more than 300 organizational partners and hundreds of individual event hosts shared valuable digital literacy skills with nearly 130,000 adults and children during the two-month campaign.</p>
+          <!-- <p>{{ gettext("Snapshot of Maker Party 2014 Paragraph 3") | safe }}</p> -->
+          <p>Whether hacking on mobile apps with <a href="https://apps.webmaker.org/designer">Appmaker</a>, discussing the nuances of net neutrality during our <a href="https://blog.mozilla.org/netpolicy/2014/07/28/join-mozilla-for-global-teach-ins-on-net-neutrality/">global teach-in</a>, or turning libraries into full-fledged maker spaces, this year’s crop of Maker Parties unleashed the creativity of our incredible community of web makers.</p>
+          <!-- <p>{{ gettext("Snapshot of Maker Party 2014 Paragraph 4") }}</p> -->
+          <p>Maker Party 2014 was truly a global celebration, with events in Argentina, Canada, Jordan, Uganda, Spain, and Japan, among dozens of other countries. We celebrated places like India that blew us away with more than 250 events, and were thrilled to see countries such as New Zealand, Iran, and Sweden hold their first ever Maker Party events.</p>
+          <div class="blog-read-more"><a href="https://blog.webmaker.org/127k-makers-2513-events-86-countries-and-one-party-that-just-wont-quit">{{ gettext("Read the full blog post") }}</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="big-section blog-posts">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>{{ gettext("Maker Party 2014 Blog Posts") }}</h1>
+        </div>
+      </div>
+      <div class="row blog-row" id="first-blog-row">
+        <!-- blog post #1 -->
+        <div class="blog-post" id="blog-1">
+          <div class="col-md-3 col-sm-2">
+            <a href="https://blog.webmaker.org/train-the-trainer-paraguay"><img src="/img/blog/blog2014-1.jpg" alt="{{ gettext('Blog 1 thumbnail image') }}"/></a>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <!-- <h3>{{ gettext("Blog 1") }}</h3>
+            <p class="blog-date">{{ gettext("Blog 1 Date") }}</p>
+            <p class="blog-excerpt">{{ gettext("Blog 1 Desc") }}</p> -->
+            <h3>Train the Trainer: Paraguay</h3>
+            <p class="blog-date">September 15, 2014</p>
+            <p class="blog-excerpt">One of the most exciting things about Maker Party is guiding people learn, and then have them immediately use that learning to guide someone else...</p>
+            <div class="blog-read-more"><a href="https://blog.webmaker.org/train-the-trainer-paraguay">{{ gettext("Read more") }}</a></div>
+          </div>
+        </div>
+        <!-- blog post #2 -->
+        <div class="blog-post">
+          <div class="col-md-3 col-sm-2">
+            <a href="https://blog.webmaker.org/music-video"><img src="/img/blog/blog2014-2.jpg" alt="{{ gettext('Blog 2 thumbnail image') }}" /></a>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <!-- <h3>{{ gettext("Blog 2") }}</h3>
+            <p class="blog-date">{{ gettext("Blog 2 Date") }}</p>
+            <p class="blog-excerpt">{{ gettext("Blog 2 Desc") }}</p> -->
+            <h3>Maker Party: make your own music video</h3>
+            <p class="blog-date">September 10, 2014</p>
+            <p class="blog-excerpt">In this Maker Party, you’ll walk people through how to make their own music video on the web. It’s fun, easy, and can take as little as two minutes! Here’s how....</p>
+            <div class="blog-read-more"><a href="https://blog.webmaker.org/music-video">{{ gettext("Read more") }}</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="row blog-row">
+        <!-- blog post #3 -->
+        <div class="blog-post">
+          <div class="col-md-3 col-sm-2">
+            <a href="https://blog.webmaker.org/qa-with-geek-girls-carrots"><img src="/img/blog/blog2014-3.jpg" alt="{{ gettext('Blog 3 thumbnail image') }}" /></a>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <!-- <h3>{{ gettext("Blog 3") }}</h3>
+            <p class="blog-date">{{ gettext("Blog 3 Date") }}</p>
+            <p class="blog-excerpt">{{ gettext("Blog 3 Desc") }}</p> -->
+            <h3>Q&A with Geek Girls Carrots</h3>
+            <p class="blog-date">September 5, 2014</p>
+            <p class="blog-excerpt">We had so much fun working with Geek Girls Carrots this Maker Party season as they planned and hosted their first Maker Party...</p>
+            <div class="blog-read-more"><a href="https://blog.webmaker.org/qa-with-geek-girls-carrots">{{ gettext("Read more") }}</a></div>
+          </div>
+        </div>
+        <!-- blog post #4 -->
+        <div class="blog-post">
+          <div class="col-md-3 col-sm-2">
+            <a href="https://blog.webmaker.org/firefox"><img src="/img/blog/blog2014-4.jpg" alt="{{ gettext('Blog 4 thumbnail image') }}" /></a>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <!-- <h3>{{ gettext("Blog 4") }}</h3>
+            <p class="blog-date">{{ gettext("Blog 4 Date") }}</p>
+            <p class="blog-excerpt">{{ gettext("Blog 4 Desc") }}</p> -->
+            <h3>New Firefox start page invites millions to learn a little code</h3>
+            <p class="blog-date">August 25, 2014</p>
+            <p class="blog-excerpt">For the first time ever, Firefox users will be able to play around with the code that makes up the familiar Firefox start page...</p>
+            <div class="blog-read-more"><a href="https://blog.webmaker.org/firefox">{{ gettext("Read more") }}</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="row blog-row">
+        <!-- blog post #5 -->
+        <div class="blog-post">
+          <div class="col-md-3 col-sm-2">
+            <a href="https://blog.webmaker.org/share-your-maker-party-events-with-the-event-reporter"><img src="/img/blog/blog2014-5.jpg" alt="{{ gettext('Blog 5 thumbnail image') }}" /></a>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <!-- <h3>{{ gettext("Blog 5") }}</h3>
+            <p class="blog-date">{{ gettext("Blog 5 Date") }}</p>
+            <p class="blog-excerpt">{{ gettext("Blog 5 Desc") }}</p> -->
+            <h3>Share Your Maker Party Events with the Event Reporter</h3>
+            <p class="blog-date">August 12, 2014</p>
+            <p class="blog-excerpt">We know a lot of time is put into organizing, planning and running a Maker Party event. Which is why we want to make sure that once your event is completed it is documented and sharable so we can celebrate your success with you...</p>
+            <div class="blog-read-more"><a href="https://blog.webmaker.org/share-your-maker-party-events-with-the-event-reporter">{{ gettext("Read more") }}</a></div>
+          </div>
+        </div>
+        <!-- blog post #6 -->
+        <div class="blog-post">
+          <div class="col-md-3 col-sm-2">
+            <a href="https://blog.webmaker.org/maker-party-2014-resources-for-libraries-and-learning-spaces"><img src="/img/blog/blog2014-6.jpg" alt="{{ gettext('Blog 6 thumbnail image') }}" /></a>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <!-- <h3>{{ gettext("Blog 6") }}</h3>
+            <p class="blog-date">{{ gettext("Blog 6 Date") }}</p>
+            <p class="blog-excerpt">{{ gettext("Blog 6 Desc") }}</p> -->
+            <h3>Maker Party 2014: Resources for Libraries and Learning Spaces</h3>
+            <p class="blog-date">July 21, 2014</p>
+            <p class="blog-excerpt">At the heart of the Maker Party campaign, Webmaker tools/resources, and Hive Learning Network is the Web Literacy Map which outlines what we think are the important skills and competencies needed to be literate on the web...</p>
+            <div class="blog-read-more"><a href="https://blog.webmaker.org/maker-party-2014-resources-for-libraries-and-learning-spaces">{{ gettext("Read more") }}</a></div>
+          </div>
         </div>
       </div>
     </div>
@@ -41,241 +156,45 @@
       <div class="row">
         <div class="col-md-12">
           <h2>{{ gettext("Maker Party History") }}</h2>
-          <p>{{ gettext("Maker Party History Desc") }}</p>
+          <p>Check out the highlights from Maker Party and see more photos in our <a href='https://www.flickr.com/photos/mozilladrumbeat/sets/72157647305286970/'>Flickr gallery</a>.</p>
+          <!-- <p>{{ gettext("Maker Party History Desc") }}</p> -->
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <div class="collage">
+          <div class="collage masonry">
             <div class="collage-row">
               <a class="collage-pics" href="/img/collage/full-1.jpg"><img src="/img/collage/1.jpg" alt="{{ gettext('Maker Party Collage Photo 1') }}" /></a>
               <a class="collage-pics" href="/img/collage/full-2.jpg"><img src="/img/collage/2.jpg" alt="{{ gettext('Maker Party Collage Photo 2') }}" /></a>
-              <a class="collage-pics" href="/img/collage/full-3.jpg"><img src="/img/collage/3.jpg" alt="{{ gettext('Maker Party Collage Photo 3') }}" /></a>
+              <a class="collage-pics" href="/img/collage/full-13.jpg"><img src="/img/collage/13.jpg" alt="{{ gettext('Maker Party Collage Photo 13') }}" /></a>
               <a class="collage-pics" href="/img/collage/full-4.jpg"><img src="/img/collage/4.jpg" alt="{{ gettext('Maker Party Collage Photo 4') }}" /></a>
-              <a class="collage-pics" href="/img/collage/full-5.jpg"><img src="/img/collage/5.jpg" alt="{{ gettext('Maker Party Collage Photo 5') }}" /></a>
+              <a class="collage-pics" href="/img/collage/full-15.jpg"><img src="/img/collage/15.jpg" alt="{{ gettext('Maker Party Collage Photo 15') }}" /></a>
             </div>
             <div class="collage-row">
-              <a class="collage-pics" href="/img/collage/full-6.jpg"><img src="/img/collage/6.jpg" alt="{{ gettext('Maker Party Collage Photo 6') }}" /></a>
+              <a class="collage-pics" href="/img/collage/full-11.jpg"><img src="/img/collage/11.jpg" alt="{{ gettext('Maker Party Collage Photo 11') }}" /></a>
               <a class="collage-pics" href="/img/collage/full-7.jpg"><img src="/img/collage/7.jpg" alt="{{ gettext('Maker Party Collage Photo 7') }}" /></a>
               <a class="collage-pics" href="/img/collage/full-8.jpg"><img src="/img/collage/8.jpg" alt="{{ gettext('Maker Party Collage Photo 8') }}" /></a>
               <a class="collage-pics" href="/img/collage/full-9.jpg"><img src="/img/collage/9.jpg" alt="{{ gettext('Maker Party Collage Photo 9') }}" /></a>
               <a class="collage-pics" href="/img/collage/full-10.jpg"><img src="/img/collage/10.jpg" alt="{{ gettext('Maker Party Collage Photo 10') }}" /></a>
-              <a class="collage-pics" href="/img/collage/full-11.jpg"><img src="/img/collage/11.jpg" alt="{{ gettext('Maker Party Collage Photo 11') }}" /></a>
+              <a class="collage-pics" href="/img/collage/full-6.jpg"><img src="/img/collage/6.jpg" alt="{{ gettext('Maker Party Collage Photo 6') }}" /></a>
+              <a class="collage-pics" href="/img/collage/full-17.jpg"><img src="/img/collage/17.jpg" alt="{{ gettext('Maker Party Collage Photo 17') }}" /></a>
+            </div>
+            <div class="collage-row">
+              <a class="collage-pics" href="/img/collage/full-3.jpg"><img src="/img/collage/3.jpg" alt="{{ gettext('Maker Party Collage Photo 3') }}" /></a>
+              <a class="collage-pics" href="/img/collage/full-20.jpg"><img src="/img/collage/20.jpg" alt="{{ gettext('Maker Party Collage Photo 20') }}" /></a>
+              <a class="collage-pics" href="/img/collage/full-5.jpg"><img src="/img/collage/5.jpg" alt="{{ gettext('Maker Party Collage Photo 5') }}" /></a>
+              <a class="collage-pics" href="/img/collage/full-16.jpg"><img src="/img/collage/16.jpg" alt="{{ gettext('Maker Party Collage Photo 16') }}" /></a>
               <a class="collage-pics" href="/img/collage/full-12.jpg"><img src="/img/collage/12.jpg" alt="{{ gettext('Maker Party Collage Photo 12') }}" /></a>
-              <a class="collage-pics" href="/img/collage/full-13.jpg"><img src="/img/collage/13.jpg" alt="{{ gettext('Maker Party Collage Photo 13') }}" /></a>
+              <a class="collage-pics" href="/img/collage/full-18.jpg"><img src="/img/collage/18.jpg" alt="{{ gettext('Maker Party Collage Photo 18') }}" /></a>
+              <a class="collage-pics" href="/img/collage/full-19.jpg"><img src="/img/collage/19.jpg" alt="{{ gettext('Maker Party Collage Photo 19') }}" /></a>
               <a class="collage-pics" href="/img/collage/full-14.jpg"><img src="/img/collage/14.jpg" alt="{{ gettext('Maker Party Collage Photo 14') }}" /></a>
             </div>
+
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="big-section blog-posts">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1>{{ gettext("Maker Party 2013 Blog Posts") }}</h1>
-        </div>
-      </div>
-      <div class="row blog-row" id="first-blog-row">
-        <div class="blog-post" id="blog-1">
-          <div class="col-md-3 col-sm-2">
-            <a href="https://blog.webmaker.org/reports-from-maker-party-2013"><img src="/img/blog/blog1.png" alt="{{ gettext('Blog 1 thumbnail image') }}"/></a>
-          </div>
-          <div class="col-md-3 col-sm-4">
-            <h3>{{ gettext("Blog 1") }}</h3>
-            <p class="blog-date">{{ gettext("Blog 1 Date") }}</p>
-            <p class="blog-excerpt">{{ gettext("Blog 1 Desc") }}</p>
-            <div class="blog-read-more"><a href="https://blog.webmaker.org/reports-from-maker-party-2013">{{ gettext("Read more") }}</a></div>
-          </div>
-        </div>
-        <div class="blog-post">
-          <div class="col-md-3 col-sm-2">
-            <a href="https://blog.webmaker.org/maker-parties-in-asia"><img src="/img/blog/blog2.png" alt="{{ gettext('Blog 2 thumbnail image') }}" /></a>
-          </div>
-          <div class="col-md-3 col-sm-4">
-            <h3>{{ gettext("Blog 2") }}</h3>
-            <p class="blog-date">{{ gettext("Blog 2 Date") }}</p>
-            <p class="blog-excerpt">{{ gettext("Blog 2 Desc") }}</p>
-            <div class="blog-read-more"><a href="https://blog.webmaker.org/maker-parties-in-asia">{{ gettext("Read more") }}</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="row blog-row">
-        <div class="blog-post">
-          <div class="col-md-3 col-sm-2">
-            <a href="https://blog.webmaker.org/jamboree-maker-party"><img src="/img/blog/blog3.png" alt="{{ gettext('Blog 3 thumbnail image') }}" /></a>
-          </div>
-          <div class="col-md-3 col-sm-4">
-            <h3>{{ gettext("Blog 3") }}</h3>
-            <p class="blog-date">{{ gettext("Blog 3 Date") }}</p>
-            <p class="blog-excerpt">{{ gettext("Blog 3 Desc") }}</p>
-            <div class="blog-read-more"><a href="https://blog.webmaker.org/jamboree-maker-party">{{ gettext("Read more") }}</a></div>
-          </div>
-        </div>
-        <div class="blog-post">
-          <div class="col-md-3 col-sm-2">
-            <a href="https://blog.webmaker.org/babymaker"><img src="/img/blog/blog4.png" alt="{{ gettext('Blog 4 thumbnail image') }}" /></a>
-          </div>
-          <div class="col-md-3 col-sm-4">
-            <h3>{{ gettext("Blog 4") }}</h3>
-            <p class="blog-date">{{ gettext("Blog 4 Date") }}</p>
-            <p class="blog-excerpt">{{ gettext("Blog 4 Desc") }}</p>
-            <div class="blog-read-more"><a href="https://blog.webmaker.org/babymaker">{{ gettext("Read more") }}</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="row blog-row">
-        <div class="blog-post">
-          <div class="col-md-3 col-sm-2">
-            <a href="https://blog.webmaker.org/nyc-makery"><img src="/img/blog/blog5.png" alt="{{ gettext('Blog 5 thumbnail image') }}" /></a>
-          </div>
-          <div class="col-md-3 col-sm-4">
-            <h3>{{ gettext("Blog 5") }}</h3>
-            <p class="blog-date">{{ gettext("Blog 5 Date") }}</p>
-            <p class="blog-excerpt">{{ gettext("Blog 5 Desc") }}</p>
-            <div class="blog-read-more"><a href="https://blog.webmaker.org/nyc-makery">{{ gettext("Read more") }}</a></div>
-          </div>
-        </div>
-        <div class="blog-post">
-          <div class="col-md-3 col-sm-2">
-            <a href="https://blog.webmaker.org/hack-n-chat"><img src="/img/blog/blog6.png" alt="{{ gettext('Blog 6 thumbnail image') }}" /></a>
-          </div>
-          <div class="col-md-3 col-sm-4">
-            <h3>{{ gettext("Blog 6") }}</h3>
-            <p class="blog-date">{{ gettext("Blog 6 Date") }}</p>
-            <p class="blog-excerpt">{{ gettext("Blog 6 Desc") }}</p>
-            <div class="blog-read-more"><a href="https://blog.webmaker.org/hack-n-chat">{{ gettext("Read more") }}</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="big-section past-partners-list">
-    <div class="container top-spacing">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="top-left-corner circle-corner"></div>
-          <div class="top-right-corner circle-corner"></div>
-        </div>
-      </div>
-    </div>
-    <div class="outer-wrapper header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center content">
-            <h2>{{ gettext("Past Partners") }}</h2>
-            <h4>{{ gettext("Past Partners Desc") }}</h4>
-          </div>
-        </div>
-      </div>
-      <div class="fold-in-left"></div>
-      <div class="fold-in-right"></div>
-    </div>
-    <div class="container the-list">
-      <div class="row" id="the-list-row">
-        <div class="col-md-4">
-          <ul class="list list-inset sublist-1">
-            <li><a href="http://aws.amazon.com/education/">Amazon</a></li>
-            <li><a href="http://www.appsforgood.org/">Apps for Good</a></li>
-            <li><a href="http://bankstreet.edu/">Bank Street College</a></li>
-            <li><a href="http://www.bareconductive.com/">Bare conductive</a></li>
-            <li><a href="http://www.blackgirlscode.com/">Black Girls Code</a></li>
-            <li><a href="http://www.bgccan.com/EN/Pages/default.aspx">Boys and Girls Clubs of Canada</a></li>
-            <li><a href="http://bristolgameshub.com/">Bristol Games Hub</a></li>
-            <li><a href="http://www.bklynpubliclibrary.org/">Brooklyn Public Library</a></li>
-            <li><a href="http://www.burberryplc.com/corporate_responsibility/burberry_foundation">Burberry Foundation</a></li>
-            <li><a href="http://careermash.ca/">CareerMash</a></li>
-            <li><a href="http://www.calacademy.org/">California Academy of Sciences</a></li>
-            <li><a href="http://www.codecademy.com/">Codecademy</a></li>
-            <li><a href="http://codeclub.org.uk/">Code Club</a></li>
-            <li><a href="http://m2l.indiana.edu">Creativity Labs at Indiana University</a></li>
-            <li><a href="http://decoded.co/">Decoded</a></li>
-            <li><a href="https://diy.org/">DIY.org</a></li>
-            <li><a href="http://www.e-skills.com/">E-Skills</a></li>
-            <li><a href="http://www.everyoneon.org/about-us">EveryoneOn / Connect2Compete</a></li>
-            <li><a href="http://exposurecamp.org/">Exposure Camp</a></li>
-            <li><a href="http://www.eyebeam.org/">Eyebeam</a></li>
-            <li><a href="http://www.remixthecity.com/">FabSpaces</a></li>
-            <li><a href="http://www.ischool.utoronto.ca/">Faculty of Information University of Toronto</a></li>
-            <li><a href="http://www.firetechcamp.com/">Fire Tech Camp</a></li>
-            <li><a href="http://www.freeformers.com/">Freeformers</a></li>
-            <li><a href="http://gamesbritannia.com/">Games Britannia</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul class="list list-inset sublist-2">
-            <li><a href="http://girlslearningcode.com/events">Girls Learning Code and Kids Learning Code</a></li>
-            <li><a href="http://www.girlscoutsgcnwi.org/">Girl Scouts of Greater Chicago and Northwest Indiana</a></li>
-            <li><a href="http://good.is/neighboring">Good</a></li>
-            <li><a href="http://http://www.grablefdn.org/">The Grable Foundation</a></li>
-            <li><a href="http://www.homeroom.org.uk/">HomeRoom</a></li>
-            <li><a href="http://imagication.org.uk/">Imagication</a></li>
-            <li><a href="http://www.imls.gov/">IMLS</a></li>
-            <li><a href="http://www.intel.com/content/www/us/en/education/intel-in-education.html">Intel</a></li>
-            <li><a href="http://www.jagex.com/">Jagex</a></li>
-            <li><a href="http://www.kauffman.org/">Kauffman Foundation</a></li>
-            <li><a href="http://www.zsl.org/zsl-london-zoo/">London Zoo/Edge of Existence</a></li>
-            <li><a href="http://madlab.org.uk/">MadLab</a></li>
-            <li><a href="https://www.makewav.es/">Make Waves</a></li>
-            <li><a href="http://makered.org/">Maker Education Initiative</a></li>
-            <li><a href="http://www.marsdd.com/futureleaders">MaRS Discover</a></li>
-            <li><a href="http://www.media.mit.edu/">MIT Media Lab</a></li>
-            <li><a href="http://mouse.org/">MOUSE</a></li>
-            <li><a href="http://www.mozilla.org/">Mozilla</a></li>
-            <li><a href="http://digitalis.nwp.org">National Writing Project</a></li>
-            <li><a href="http://www.nysci.org/">New York Hall of Science</a></li>
-            <li><a href="https://www.fundforpublicschools.org/nyc-summer-quest-highlights">NYC Summer Quest: NYC Department of Education</a></li>
-            <li><a href="https://www.fundforpublicschools.org/nyc-summer-quest-highlights">NYC Summer Quest: NYC Department of Youth and Community Development</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul class="list list-inset sublist-3">
-            <li><a href="https://www.fundforpublicschools.org/nyc-summer-quest-highlights">NYC Summer Quest: Fund for Public Schools</a></li>
-            <li><a href="http://www.o2thinkbig.co.uk/">O2 Think Big</a></li>
-            <li><a href="https://2013.pycon.ca/en/">PyCon Canada</a></li>
-            <li><a href="http://www.reelworks.org/rw/">Reel Works</a></li>
-            <li><a href="http://www.joanganzcooneycenter.org/">Sesame Workshop: Joan Ganz Cooney Centre</a></li>
-            <li><a href="http://skillcrush.com/">Skillcrush</a></li>
-            <li><a href="http://www.stardoll.com/en/">StarDoll</a></li>
-            <li><a href="http://techmixmag.com/magazine">TechMix</a></li>
-            <li><a href="http://www.technocamps.com/">TechnoCamps</a></li>
-            <li><a href="http://technologywillsaveus.org/">Technology Will Save Us</a></li>
-            <li><a href="http://www.teentechevent.com/">TeenTech</a></li>
-            <li><a href="http://www.expandedschools.org/">The After School Corporation (TASC)</a></li>
-            <li><a href="http://sproutfund.org">The Sprout Fund</a></li>
-            <li><a href="http://www.textilemuseum.ca/apps/index.cfm?page=program.detail&programEventId=217&areaId=9">The Textile Museum of Canada</a></li>
-            <li><a href="http://www.tiff.net/summercamp">TIFF</a></li>
-            <li><a href="http://www.telecentre.org/">Telecentre.org</a></li>
-            <li><a href="http://www.thirteen.org/edonline/">WNET / Thirteen.org</a></li>
-            <li><a href="https://youngrewiredstate.org/">Young Rewired State</a></li>
-            <li><a href="http://www.ymcanyc.org/">YMCA NYC</a></li>
-            <li><a href="https://www.ywcatoronto.org/page.asp?l1=54&pid=160">YWCA Toronto</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="container bottom-spacing">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="bottom-left-corner circle-corner"></div>
-          <div class="bottom-right-corner circle-corner"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="big-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-        </div>
-        <div class="col-md-6">
-        </div>
-      </div>
-    </div>
-  </div>
 {% endblock %}
 
