@@ -23,6 +23,9 @@
 @mp-lightyellow: #fbf6b6;
 @mp-grey: #83a4b3;
 @mp-nav-lighter-blue: #01527D;
+@red-ribbon-body: #e8282f;
+@red-ribbon-side: #dd001c;
+@red-ribbon-shadow: #213c3f;
 
 @heatmap-bg: #6FCCDD;
 
@@ -50,6 +53,10 @@
   @media (max-width: @screen-xs-max) {
     display: none;
   }
+}
+
+.btn {
+  white-space: normal;
 }
 
 .btn-cta {
@@ -257,13 +264,15 @@ ul.nav-webmaker-logo {
   color: inherit;
   background: none;
   margin-bottom: 0;
+  @media (max-width: @screen-xs-max) {
+    padding: 10px;
+  }
   h1 {
     line-height: 100%;
   }
   .container {
     margin-bottom: 50px;
   }
-
   .cta-button-container a:first-child {
     margin-right: 10px;
   }
@@ -530,26 +539,378 @@ body.error {
 */
 
 .home {
+  overflow-x: hidden;
   .banner {
-    .mp-banner;
-    background-image: url('../img/makerparty_landing_banner-mobile.jpg');
-    @media (min-width: @screen-sm-min) {
-      background-image: url('../img/makerparty_landing_banner.jpg');
+    background: linear-gradient(to bottom, @mp-lightblue, fade(@mp-lightblue,50%) );
+    overflow-x: hidden;
+  }
+}
+
+/* Cloud animation based on http://thecodeplayer.com/walkthrough/pure-css3-animated-clouds-background */
+#clouds {
+  position: absolute;
+
+  @media (min-width: @screen-sm-min) {
+    .cloud {
+      width: 200px;
+      height: 60px;
+      position: relative;
+    }
+
+    /*Time to animate*/
+    .x1 {
+      top: -50px;
+      left: 100px;
+      -webkit-transform: scale(0.4);
+      -moz-transform: scale(0.4);
+      transform: scale(0.4);
+
+      -webkit-animation: moveclouds 70s linear infinite;
+      -moz-animation: moveclouds 70s linear infinite;
+      -o-animation: moveclouds 70s linear infinite;
+    }
+
+    /*variable speed, opacity, and position of clouds for realistic effect*/
+    .x2 {
+      left: 300px;
+
+      -webkit-transform: scale(0.2);
+      -moz-transform: scale(0.2);
+      transform: scale(0.2);
+      opacity: 0.9; /*opacity proportional to the size*/
+
+      /*Speed will also be proportional to the size and opacity*/
+      /*More the speed. Less the time in 's' = seconds*/
+      -webkit-animation: moveclouds 100s linear infinite;
+      -moz-animation: moveclouds 100s linear infinite;
+      -o-animation: moveclouds 100s linear infinite;
+    }
+
+    .x3 {
+      top: -20px;
+      left: -350px;
+
+      -webkit-transform: scale(0.3);
+      -moz-transform: scale(0.3);
+      transform: scale(0.3);
+      opacity: 0.8; /*opacity proportional to the size*/
+
+      -webkit-animation: moveclouds 90s linear infinite;
+      -moz-animation: moveclouds 90s linear infinite;
+      -o-animation: moveclouds 90s linear infinite;
+    }
+
+    .x4 {
+      left: 500px;
+      top: -250px;
+
+      -webkit-transform: scale(0.25);
+      -moz-transform: scale(0.25);
+      transform: scale(0.25);
+      opacity: 0.6; /*opacity proportional to the size*/
+
+      -webkit-animation: moveclouds 80s linear infinite;
+      -moz-animation: moveclouds 80s linear infinite;
+      -o-animation: moveclouds 80s linear infinite;
+    }
+
+    .x5 {
+      left: -50px;
+      top: -250px;
+
+      -webkit-transform: scale(0.3);
+      -moz-transform: scale(0.3);
+      transform: scale(0.3);
+      opacity: 0.8; /*opacity proportional to the size*/
+
+      -webkit-animation: moveclouds 90s linear infinite;
+      -moz-animation: moveclouds 90s linear infinite;
+      -o-animation: moveclouds 90s linear infinite;
+    }
+
+    .x6 {
+      left: 700px;
+      top: -150px;
+
+      -webkit-transform: scale(0.35);
+      -moz-transform: scale(0.35);
+      transform: scale(0.35);
+      opacity: 0.9; /*opacity proportional to the size*/
+
+      -webkit-animation: moveclouds 70s linear infinite;
+      -moz-animation: moveclouds 70s linear infinite;
+      -o-animation: moveclouds 70s linear infinite;
+    }
+
+    @-webkit-keyframes moveclouds {
+      0% {margin-left: 1000px;}
+      100% {margin-left: -1000px;}
+    }
+    @-moz-keyframes moveclouds {
+      0% {margin-left: 1000px;}
+      100% {margin-left: -1000px;}
+    }
+    @-o-keyframes moveclouds {
+      0% {margin-left: 1000px;}
+      100% {margin-left: -1000px;}
+    }
+  }
+
+  @media (max-width: @screen-xs-max) {
+    .cloud {
+      width: 120px;
+      height: 40px;
+      position: relative;
+    }
+
+    /*Time to animate*/
+    .x1 {
+      top: -30px;
+      left: 120px;
+      -webkit-transform: scale(0.4);
+      -moz-transform: scale(0.4);
+      transform: scale(0.4);
+
+      -webkit-animation: moveclouds 50s linear infinite;
+      -moz-animation: moveclouds 50s linear infinite;
+      -o-animation: moveclouds 50s linear infinite;
+    }
+
+    .x2 {
+      left: 0px;
+
+      -webkit-transform: scale(0.5);
+      -moz-transform: scale(0.5);
+      transform: scale(0.5);
+      opacity: 0.9;
+
+      -webkit-animation: moveclouds 30s linear infinite;
+      -moz-animation: moveclouds 30s linear infinite;
+      -o-animation: moveclouds 30s linear infinite;
+    }
+
+    .x3 {
+      top: 70px;
+      left: 50px;
+
+      -webkit-transform: scale(0.3);
+      -moz-transform: scale(0.3);
+      transform: scale(0.3);
+      opacity: 0.7;
+
+      -webkit-animation: moveclouds 60s linear infinite;
+      -moz-animation: moveclouds 60s linear infinite;
+      -o-animation: moveclouds 60s linear infinite;
+    }
+
+    .x4,
+    .x5,
+    .x6 {
+      display: none;
+    }
+
+    @-webkit-keyframes moveclouds {
+      0% {margin-left: 0;}
+      100% {margin-left: -@screen-xs-max;}
+    }
+    @-moz-keyframes moveclouds {
+      0% {margin-left: 0;}
+      100% {margin-left: -@screen-xs-max;}
+    }
+    @-o-keyframes moveclouds {
+      0% {margin-left: 0;}
+      100% {margin-left: -@screen-xs-max;}
+    }
+  }
+}
+/* cloud animation sample code ends */
+
+#rocket {
+  position: absolute;
+  img {
+    position: relative;
+    top: 100px;
+    width: 100px;
+    height: 100px;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: bounceIn;
+  }
+  @media (max-width: @screen-sm-max) {
+    display: none;
+  }
+}
+
+#infographic-2014,
+#thank-you-note {
+  h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    color: @mp-green;
+    @media (max-width: @screen-xs-max) {
+      font-size: 25px;
+    }
+  }
+  p {
+    line-height: 1.2;
+    @media (max-width: @screen-xs-max) {
+      font-size: 16px;
     }
   }
 }
 
-#home-banner-video {
-  padding-bottom: 66.66%;
-  height: 0;
-  position: relative;
-  margin-top: 20px; /* so that it aligns with the h1 in banner */
-  margin-bottom: 20px;
-  iframe {
-    position: absolute;
+#infographic-2014 {
+  margin-top: 50px;
+  margin-bottom: 70px;
+  @media (max-width: @screen-xs-max) {
+    margin-top: 20px;
+  }
+
+  img {
     width: 100%;
-    height: 100%;
-    border: none;
+  }
+  img.illustration {
+    max-width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  p.stats-heading {
+    font-size: 45px;
+    margin-bottom: 0;
+    color: @brand-secondary;
+    @media (max-width: @screen-xs-max) {
+      font-size: 25px;
+    }
+  }
+  .stats {
+    font-weight: 700;
+  }
+  .graphic-container {
+    position: relative;
+    margin-top: 30px;
+    p.legend {
+      color: @mp-green;
+      position: absolute;
+      bottom: 30%;
+      @media (max-width: @screen-sm-max) {
+        font-size: 15px;
+      }
+      @media (max-width: @screen-xs-max) {
+        bottom: 7%;
+        left: 50%;
+      }
+    }
+  }
+}
+
+.infographic-ribbon {
+  margin-bottom: 30px;
+  .ribbon-body {
+    h1 {
+      color: #fff;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Based on ribbon tutorial: http://css-tricks.com/snippets/css/ribbon/ */
+
+.ribbon-container {
+  position: relative;
+  z-index: 1;
+}
+
+.infographic-ribbon {
+  font-size: 16px !important;
+  width: 80%;
+  position: relative;
+  background: @red-ribbon-body;
+  color: #fff;
+  text-align: center;
+  padding: 1em 2em;
+  margin: 0 auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+  @media (max-width: @screen-xs-max) {
+    width: 100%;
+  }
+}
+.infographic-ribbon:before,
+.infographic-ribbon:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -1em;
+  border: 3em solid @red-ribbon-side;
+  z-index: -1;
+}
+.infographic-ribbon:before {
+  left: -4em;
+  border-right-width: 2em;
+  border-left-color: transparent;
+  @media (max-width: @screen-xs-max) {
+    left: -5.5em;
+    border-right-width: 3.5em;
+  }
+}
+.infographic-ribbon:after {
+  right: -4em;
+  border-left-width: 2em;
+  border-right-color: transparent;
+  @media (max-width: @screen-xs-max) {
+    right: -5.5em;
+    border-left-width: 3.5em;
+  }
+}
+.infographic-ribbon .ribbon-body:before,
+.infographic-ribbon .ribbon-body:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: @red-ribbon-shadow transparent transparent transparent;
+  bottom: -1em;
+}
+.infographic-ribbon .ribbon-body:before {
+   left: 0;
+   border-width: 1em 0 0 1em;
+}
+.infographic-ribbon .ribbon-body:after {
+   right: 0;
+   border-width: 1em 1em 0 0;
+}
+
+/* ribbon tutorial sample code ends */
+
+
+
+#thank-you-note {
+  background: @mp-yellow;
+  padding: 30px;
+  @media (max-width: @screen-xs-max) {
+    padding: 20px 5px;
+  }
+  .badge-preview {
+    text-align: center;
+    float: left;
+  }
+  img {
+    width: 100%;
+    @media (max-width: @screen-xs-max) {
+      width: 50%;
+      margin-bottom: 15px;
+    }
+  }
+  h2 {
+    margin-top: 15px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .btn {
+    margin-top: 25px;
   }
 }
 
@@ -587,36 +948,48 @@ body.error {
       img {
         float: left;
         max-height: 100%;
+        height: 100%;
       }
     }
     .collage-row a:not(:first-child) img {
       margin-left: 5px;
     }
-    .collage-row:first-child {
-      height: 113px;
+    .collage-row:nth-child(1) {
+      height: 97px;
       margin-bottom: 5px;
     }
     .collage-row:nth-child(2) {
-      height: 62px;
+      height: 61.3px;
+      margin-bottom: 5px;
+    }
+    .collage-row:nth-child(3) {
+      height: 55.6px;
     }
   }
   @media (min-width: @screen-md-min) {
-    .collage-row:first-child {
-      height: 140px;
+    .collage-row:nth-child(1) {
+      height: 128px;
     }
     .collage-row:nth-child(2) {
-      height: 77.3px;
+      height: 81px;
+    }
+    .collage-row:nth-child(3) {
+      height: 73.5px;
     }
   }
   @media (min-width: @screen-lg-min) {
-    .collage-row:first-child {
-      height: 180px;
+    .collage-row:nth-child(1) {
+      height: 156px;
     }
     .collage-row:nth-child(2) {
-      height: 100px;
+      height: 99px;
+    }
+    .collage-row:nth-child(3) {
+      height: 90px;
     }
   }
 }
+
 
 #flickr-carousel {
   background: red;
@@ -627,6 +1000,9 @@ body.error {
   }
   .flickr-pics {
     height: 200px;
+    @media (max-width: @screen-xs-max) {
+      height: 100%;
+    }
   }
   .elastislide-horizontal nav span {
     background-color: @mp-green;
@@ -654,12 +1030,16 @@ body.error {
   }
 }
 
-.testimonials {
+#testimonials-and-twitter {
   .big-section;
   background: @lightgrey;
+}
+
+#testimonials {
 
   .quote-container {
     overflow: hidden;
+    margin-top: 20px;
   }
   .quote {
     float: left;
@@ -692,19 +1072,6 @@ body.error {
       width: 95%;
     }
   }
-  .quote-arrow-right {
-    /*display: none;*/
-    @media (min-width: @screen-md-min) {
-      float: left;
-      width: 0;
-      height: 0;
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid transparent;
-      border-left: 30px solid #fff;
-      position: relative;
-      top: 35px;
-    }
-  }
 
   .quote-arrow-down {
     float: left;
@@ -714,13 +1081,10 @@ body.error {
     border-top: 30px solid #fff;
     border-left: 20px solid transparent;
     margin-left: 65px;
-    @media (min-width: @screen-md-min) {
-      display: none;
-    }
   }
 
   .avatar-container {
-    padding-top: 20px;
+    padding-top: 10px;
     @media (max-width: @screen-sm-max) {
       padding-left: 50px;
       .row {
@@ -738,6 +1102,19 @@ body.error {
 
 }
 
+#twitter-feeds {
+  iframe {
+    margin-left: 5%;
+    width: 95% !important;
+  }
+  @media (max-width: @screen-sm-max) {
+    margin-top: 30px;
+    iframe {
+      margin-left: 0;
+      width: 100% !important;
+    }
+  }
+}
 
 
 /* ====================
@@ -793,10 +1170,7 @@ body.error {
       margin-right: 10%;
       @media (max-width: @screen-sm-max) {
         margin-bottom: 20px;
-        max-width: 100px;
-      }
-      @media (max-width: 400px) {
-        max-width: 80px;
+        max-width: 100%;
       }
     }
   }
@@ -821,17 +1195,24 @@ body.error {
   }
 }
 
-#snapshot-2013 {
-  div a > img {
-    padding-right: 25px;
-  }
-  img {
-    width: 100%;
-    margin-top: 20px;
-  }
+#snapshot-2014 {
   .blog-read-more {
     float: right;
     margin-top: 2em;
+  }
+}
+
+#maker-party-video {
+  padding-bottom: 66.66%;
+  height: 0;
+  position: relative;
+  margin-top: 20px; /* so that it aligns with the h1 in banner */
+  margin-bottom: 20px;
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
   }
 }
 
@@ -863,124 +1244,13 @@ body.error {
   }
   img {
     width: 100%;
+    @media (max-width: @screen-xs-max) {
+      max-width: 300px;
+      margin-bottom: 10px;
+    }
   }
   h3 {
-    margin-top: 5px;
-  }
-}
-
-
-.past-partners-list {
-  @media (max-width: @screen-xs-max) {
-    overflow-x: hidden;
-  }
-
-  .container {
-    background: @lightgrey;
-    padding-bottom: 10px;
-  }
-
-  .circle-corner {
-    width: 50px;
-    height: 50px;
-    background: #fff;
-    border-radius: 50%;
-    position: absolute;
-  }
-
-  .top-spacing {
-    padding-top: 20px;
-    .top-left-corner {
-      top: -55px;
-      left: -25px;
-    }
-    .top-right-corner {
-      top: -55px;
-      right: -25px;
-    }
-  }
-
-  .bottom-spacing {
-    .bottom-left-corner {
-      top: 0px;
-      left: -25px;
-    }
-    .bottom-right-corner {
-      top: 0;
-      right: -25px;
-    }
-  }
-
-  .outer-wrapper.header {
-    background: @mp-green;
-    margin: 0 auto;
-    @media (min-width: @screen-sm-min) {
-      width: calc( @screen-sm-min + 20px );
-      .fold-in-left {
-        float: left;
-        width: 0;
-        height: 0;
-        border-top: 0 solid transparent;
-        border-bottom: 20px solid transparent;
-        border-right: 20px solid #007f89;
-      }
-      .fold-in-right {
-        float: right;
-        width: 0;
-        height: 0;
-        border-top: 0 solid transparent;
-        border-bottom: 20px solid transparent;
-        border-left: 20px solid #007f89;
-      }
-    }
-    @media (min-width: @screen-md-min) {
-      width: calc( @screen-md-min + 30px );
-      .fold-in-left {
-        border-bottom: 30px solid transparent;
-        border-right: 30px solid #007f89;
-      }
-      .fold-in-right {
-        border-bottom: 30px solid transparent;
-        border-left: 30px solid #007f89;
-      }
-    }
-    @media (min-width: @screen-lg-min) {
-      width: calc( @screen-lg-min + 30px );
-    }
-    .row {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-    .container,
-    .content {
-      background: @mp-green;
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-top: 10px;
-    }
-    h2 {
-      font-weight: bold;
-      color: @mp-yellow;
-    }
-    h4 {
-      color: #fff;
-    }
-  }
-
-  .the-list {
-    #the-list-row {
-      margin-top: 30px;
-    }
-    .list.list-inset {
-      padding-left: 35px;
-    }
-    ul {
-      list-style-type: none;
-      margin-bottom: 0;
-      li {
-        line-height: 1.7;
-      }
-    }
+    margin-top: 0;
   }
 }
 

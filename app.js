@@ -101,7 +101,7 @@ app.get('/history', function(req, res){
 });
 
 app.get('/live-updates', function(req, res){
-  res.render('live-updates.html');
+  res.redirect("/");
 });
 
 // Run event stats generation every 1 hour
@@ -139,35 +139,6 @@ app.get('/heatmap.svg', function(req, res) {
 app.get('/heatmap.base.svg', function(req, res) {
   res.send( heatmap.baseFile );
 });
-
-// get the latest 10 photos from Maker Party 2014 Flickr album
-app.get('/flickr-photos', function(req, res) {
-  var output = '';
-  var options = {
-    host: 'api.flickr.com',
-    path: '/services/rest/?' +
-          'method=flickr.photosets.getPhotos' +
-          '&photoset_id=72157644395497439' +
-          '&privacy_filter=1' + // public photos only
-          '&per_page=10' +
-          '&page=1' +
-          '&format=json' +
-          '&nojsoncallback=1' +
-          '&api_key=' + env.get('FLICKR_API_KEY'),
-    method: 'GET'
-  };
-  // Calling Flickr API can only be made via SSL
-  https.request(options, function(response) {
-    response.on('data', function (chunk) {
-      output += chunk;
-    });
-    response.on('end',function() {
-      res.setHeader('Content-Type', 'application/json');
-      res.send(JSON.parse(output));
-    });
-  }).end();
-});
-
 
 // Localized Strings
 app.get('/strings/:lang?', i18n.stringsRoute('en-US'));
