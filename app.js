@@ -101,7 +101,7 @@ app.get('/history', function(req, res){
 });
 
 app.get('/live-updates', function(req, res){
-  res.render('live-updates.html');
+  res.redirect("/");
 });
 
 // Run event stats generation every 1 hour

@@ -72,7 +72,7 @@
       <!-- thank you note -->
       <div class="row" id="thank-you-note">
         <div class="col-md-3 col-sm-3">
-          <a href="https://webmaker.org/badges/skill-sharer"><img src="/img/badge_skill_sharer.png"></a>
+          <a href="https://webmaker.org/badges/skill-sharer" class="badge-preview"><img src="/img/badge_skill_sharer.png"></a>
         </div>
         <div class="col-md-9 col-sm-9">
           <!-- <h2>{{ gettext("Thank You Note Title") }}</h2> -->
@@ -102,12 +102,14 @@
         <div class="col-md-4 col-sm-4 modules">
           <a href="/{{localeInfo.lang}}/resources"><img src="/img/makerparty_hostanevent_illustration.png" alt="{{ gettext('Maker Party Host An Event Illustration') }}" /></a>
           <h3><a href="/{{localeInfo.lang}}/resources">{{ gettext("Host an Event") }}</a></h3>
-          <p>{{ gettext("Host an Event Desc") }}</p>
+          <!-- <p>{{ gettext("Host an Event Desc") | safe }}</p> -->
+          <p>Host an Event. During our annual two-month party (July to September), individuals and organizations from around the world host thousands of events teaching the culture, mechanics and citizenship of the web. Hosting an event during the rest of the year? Add it to our <a href="https://events.webmaker.org/">events page</a>!</p>
         </div>
         <div class="col-md-4 col-sm-4 modules">
           <a href="https://events.webmaker.org" target="_blank"><img src="/img/makerparty_attendanevent_illustration2.png" alt="{{ gettext('Maker Party Attend An Event Illustration') }}" /></a>
           <h3><a href="https://events.webmaker.org" target="_blank">{{ gettext("Attend an Event") }}</a></h3>
-          <p>{{ gettext("Attend an Event Desc") | safe }}</p>
+          <!-- <p>{{ gettext("Attend an Event Desc") | safe }}</p> -->
+          <p>Attend an Event. Visit our <a href="https://events.webmaker.org/">events page</a> and see what's happening in your neighbourhood during Maker Party, or any time of year.</p>
         </div>
         <div class="col-md-4 col-sm-4 modules">
           <a href="/{{localeInfo.lang}}/resources"><img src="/img/makerparty_getsupport_illustration.png" alt="{{ gettext('Maker Party Get Support Illustration') }}" /></a>
@@ -128,7 +130,8 @@
       <div class="row">
         <div class="col-md-6 big-section">
           <h2>{{ gettext("Have fun with our tools") }}</h2>
-          <p>{{ gettext("Have fun with our tools Desc") | safe }}</p>
+          <!-- <p>{{ gettext("Have fun with our tools Desc") | safe }}</p> -->
+          <p>You can use anything you like to teach the web at your Maker Party event, from the wonderful array of tools available online to good old pencils and paper. Mozilla Webmaker is proud to offer fun, easy-to-use, free <a href='https://webmaker.org/tools'>tools</a>: see the inner working of a webpage with <b>X-Ray Goggles</b>; learn HTML and CSS using <b>Thimble</b>; remix video, audio and images from the web with <b>Popcorn Maker</b>, and build an personal mobile app with <b>Appmaker</b>.</p>
         </div>
         <div class="col-md-6 big-section">
           <h2>{{ gettext("Learn by teaching") }}</h2>
