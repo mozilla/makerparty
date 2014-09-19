@@ -9,9 +9,6 @@ function addCommasToNumber(num) {
 $(".history .collage-pics").colorbox({
   rel: "collage-pics"
 });
-$(".history .infographic").colorbox({
-  rel: "infographic"
-});
 
 /* ****************************************
  *  Sign up to Get Maker Party Update
